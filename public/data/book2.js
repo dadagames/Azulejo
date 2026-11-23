@@ -163,6 +163,7 @@ The **pretérito perfeito** is the simple past: actions that happened and finish
 | tu | -aste | -este | -iste |
 | ele · ela · você | -ou | -eu | -iu |
 | nós | -ámos | -emos | -imos |
+| vós | -astes | -estes | -istes |
 | eles · elas · vocês | -aram | -eram | -iram |
 !pt In Portugal the *nós* form of -ar verbs takes an accent in the past: **falámos** (we spoke) is different from **falamos** (we speak) — the *á* is open. Brazil writes both *falamos*.
 !tip For -er and -ir verbs, *nós* is the same in the present and the past (*comemos, partimos*): the context tells you which.
@@ -244,8 +245,9 @@ u19: {
 ## The imperfeito
 The **pretérito imperfeito** describes the past as a background: habits, descriptions, ongoing states — things with no clear beginning or end.
 @conj morar,viver,partir imp
-- **-ar** verbs: -ava, -avas, -ava, -ávamos, -avam
-- **-er** and **-ir** verbs: -ia, -ias, -ia, -íamos, -iam
+- **-ar** verbs: -ava, -avas, -ava, -ávamos, -áveis, -avam
+- **-er** and **-ir** verbs: -ia, -ias, -ia, -íamos, -íeis, -iam
+- (The fifth form is vós: *faláveis, comíeis* — see [[vos]].)
 - The **eu** and **ele** forms are identical: *eu morava, ele morava*.
 
 ## Only four irregular verbs
@@ -312,6 +314,7 @@ For **você / o senhor / a senhora**, **nós** and **vocês**, take the *eu* for
 | nós | falemos | comamos | abramos | façamos |
 | vocês | falem | comam | abram | façam |
 @conj tomar,beber impa
+- **Vós** has a form of its own — the present without the *-s*: *falai, comei, abri, fazei* (and *sede, ide*). You'll meet it in prayers and old texts. See [[imperativo]].
 ### Saying don't
 The negative uses those "swapped" forms for every person — including tu:
 > Não fales! · Não fale! · Não falem! = Don't speak!
@@ -499,8 +502,8 @@ The **conjuntivo** (subjunctive) is a set of verb forms for things that are wish
 
 ## Forming it
 Take the **eu** form of the present, drop the **-o**, and add the "opposite" vowel:
-- **-ar** verbs take **-e**: falo → fal**e**, fal**es**, fal**e**, fal**emos**, fal**em**
-- **-er** and **-ir** verbs take **-a**: como → com**a**, parto → part**a**
+- **-ar** verbs take **-e**: falo → fal**e**, fal**es**, fal**e**, fal**emos**, fal**eis**, fal**em**
+- **-er** and **-ir** verbs take **-a**: como → com**a**, com**as**, com**a**, com**amos**, com**ais**, com**am** · parto → part**a**
 @conj falar,comer,fazer,ter cpres
 Because it's built on the *eu* form, irregular presents carry over: *digo → diga, venho → venha, posso → possa, ouço → ouça*.
 ### Seven verbs to learn by heart
@@ -539,12 +542,12 @@ u26: {
   goals: ['Form the imperfeito do conjuntivo', 'Talk about imaginary or unlikely situations with se', 'Use it after a past trigger: queria que…'],
   text: `
 ## Forming it
-Take the **eles** form of the pretérito perfeito, drop **-ram**, and add **-sse, -sses, -sse, -ssemos, -ssem**:
+Take the **eles** form of the pretérito perfeito, drop **-ram**, and add **-sse, -sses, -sse, -ssemos, -sseis, -ssem**:
 | falaram → falasse | comeram → comesse |
 | fizeram → fizesse | tiveram → tivesse |
 | foram → fosse | puderam → pudesse |
 @conj falar,ter,ser,poder cimp
-- The nós form takes an accent: *falássemos, comêssemos, fizéssemos, partíssemos*.
+- The nós and vós forms take an accent: *falássemos, comêssemos, fizéssemos, partíssemos* · *falásseis, fizésseis*.
 
 ## If … (imaginary or unlikely)
 Use **se + imperfeito do conjuntivo**, and the conditional (or the imperfeito) in the other half:
@@ -579,7 +582,7 @@ u27: {
 Portuguese has a special subjunctive for **conditions in the future**: *when you arrive*, *if you have time*, *as soon as I know*. English uses the present; Portuguese uses the **futuro do conjuntivo**.
 
 ## Forming it
-Start from the **eles** form of the pretérito perfeito, drop **-ram**, and add **-r, -res, -r, -rmos, -rem**:
+Start from the **eles** form of the pretérito perfeito, drop **-ram**, and add **-r, -res, -r, -rmos, -rdes, -rem**:
 | falaram → falar | comeram → comer |
 | tiveram → tiver | fizeram → fizer |
 | foram → for | puderam → puder |

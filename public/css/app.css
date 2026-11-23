@@ -577,8 +577,12 @@ textarea.answer:focus, .cz-gap:focus, .conj-in input:focus { outline: none; bord
   .top .logo-tile { width: 34px; height: 34px; }
   .top-stats { display: flex; gap: 14px; align-items: center; }
   .main { padding: 18px max(16px, env(safe-area-inset-right)) 110px max(16px, env(safe-area-inset-left)); }
-  .tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--card); border-top: 2px solid var(--line); padding: 6px 4px max(6px, env(safe-area-inset-bottom)); }
+  .tabs { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--card); border-top: 2px solid var(--line); padding: 6px 4px max(6px, env(safe-area-inset-bottom)); }
   .tabs a { position: relative; display: grid; justify-items: center; gap: 2px; padding: 6px 2px; border-radius: 12px; color: var(--ink2); text-decoration: none; font-size: 11px; font-weight: 800; }
+  .tabs a span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  @media (max-width: 400px) { .tabs a { font-size: 10px; letter-spacing: -.02em; padding: 6px 0; } .tabs a .i { width: 24px; height: 24px; } }
+  @media (max-width: 370px) { .tabs a { font-size: 9.5px; } }
+  @media (max-width: 335px) { .tabs a { font-size: 8.6px; } }
   .tabs a .i { width: 26px; height: 26px; }
   .tabs a.on { color: var(--cobalt); background: var(--cobalt-l); }
   .tabs .due-badge { position: absolute; top: 0; right: 14%; margin: 0; font-size: 10px; padding: 0 6px; }
@@ -699,10 +703,57 @@ textarea.answer:focus, .cz-gap:focus, .conj-in input:focus { outline: none; bord
 .conj-embed thead a { text-decoration: none; }
 .conj-embed tbody th { font-size: 13px; color: var(--ink2); font-weight: 700; white-space: nowrap; }
 .conj-embed .form b { color: var(--sc); }
-.conj-embed tr.vos th, .conj-embed tr.vos .form, .tcard tr.vos th, .tcard tr.vos .form { color: var(--ink2); opacity: .55; font-weight: 600; }
-.conj-embed tr.vos .form b { color: inherit; }
-.tcard tr.vos .form { cursor: default; }
-.vos-key { color: var(--ink2); opacity: .6; font-weight: 700; font-size: 14px; }
+/* vós: shown in full so it can be learned, but marked as the old-fashioned form */
+.conj-embed tr.vos, .tcard tr.vos { background: repeating-linear-gradient(135deg, transparent 0 6px, color-mix(in srgb, var(--line) 45%, transparent) 6px 7px); }
+.conj-embed tr.vos .form:not(.irr):not(.sp), .tcard tr.vos .form:not(.irr):not(.sp) { color: var(--ink2); }
+.vos-l { color: var(--ink2); font-style: italic; text-decoration: underline dotted; text-underline-offset: 3px; }
+.vos-l:hover { color: var(--cobalt); }
+.vos-key { color: var(--ink2); font-weight: 700; font-size: 14px; padding: 2px 8px; border-radius: 8px; background: repeating-linear-gradient(135deg, transparent 0 6px, color-mix(in srgb, var(--line) 60%, transparent) 6px 7px); }
+.vos-key:hover { color: var(--cobalt); }
+
+/* grammar reference */
+.glink { color: var(--cobalt); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.glink .i { width: 16px; height: 16px; vertical-align: -3px; }
+.ch-help { margin: 12px 0 0; font-size: 14px; }
+.ch-help a { color: var(--ink2); text-decoration: none; display: inline-flex; gap: 6px; align-items: flex-start; }
+.ch-help a:hover { color: var(--cobalt); }
+.ch-help .i { flex: none; width: 18px; height: 18px; color: light-dark(#b07d00, #f2c35b); }
+.gram-box { max-width: 72ch; margin: 34px 0 6px; padding: 18px 20px; border-radius: 18px; background: var(--card2); border: 2px solid var(--line); }
+.gram-box h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 2px; color: var(--ink); font-size: 18px; }
+.gram-box h3 .i { color: var(--sc, var(--cobalt)); }
+.gram-box > p { margin: 0 0 12px; }
+.gram-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 8px; }
+.gram-links a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 8px; padding: 10px 14px; border-radius: 14px; background: var(--card); border: 2px solid var(--line); color: var(--ink); text-decoration: none; }
+.gram-links a:hover { border-color: var(--cobalt); }
+.gram-links a b { font-size: 15px; }
+.gram-links a small { grid-column: 1; color: var(--ink2); font-size: 13px; line-height: 1.35; }
+.gram-links a .i { grid-column: 2; grid-row: 1 / span 2; color: var(--ink2); }
+.gram-card .gc-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+.gram-card .gc-i { flex: none; width: 44px; height: 44px; padding: 8px; border-radius: 12px; background: var(--cobalt-l); color: var(--cobalt); }
+.gram-card h2 { margin: 0 0 4px; }
+.gram-card .gc-head p { margin: 0; }
+.gram-card > p:last-child { margin: 12px 0 0; }
+.gram-intro p { margin-top: 0; }
+.gram-group { margin: 22px 0; }
+.gram-group h2 { font-size: 22px; margin-bottom: 10px; }
+.gram-group h2 small { font-size: 15px; font-weight: 700; }
+.gram-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+.gram-topic { display: flex; flex-direction: column; gap: 3px; text-decoration: none; color: var(--ink); padding: 16px 18px; margin: 0; }
+.gram-topic:hover { border-color: var(--cobalt); }
+.gram-topic b { font-size: 17px; }
+.gram-topic span { color: var(--ink2); font-size: 14px; line-height: 1.4; }
+.gram-topic small { margin-top: 4px; font-size: 12px; font-weight: 700; }
+.chapter.gram { --sc: #6b4fd0; }
+.see-also { margin: 18px 0; }
+.see-also .kicker { margin-bottom: 8px; }
+.see-also .chip .i { width: 16px; height: 16px; }
+.verb-help { font-size: 14px; color: var(--ink2); display: flex; gap: 8px; align-items: flex-start; margin: 4px 0 12px; }
+.verb-help > .i:first-child { flex: none; width: 20px; height: 20px; color: var(--cobalt); }
+.verb-help .i { width: 16px; height: 16px; vertical-align: -3px; }
+.m-card { --sc: var(--cobalt); }
+.m-card .conj-embed { margin: 8px 0 16px; }
+.m-card .conj-embed figcaption { display: none; }
+.m-card .conj-embed table { min-width: 0; }
 .ch-sec h3 { font-size: 16px; color: var(--ink2); margin: 16px 0 4px; }
 .vpic { display: inline-grid; place-items: center; color: var(--cobalt); }
 a.wmain { color: var(--ink); text-decoration: none; }

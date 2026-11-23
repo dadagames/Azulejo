@@ -155,20 +155,72 @@
       html += `<section class="level c${sec.id}"><header class="level-head"><span class="lvl">${esc(sec.level)}</span><div><h2>${esc(sec.pt)}</h2><p class="muted">${esc(sec.en)} · ${doneN}/${us.length} chapters</p></div><div class="sec-bar"><span style="width:${Math.round(100 * doneN / us.length)}%"></span></div></header>
         <ol class="ch-list">${us.map(u => { const st = chStatus(u); return `<li><a class="ch-row ${st.cls}" href="#ch-${u.id}"><span class="ch-n">${u.n}</span><span class="ch-t"><b>${esc(u.pt)}</b><small>${esc(u.en)}</small></span><span class="ch-meta">${st.txt}</span>${I('chev')}</a></li>`; }).join('')}</ol></section>`;
     });
-    html += `</div><section class="card"><h2>Tenses at a glance</h2><div class="tense-guide">${E.TENSES.filter(t => !t.aux || t.k === 'ppc' || t.k === 'mqpc').map(t => `<details><summary><b>${esc(t.pt)}</b> <span class="muted">${esc(t.en)}</span></summary><p>${esc(t.use)}</p></details>`).join('')}</div></section>`;
+    html += `</div>${gramCard()}<section class="card"><h2>Tenses at a glance</h2><div class="tense-guide">${E.TENSES.filter(t => !t.aux || t.k === 'ppc' || t.k === 'mqpc').map(t => { const g = GR().tenses[t.k]; return `<details><summary><b>${esc(t.pt)}</b> <span class="muted">${esc(t.en)}</span></summary><p>${esc(t.use)}</p>${g ? `<p><a class="glink" href="#grammar-${g}">How to form it and when to use it ${I('chev')}</a></p>` : ''}</details>`; }).join('')}</div></section>`;
     main().innerHTML = html;
+  }
+
+  function gramCard() {
+    const G = GR(); if (!G.groups.length) return '';
+    return `<section class="card gram-card"><div class="gc-head">${I('gram', 'gc-i')}<div><h2>Gramática</h2><p class="muted">Every rule of the language in one place, in plain English: the persons, what <b>vós</b> is, how to form every tense, pronouns, articles and more.</p></div></div>
+      <div class="gram-links">${G.groups.map(g => `<a href="#grammar-g-${g.id}"><b>${esc(g.pt)}</b><small>${esc(g.en)} · ${g.topics.length} topics</small>${I('chev')}</a>`).join('')}</div>
+      <p><a class="btn ghost small" href="#grammar">${I('gram')} Open the grammar</a></p></section>`;
+  }
+
+  /* ---------------- Grammar reference ---------------- */
+  function gramOrder() { return GR().groups.flatMap(g => g.topics.map(id => ({ id, g }))).filter(x => GR().t[x.id]); }
+  function gramChapters(id) { const C = GR().chapters; return AZ.units.filter(u => (C[u.id] || []).includes(id)); }
+  let gramQ = '';
+  function viewGrammar(anchor) {
+    const G = GR(), q = E.stripAccents(gramQ.trim().toLowerCase());
+    const hit = id => { if (!q) return true; const T = G.t[id]; return E.stripAccents((T.pt + ' ' + T.en + ' ' + T.text).toLowerCase()).includes(q); };
+    main().innerHTML = `<h1 class="page-t">Gramática <small>The reference — every rule, every form</small></h1>
+      <section class="card gram-intro"><p>The course chapters teach things a little at a time. This is where it all comes together: look anything up here whenever you need it. New to grammar terms? Start with <a class="glink" href="#grammar-terms">Palavras da gramática</a>, then <a class="glink" href="#grammar-persons">the persons</a> and <a class="glink" href="#grammar-vos">vós</a>.</p>
+        <label class="search">${I('search')}<input id="gq" type="search" placeholder="Search the grammar: vós, plural, lhe, quando, há…" value="${esc(gramQ)}" autocomplete="off" spellcheck="false"></label></section>
+      ${G.groups.map(g => { const ts = g.topics.filter(id => G.t[id] && hit(id)); return ts.length ? `<section class="gram-group" id="g-${g.id}"><h2>${esc(g.pt)} <small class="muted">${esc(g.en)}</small></h2><div class="gram-grid">${ts.map(id => { const T = G.t[id], chs = gramChapters(id); return `<a class="card gram-topic" href="#grammar-${id}"><b>${esc(T.pt)}</b><span>${esc(T.en)}</span>${chs.length ? `<small class="muted">Chapter ${chs.slice(0, 3).map(u => u.n).join(', ')}</small>` : ''}</a>`; }).join('')}</div></section>` : ''; }).join('') || `<p class="muted">Nothing found for “${esc(gramQ)}”.</p>`}`;
+    const inp = $('#gq'); inp.addEventListener('input', () => { gramQ = inp.value; clearTimeout(inp._t); inp._t = setTimeout(() => { const pos = inp.selectionStart; viewGrammar(); const n = $('#gq'); n.focus(); n.setSelectionRange(pos, pos); }, 180); });
+    if (anchor) { const el = $('#g-' + anchor); if (el) setTimeout(() => el.scrollIntoView({ block: 'start' }), 0); }
+  }
+  function viewGrammarTopic(id) {
+    const G = GR(), T = G.t[id]; if (!T) { location.replace('#grammar'); return; }
+    const order = gramOrder(), i = order.findIndex(x => x.id === id), grp = order[i].g, prev = order[i - 1], nxt = order[i + 1];
+    const chs = gramChapters(id);
+    main().innerHTML = `<a class="back" href="#grammar">${I('back')} Gramática</a>
+      <article class="chapter gram">
+        <header class="ch-head"><span class="kicker">Gramática · ${esc(grp.pt)}</span><h1>${esc(T.pt)}</h1><p class="sub">${esc(T.en)}</p></header>
+        <section class="book">${md(T.text)}</section>
+        ${chs.length ? `<aside class="gram-box"><h3>${I('book')} In the course</h3><p class="muted small">The chapters where this comes up, with examples, readings and practice.</p><div class="gram-links">${chs.map(u => `<a href="#ch-${u.id}"><b>${u.n}. ${esc(u.pt)}</b><small>${esc(u.en)}${AZ.chDone(u) ? ' · done' : ''}</small>${I('chev')}</a>`).join('')}</div></aside>` : ''}
+      </article>
+      <nav class="pager">${prev ? `<a href="#grammar-${prev.id}">${I('back')} ${esc(G.t[prev.id].pt)}</a>` : '<span></span>'}${nxt ? `<a href="#grammar-${nxt.id}">${esc(G.t[nxt.id].pt)} ${I('chev')}</a>` : ''}</nav>`;
   }
 
   /* ---------------- The chapter page ---------------- */
   // the course book's little markup (see data/book.js)
-  function inline(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>'); }
+  const GR = () => window.AZ_GRAMMAR || { groups: [], t: {}, chapters: {}, tenses: {} };
+  // [[vos]], [[vos|text]], [[u17]]: links to a grammar topic or a chapter
+  function linkTo(id, text) {
+    if (/^u\d+$/.test(id)) { const u = AZ.units.find(x => x.id === id); return u ? `<a class="glink" href="#ch-${id}">${text || 'chapter ' + u.n}</a>` : esc(text || id); }
+    const T = GR().t[id]; return T ? `<a class="glink" href="#grammar-${id}">${text || esc(T.pt)}</a>` : (text || esc(id));
+  }
+  function inline(s) {
+    return esc(s).replace(/\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g, (m, id, tx) => linkTo(id, tx))
+      .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>');
+  }
+  function seeAlso(ids) {
+    const links = ids.map(id => {
+      if (/^u\d+$/.test(id)) { const u = AZ.units.find(x => x.id === id); return u ? `<a class="chip" href="#ch-${id}">${I('book')} ${u.n}. ${esc(u.pt)}</a>` : ''; }
+      const T = GR().t[id]; return T ? `<a class="chip" href="#grammar-${id}">${I('gram')} ${esc(T.pt)}</a>` : '';
+    }).filter(Boolean);
+    return links.length ? `<div class="see-also"><span class="kicker">See also</span><div class="chips">${links.join('')}</div></div>` : '';
+  }
+  const VOS_TH = `<a class="vos-l" href="#grammar-vos" title="vós — you (plural), old-fashioned. Tap to read about it.">vós</a>`;
   function conjEmbed(verbs, t) {
     const T = E.TENSE[t]; if (!T) return '';
     const Fs = verbs.map(v => [v, E.conjugate(v)]).filter(x => x[1] && x[1][t]);
     if (!Fs.length) return '';
     const imp = t === 'impa' || t === 'impn';
     const ps = imp ? [1, 2, 3, 4, 5] : [0, 1, 2, 3, 4, 5];
-    const lab = imp ? ['', 'tu', 'você', 'nós', 'vós', 'vocês'] : ['eu', 'tu', 'ele · ela · você', 'nós', 'vós', 'eles · elas · vocês'];
+    const lab = (imp ? ['', 'tu', 'você', 'nós', 'vós', 'vocês'] : ['eu', 'tu', 'ele · ela · você', 'nós', 'vós', 'eles · elas · vocês']).slice();
+    lab[4] = VOS_TH;
     const cell = (v, F, p) => {
       const f = F[t][p] || ''; const mk = F.marks && F.marks[t] ? F.marks[t][p] : 0;
       const stem = /^(fut|cond)$/.test(t) ? v.replace(/ô/, 'o') : v.slice(0, -2);
@@ -193,6 +245,7 @@
       if (l.startsWith('!pt ')) { close(); const tx = l.slice(4).replace(/^In Portugal,? (\w)/, (m, c) => c.toUpperCase()); out += `<p class="note ptbox"><span class="flag-pt" aria-hidden="true"></span><span><b>Em Portugal</b> ${inline(tx)}</span></p>`; return; }
       if (l.startsWith('!warn ')) { close(); out += `<p class="note warnbox">${I('info')}<span><b>Watch out</b> ${inline(l.slice(6))}</span></p>`; return; }
       if (l.startsWith('@conj ')) { close(); const [vs, t] = l.slice(6).trim().split(/\s+/); out += conjEmbed(vs.split(','), t || 'pres'); return; }
+      if (l.startsWith('@see ')) { close(); out += seeAlso(l.slice(5).split(/[\s,]+/).filter(Boolean)); return; }
       if (l.startsWith('|')) {
         if (list) { out += '</ul>'; list = false; }
         const head = l.startsWith('|!');
@@ -203,6 +256,13 @@
       close(); out += `<p>${inline(l)}</p>`;
     });
     close(); return out;
+  }
+  // the reference pages that go with a chapter
+  function gramBox(u) {
+    const ids = (GR().chapters[u.id] || []).filter(id => GR().t[id]);
+    if (!ids.length) return '';
+    return `<aside class="gram-box"><h3>${I('gram')} Look it up in the grammar</h3><p class="muted small">The full rules behind this chapter, with every form — including vós.</p>
+      <div class="gram-links">${ids.map(id => { const T = GR().t[id]; return `<a href="#grammar-${id}"><b>${esc(T.pt)}</b><small>${esc(T.en)}</small>${I('chev')}</a>`; }).join('')}</div></aside>`;
   }
   let hideEn = false;
   function viewChapter(id) {
@@ -217,9 +277,10 @@
       <article class="chapter c${u.s}">
         <header class="ch-head"><span class="kicker">Capítulo ${u.n} · ${esc(u.lv.code)} · ${esc(u.lv.pt)}</span><h1>${esc(u.pt)}</h1><p class="sub">${esc(u.en)}</p>
           ${r.done ? `<p class="ch-done">${I('check')} Chapter test passed${r.best ? ` · best ${r.best}%` : ''}</p>` : ''}
-          <nav class="ch-tabs">${[['text', 'Explicação'], ['vocab', 'Vocabulário'], ['ex', 'Exemplos'], ['read', 'Leitura'], ['prac', 'Praticar']].filter(([k]) => k !== 'read' || reads.length).map(([k, l]) => `<button class="pill" data-act="ch-go" data-s="${k}">${l}</button>`).join('')}</nav></header>
+          <nav class="ch-tabs">${[['text', 'Explicação'], ['vocab', 'Vocabulário'], ['ex', 'Exemplos'], ['read', 'Leitura'], ['prac', 'Praticar']].filter(([k]) => k !== 'read' || reads.length).map(([k, l]) => `<button class="pill" data-act="ch-go" data-s="${k}">${l}</button>`).join('')}</nav>
+          <p class="ch-help"><a href="#grammar-terms">${I('bulb')} Not sure what a word like <i>verb</i>, <i>subject</i> or <i>tense</i> means? Every grammar word is explained here.</a></p></header>
         ${u.goals.length ? `<section class="goals"><h2>Neste capítulo <small>In this chapter you'll learn to</small></h2><ul>${u.goals.map(g => `<li>${esc(g)}</li>`).join('')}</ul></section>` : ''}
-        <section class="book" id="s-text">${md(u.text)}</section>
+        <section class="book" id="s-text">${md(u.text)}${gramBox(u)}</section>
         <section class="ch-sec" id="s-vocab"><h2>Vocabulário <small>${vocab.reduce((a, g) => a + g.words.length + g.verbs.length, 0)} words and verbs</small></h2>
           ${vocab.map(g => `<h3>${esc(g.title)}</h3><div class="wlist">${g.words.map(wordRow).join('')}${g.verbs.map(v => `<div class="wrow"><a class="wmain" href="#verb-${v.slug}"><span class="pic sm vpic" aria-hidden="true">${I('verbs')}</span><b class="pt">${esc(v.inf)}</b><span class="muted">${esc(AZ.glossShort(v.en))}</span></a><span class="stage-pill none">verb</span><button class="say sm" data-act="say" data-text="${esc(v.inf)}" aria-label="Listen to ${esc(v.inf)}">${I('speaker')}</button></div>`).join('')}</div>`).join('')}
         </section>
@@ -449,6 +510,7 @@
     main().innerHTML = `<h1 class="page-t">Verbos <small>${AZ.verbs.length} verbs, every tense</small></h1>
       <div class="toolbar"><label class="search">${I('search')}<input id="vq" type="search" placeholder="Search a verb, a form (fiz, tivesse…) or English" value="${esc(verbFilter.q)}" autocomplete="off" spellcheck="false" lang="pt-PT"></label>
         <a class="btn primary" href="#practice" data-act="prac-mode" data-m="conj">${I('bolt')} Practise conjugation</a></div>
+      <p class="verb-help">${I('gram')} New to verbs? Read <a class="glink" href="#grammar-verbs">how verbs work</a>, <a class="glink" href="#grammar-persons">the six persons</a> and <a class="glink" href="#grammar-vos">what vós is</a>. Every tense has an ${I('info')} button with its rules.</p>
       <div class="filters" role="tablist">${FL.map(([k, l]) => `<button class="pill ${f === k && !q ? 'on' : ''}" data-act="vf" data-f="${k}">${l}</button>`).join('')}</div>
       ${formHit && formHit.length ? `<div class="card form-hit">${formHit.slice(0, 4).map(h => { const T = E.TENSE[h.t]; return `<p><b class="pt">${esc(q)}</b> is <a href="#verb-${E.slug(h.inf)}"><b>${esc(h.inf)}</b></a> — ${h.t === 'pp' ? 'past participle' : h.t === 'ger' ? 'gerund' : h.t === 'inf' ? 'infinitive' : esc(T.pt) + ', ' + ['eu', 'tu', 'ele/ela/você', 'nós', 'vós', 'eles/elas/vocês'][h.p]}</p>`; }).join('')}</div>` : ''}
       <div class="verb-list">${list.slice(0, 400).map(v => { const F = E.conjugate(v.inf); return `<a class="verb-row" href="#verb-${v.slug}"><b class="pt">${esc(v.inf)}</b><span class="vgloss">${esc(AZ.glossShort(v.en))}</span>${verbBadges(F)}</a>`; }).join('') || '<p class="muted">No verbs match.</p>'}</div>
@@ -457,14 +519,13 @@
   }
   let showCompound = false;
   function tableHTML(F, t) {
-    const T = E.TENSE[t], vos = AZ.S.settings.vos;
+    const T = E.TENSE[t];
     const imp = t === 'impa' || t === 'impn';
     const ps = imp ? [1, 2, 3, 4, 5] : [0, 1, 2, 3, 4, 5];
     const lab = imp ? ['', 'tu', 'você', 'nós', 'vós', 'vocês'] : ['eu', 'tu', 'ele / ela / você', 'nós', 'vós', 'eles / elas / vocês'];
     const rows = ps.map(p => {
       const f = F[t][p]; const mk = F.marks && F.marks[t] ? F.marks[t][p] : 0;
-      if (p === 4 && !vos) return `<tr class="vos" title="vós — old-fashioned, see chapter 2"><th>${lab[p]}</th><td><span class="form">${esc(f)}</span></td></tr>`;
-      return `<tr><th>${lab[p]}</th><td><button class="form ${mk === 2 ? 'irr' : mk === 1 ? 'sp' : ''}" data-act="say" data-text="${esc((t === 'impn' ? 'não ' : '') + f)}">${t === 'impn' ? '<span class="muted">não </span>' : ''}${esc(f)}</button></td></tr>`;
+      return `<tr class="${p === 4 ? 'vos' : ''}"><th>${p === 4 ? VOS_TH : lab[p]}</th><td><button class="form ${mk === 2 ? 'irr' : mk === 1 ? 'sp' : ''}" data-act="say" data-text="${esc((t === 'impn' ? 'não ' : '') + f)}">${t === 'impn' ? '<span class="muted">não </span>' : ''}${esc(f)}</button></td></tr>`;
     }).join('');
     return `<article class="tcard"><header><h3>${esc(T.pt)}</h3><p>${esc(T.en)}</p><button class="icon-btn sm" data-act="tense-info" data-t="${t}" aria-label="When to use ${esc(T.pt)}">${I('info')}</button></header><table>${rows}</table></article>`;
   }
@@ -482,8 +543,8 @@
         <dl class="vh-forms"><div><dt>Gerúndio</dt><dd><button class="form" data-act="say" data-text="${esc(F.ger)}">${esc(F.ger)}</button></dd></div><div><dt>Particípio</dt><dd><button class="form ${F.marks && F.marks.pp === 2 ? 'irr' : ''}" data-act="say" data-text="${esc(F.pp)}">${esc(F.pp)}</button>${F.pp2 ? ` <span class="muted">/ ${esc(F.pp2)} (with ser, estar)</span>` : ''}</dd></div></dl>
         ${F.note ? `<p class="t-note">${I('bulb')} ${esc(F.note)}</p>` : ''}</div>
         <div class="vh-actions"><button class="btn primary" data-act="verb-gym" data-inf="${esc(v.inf)}">${I('bolt')} Practise this verb</button><button class="btn ghost" data-act="verb-table" data-inf="${esc(v.inf)}" data-t="pres">${I('verbs')} Write a table</button><button class="btn ghost" data-act="verb-add" data-inf="${esc(v.inf)}" ${inRev ? 'disabled' : ''}>${I(inRev ? 'check' : 'plus')} ${inRev ? 'In your reviews' : 'Add to reviews'}</button>
-        <label class="toggle"><input type="checkbox" data-act="vos" ${AZ.S.settings.vos ? 'checked' : ''}><span>Treat vós as normal (drills too)</span></label></div></section>
-      <p class="legend"><span class="form irr">irregular</span><span class="form sp">spelling change</span><span class="vos-key">vós (rare)</span><span class="muted">Tap any form to hear it.</span></p>
+        <label class="toggle"><input type="checkbox" data-act="vos" ${AZ.S.settings.vos ? 'checked' : ''}><span>Include vós when I practise</span></label></div></section>
+      <p class="legend"><span class="form irr">irregular</span><span class="form sp">spelling change</span><a class="vos-key" href="#grammar-vos">vós — you (plural), old-fashioned: what is it?</a><span class="muted">Tap any form to hear it, or ${I('info')} for how a tense works.</span></p>
       ${groups.map(([g, ts]) => `<h2 class="grp">${g}</h2><div class="tgrid">${ts.map(t => tableHTML(F, t)).join('')}</div>`).join('')}
       <h2 class="grp"><button class="link" data-act="compound">${I(showCompound ? 'minus' : 'plus')} Tempos compostos <small class="muted">ter + ${esc(F.pp)}</small></button></h2>
       ${showCompound ? `<div class="tgrid">${comp.map(t => tableHTML(F, t)).join('')}</div>` : ''}
@@ -620,13 +681,14 @@
       else if (name === 'read') viewRead();
       else if (name === 'story') viewStory(arg);
       else if (name === 'me') viewMe();
+      else if (name === 'grammar') { if (!arg) viewGrammar(); else if (arg.startsWith('g-')) viewGrammar(arg.slice(2)); else viewGrammarTopic(arg); }
       else viewCourse();
     } catch (e) { console.error(e); main().innerHTML = `<div class="card"><h2>Something went wrong</h2><p class="muted">${esc(e.message)}</p><a class="btn primary" href="#course">Back to the course</a></div>`; }
     renderChrome();
   }
   AZ.render = route;
   let lastHash = location.hash;
-  window.addEventListener('hashchange', () => { if (location.hash.split('-')[0] !== lastHash.split('-')[0] || !/^#(verb|deck|story)/.test(location.hash)) window.scrollTo(0, 0); lastHash = location.hash; route(); });
+  window.addEventListener('hashchange', () => { AZ.closeModal(); if (location.hash.split('-')[0] !== lastHash.split('-')[0] || !/^#(verb|deck|story)/.test(location.hash)) window.scrollTo(0, 0); lastHash = location.hash; route(); });
   AZ.onChange(kind => { if (kind === 'sync' || kind === 'voices') { renderChrome(); if (kind === 'voices' && /^#(me|ch|practice)/.test(location.hash) && !AZ.inSession() && !storyState.playing) { const y = window.scrollY; route(); window.scrollTo(0, y); } return; } if (!AZ.inSession()) { const y = window.scrollY; route(); window.scrollTo(0, y); } });
 
   /* ---------------- Global actions ---------------- */
@@ -676,7 +738,14 @@
       case 'vf': verbFilter = { q: '', f: t.dataset.f }; viewVerbs(); break;
       case 'compound': showCompound = !showCompound; route(); break;
       case 'vos': AZ.S.settings.vos = t.checked; AZ.save(true); route(); break;
-      case 'tense-info': { const T = E.TENSE[t.dataset.t]; AZ.modal(`<button class="icon-btn m-x" data-act="m-close" aria-label="Close">${I('x')}</button><h3>${esc(T.pt)}</h3><p class="muted">${esc(T.en)}</p><p>${esc(T.use)}</p>`); break; }
+      case 'tense-info': {
+        const k = t.dataset.t, T = E.TENSE[k], g = GR().tenses[k], GT = g && GR().t[g];
+        const reg = conjEmbed(['falar', 'comer', 'partir'], k);
+        AZ.modal(`<button class="icon-btn m-x" data-act="m-close" aria-label="Close">${I('x')}</button><h3>${esc(T.pt)}</h3><p class="muted">${esc(T.en)}</p><p>${esc(T.use)}</p>
+          ${reg ? `<p class="small"><b>The regular pattern</b> — the endings in bold are what you add to the stem:</p>${reg}` : ''}
+          ${GT ? `<a class="btn primary" href="#grammar-${g}">${I('gram')} ${esc(GT.pt)}: the full explanation</a>` : ''}`);
+        break;
+      }
       case 'verb-gym': AZ.startVerb(t.dataset.inf); break;
       case 'verb-table': { const inf = t.dataset.inf, ts = AZ.tensesOf(AZ.studied()); AZ.startConjugation({ verbs: [inf], tenses: ts, format: 'tables', n: Math.min(4, ts.length) }); break; }
       case 'verb-add': { const inf = t.dataset.inf; AZ.srsAdd('v:' + inf); ['pres', 'pret', 'imp'].forEach(x => AZ.srsAdd('c:' + inf + ':' + x)); AZ.save(); AZ.toast(inf + ' added: presente, perfeito, imperfeito'); break; }

@@ -154,7 +154,16 @@ For more than one person, Portugal uses **vocês** — for friends and strangers
 Its relatives are still very much alive: **vos** (you, to you) as an object pronoun, and **vosso** (your) as a possessive, both used with *vocês*:
 > Vejo-vos amanhã! = See you (all) tomorrow!
 > A vossa casa é linda. = Your house is lovely.
-!tip You need to *recognise* vós forms — they usually end in **-is**: *sois, falais, comeis, partis* — but you don't need to use them. Azulejo's tables show vós in grey, and drills leave it out unless you switch it on in your settings.
+### How to conjugate vós
+Vós has its own ending in every tense, and it's very regular. Here is the present, next to the *vocês* form you'll actually use (you'll learn the regular verbs properly in chapter 4):
+|! | -ar: falar | -er: comer | -ir: partir | ser |
+| vocês — the normal *you all* | falam | comem | partem | são |
+| vós — the old *you all* | fal**ais** | com**eis** | part**is** | sois |
+- In the past it ends in **-stes**: *falastes, comestes, partistes, fostes* (you all spoke, ate, left, were).
+- In orders it ends in **-ai, -ei, -i** or **-de**: *falai! comei! parti! sede! ide!* — at the end of Mass the priest says *Ide em paz* (Go in peace).
+- Every verb table in Azulejo shows the vós form on its own striped row, so you can always look it up. The [[vos|vós page in the grammar]] has every tense and the irregular verbs.
+!tip You need to *recognise* vós forms — the giveaway is an ending in **-is** or **-des**: *sois, falais, comeis, partis, tendes, ides*. You don't need to use them: say *vocês*. Practice leaves vós out unless you switch on *Practise vós too* in **Eu → Settings**.
+@see vos persons
 
 ## Dropping the pronoun
 The verb ending already tells you who is speaking, so Portuguese usually **leaves out eu, tu and nós**:
@@ -220,7 +229,7 @@ Look closely and you'll see a logic that comes back in almost every tense:
 | tu | **-s** | tu forms nearly always end in -s |
 | ele · ela · você | **-a** or **-e** | the bare stem plus a vowel |
 | nós | **-mos** | nós always ends in -mos |
-| vós | **-is** | rare (see chapter 2) |
+| vós | **-is** (-ais, -eis, -is) | the old *you all* ([[u2]]): falais, comeis, partis |
 | eles · elas · vocês | **-m** | the plural always ends in -m |
 - **-ar** verbs have an **a** in their endings: fal**as**, fal**a**, fal**amos**, fal**am**.
 - **-er** and **-ir** verbs have an **e**: com**es**, com**e**, com**em** · part**es**, part**e**, part**em**. They are only different in *nós* and *vós*: com**emos**, part**imos**.
