@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // The Worker name. If you import the repo in the Cloudflare dashboard, give the project this same name.
+  "name": "azulejo",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+
+  // The app itself: plain files served straight from ./public.
+  // Only /api/* runs the Worker code (saving and loading progress).
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // Where progress is stored. No database_id needed: Wrangler creates the database
+  // the first time you deploy. (If yours does not, see "Database" in the README.)
+  "d1_databases": [{ "binding": "DB" }],
+
+  "observability": { "enabled": true }
+}

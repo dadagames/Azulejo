@@ -1,0 +1,14 @@
+{
+  "name": "azulejo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Study European Portuguese: a course book from A1 to B1, writing and conjugation practice, chapter readings, spaced-repetition reviews and tables for every common verb.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node tests/engine.test.js && node tests/course.check.js && node tests/gen.stress.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.45.0"
+  }
+}
