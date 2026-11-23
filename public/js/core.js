@@ -407,16 +407,28 @@
   const withTimeout = (p, ms) => Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms))]);
 
   async function detectCloud() {
-    const base = (AZ.S.settings.sync.endpoint || '').trim().replace(/\/+$/, '');
-    if (!base) {
-      if (!/^https?:$/.test(location.protocol)) return null; // opened straight from a file
+    // where to save: a server typed in the settings, else the site itself (when it runs on the Worker),
+    // else the Worker named in config.js (copies on GitHub Pages, or opened from a file)
+    const custom = (AZ.S.settings.sync.endpoint || '').trim().replace(/\/+$/, '');
+    const conf = String((window.AZ_CONFIG || {}).api || '').trim().replace(/\/+$/, '');
+    const web = /^https?:$/.test(location.protocol);
+    let candidates = [];
+    if (custom) candidates = [custom];
+    else {
       if (window.claude && typeof window.claude.use === 'function') return null; // running on claude.ai
+      let same = false; try { same = !!conf && new URL(conf).origin === location.origin; } catch (e) {}
+      if (web && !/\.github\.io$/.test(location.hostname)) candidates.push('');
+      if (conf && !same) candidates.push(conf);
     }
-    try {
-      const r = await withTimeout(fetch(base + '/api/health', { cache: 'no-store' }), 4000);
-      if (!r.ok) return null;
-      const j = await r.json(); if (!j || j.app !== 'azulejo') return null;
-    } catch (e) { return null; }
+    let base = null;
+    for (const c of candidates) {
+      try {
+        const r = await withTimeout(fetch(c + '/api/health', { cache: 'no-store' }), 4000);
+        if (!r.ok) continue;
+        const j = await r.json(); if (j && j.app === 'azulejo') { base = c; break; }
+      } catch (e) { /* try the next one */ }
+    }
+    if (base === null) return null;
     if (!AZ.S.settings.sync.id) { AZ.S.settings.sync.id = 'az-' + AZ.uid(22); storeLocal(); }
     const id = () => AZ.S.settings.sync.id;
     const url = () => base + '/api/progress/' + encodeURIComponent(id());

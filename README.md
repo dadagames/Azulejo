@@ -95,6 +95,14 @@ npx wrangler secret put SYNC_TOKEN
 
 Worker → Settings → Domains & Routes → Add → Custom domain.
 
+## Also on GitHub Pages
+
+The repo publishes itself to **https://dadagames.github.io/Azulejo/** with the workflow in `.github/workflows/pages.yml`, on every push to `main`.
+
+One-time setup: on GitHub, open the repository's **Settings → Pages**, and under *Build and deployment* set **Source** to **GitHub Actions**. Then run the workflow once from the **Actions** tab (*GitHub Pages → Run workflow*), or just push a change.
+
+GitHub Pages only serves files, so the copy there saves through your Cloudflare Worker — its address is in `public/config.js`. Accounts are shared: log in on either address and your progress is the same. (Without an account, each address keeps its own progress in the browser.)
+
 ## Run it locally
 
 ```bash
@@ -109,6 +117,7 @@ Or just open `public/index.html` in a browser (progress then stays in that brows
 ```
 public/
   index.html          page shell and icons
+  config.js           the address of your Cloudflare Worker (used by copies such as GitHub Pages)
   css/app.css         all styling (light and dark)
   js/engine.js        conjugation engine, English helper, answer checker
   js/generator.js     builds practice sentences from what you've studied
@@ -124,6 +133,7 @@ public/
   data/gen.js         word classes and sentence frames for the generator
 worker/index.js       Cloudflare Worker: /api/health, /api/progress/<code> and /api/account/*
 wrangler.jsonc        Cloudflare configuration
+.github/workflows/    publishes public/ to GitHub Pages
 tests/                content and engine checks
 ```
 

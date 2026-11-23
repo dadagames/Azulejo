@@ -509,7 +509,7 @@
         ${R.mode === 'cloud' ? accountHTML()
         : R.mode === 'claude' ? `<p>You're using Azulejo on claude.ai, so progress is saved privately to your account and follows you to any device where you open this page. Nobody else can see it.</p>`
         : `<p>Progress is saved in this browser. On your Cloudflare site (see the README) you can create an account and continue on any device.</p>`}
-        <details><summary>Advanced: custom sync server</summary><label class="field"><span>API base URL (leave empty when the site itself runs on Cloudflare)</span><input id="sync-ep" value="${esc(S.settings.sync.endpoint)}" placeholder="https://your-site.workers.dev" spellcheck="false"></label>
+        <details><summary>Advanced: custom sync server</summary><label class="field"><span>API base URL (leave empty to use the one in config.js)</span><input id="sync-ep" value="${esc(S.settings.sync.endpoint)}" placeholder="https://your-site.workers.dev" spellcheck="false"></label>
           <label class="field"><span>Sync password (only if you set SYNC_TOKEN on the Worker)</span><input id="sync-tok" type="password" value="${esc(S.settings.sync.token)}" autocomplete="off"></label>
           <button class="btn ghost small" data-act="sync-ep">Save and reconnect</button></details>
       </section>
