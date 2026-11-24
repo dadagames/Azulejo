@@ -104,6 +104,16 @@ One-time setup: on GitHub, open the repository's **Settings → Pages**, and und
 
 GitHub Pages only serves files, so the copy there saves through your Cloudflare Worker — its address is in `public/config.js`. Accounts are shared: log in on either address and your progress is the same. (Without an account, each address keeps its own progress in the browser.)
 
+## Visitor counts (Cloudflare Web Analytics)
+
+Azulejo can count visits with Cloudflare Web Analytics, which uses no cookies.
+
+1. In Cloudflare, open **Analytics → Web Analytics**. Use the site for your GitHub Pages address (e.g. `dadagames.github.io`), or **Add a site** for it. Add your Worker's address (`azulejo.<you>.workers.dev`) as a second site if you want that copy counted too, because each token only works on its own address.
+2. Click **JS Snippet installation** and copy the token: the long code after `"token": "`.
+3. Paste it next to the right address under `analytics` in `public/config.js` and push.
+
+Data appears after a few minutes. The site moves between pages with `#` addresses, which Cloudflare can't follow, so a page view means one opening of the site. Visitors with ad blockers aren't counted. On a shared `github.io` address, filter by the path `/Azulejo/` to see only this site. The claude.ai version and local copies never load analytics.
+
 ## Run it locally
 
 ```bash
