@@ -4,4 +4,13 @@
    On the Worker's own site it's used directly; set it to '' to save only in the browser. */
 window.AZ_CONFIG = {
   api: 'https://azulejo.daanvanooyen60.workers.dev',
+
+  // Cloudflare Web Analytics: how many people use the site (no cookies, no personal data).
+  // In Cloudflare: Analytics → Web Analytics → your site → "JS Snippet installation", copy the
+  // token (the long code after "token") and paste it between the quotes for that address.
+  // Each token only works on its own address. Leave a token empty to switch analytics off there.
+  analytics: {
+    'dadagames.github.io': '',
+    'azulejo.daanvanooyen60.workers.dev': '',
+  },
 };

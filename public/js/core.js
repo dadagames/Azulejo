@@ -406,6 +406,29 @@
   });
   const withTimeout = (p, ms) => Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms))]);
 
+  // Cloudflare Web Analytics (cookieless visit counts). Loads only on the hosts listed in config.js,
+  // so local copies and the claude.ai version never send anything. The site uses #addresses, which
+  // Cloudflare can't follow, so each opening of the site counts as one page view.
+  AZ.analyticsToken = function (host, A) {
+    // a token, or { host: token }; anything pasted around the token (like the whole snippet) is ignored
+    const pick = v => ((String(v || '').match(/[0-9a-f]{20,64}/i) || [''])[0]);
+    if (!A) return '';
+    if (typeof A === 'string') return pick(A);
+    const h = Object.keys(A).find(k => host === k || host.endsWith('.' + k));
+    return h ? pick(A[h]) : '';
+  };
+  (function loadAnalytics() {
+    try {
+      if (window.claude || location.protocol !== 'https:') return;
+      const token = AZ.analyticsToken(location.hostname, (window.AZ_CONFIG || {}).analytics);
+      if (!token) return;
+      const s = document.createElement('script');
+      s.defer = true;
+      s.src = 'https://static.cloudflareinsights.com/beacon.min.js?token=' + token + '&spa=false';
+      document.head.appendChild(s);
+    } catch (e) {}
+  })();
+
   async function detectCloud() {
     // where to save: a server typed in the settings, else the site itself (when it runs on the Worker),
     // else the Worker named in config.js (copies on GitHub Pages, or opened from a file)
