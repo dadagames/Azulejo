@@ -10,7 +10,7 @@ window.AZ_CONFIG = {
   // token (the long code after "token") and paste it between the quotes for that address.
   // Each token only works on its own address. Leave a token empty to switch analytics off there.
   analytics: {
-    'dadagames.github.io': '',
+    'dadagames.github.io': '89df23c428fe44e188352666baadf8b6',
     'azulejo.daanvanooyen60.workers.dev': '',
   },
 };
