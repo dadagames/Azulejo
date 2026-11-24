@@ -71,7 +71,7 @@
   const DEFAULT = () => ({
     v: 1, created: Date.now(), updated: 0, resetAt: 0, per: {}, xp: 0, days: {}, lessons: {}, srs: {}, reads: {}, mine: [], badges: {},
     stats: { ans: 0, ok: 0, lessons: 0, reviews: 0, gym: 0, perfect: 0, free: 0 },
-    settings: { goal: 30, sound: true, voice: 'auto', rate: 0.9, strict: false, hard: false, vos: false, batch: 20, name: '', sync: { id: '', endpoint: '', token: '' } },
+    settings: { goal: 30, sound: true, voice: 'auto', fallback: false, rate: 0.9, strict: false, hard: false, vos: false, batch: 20, name: '', sync: { id: '', endpoint: '', token: '' } },
   });
   function mergeDefaults(s) {
     const d = DEFAULT(); const out = Object.assign(d, s || {});
@@ -327,12 +327,23 @@
     const t = setTimeout(() => { speechTimers = speechTimers.filter(x => x !== t); AZ.speak(text, Object.assign({}, opts, { _timer: true })); }, ms || 0);
     speechTimers.push(t);
   };
+  // 1. the recorded neural voice (js/voice.js), 2. on claude.ai the Claude voice,
+  // 3. the device's own voice: only when chosen, or allowed for texts without a recording
+  const REC = window.AZVoice;
+  if (REC) REC.load().then(() => AZ.listeners.forEach(fn => fn('voices')));
+  AZ.hasRecordings = () => !!(REC && REC.ready());
+  AZ.recorded = text => !!(REC && REC.ready() && REC.has(text));
   AZ.speak = function (text, opts = {}) {
     if (!opts._timer) clearSpeechTimers();
     text = String(text || '').replace(/[{}]/g, '');
     if (!text) return;
-    const rate = (opts.slow ? 0.62 : 1) * (AZ.S.settings.rate || 0.9);
     const pref = AZ.S.settings.voice;
+    if (pref === 'off') { if (opts.onend) setTimeout(opts.onend, 0); return; }
+    if (REC && REC.ready() && pref !== 'device' && pref !== 'claude') {
+      if (REC.play(text, { rate: opts.slow ? 0.72 : (AZ.S.settings.rate || 0.9) / 0.9, onend: opts.onend })) return;
+      if (!AZ.S.settings.fallback) { if (opts.onend) setTimeout(opts.onend, 0); return; }
+    }
+    const rate = (opts.slow ? 0.62 : 1) * (AZ.S.settings.rate || 0.9);
     const useClaude = claudeTTS && (pref === 'claude' || (pref === 'auto' && !AZ.hasPTPT()));
     if (useClaude) { try { claudeSay(text, Math.max(0.7, Math.min(1.5, rate)), opts.onend); return; } catch (e) { /* fall back */ } }
     if (!SS) return;
@@ -346,8 +357,8 @@
       SS.speak(u);
     } catch (e) { /* speech not available */ }
   };
-  AZ.stopSpeech = () => { clearSpeechTimers(); try { SS && SS.cancel(); } catch (e) {} try { claudeTTS && claudeTTS.stop(); } catch (e) {} };
-  AZ.canSpeak = () => !!(SS || claudeTTS);
+  AZ.stopSpeech = () => { clearSpeechTimers(); try { REC && REC.stop(); } catch (e) {} try { SS && SS.cancel(); } catch (e) {} try { claudeTTS && claudeTTS.stop(); } catch (e) {} };
+  AZ.canSpeak = () => AZ.S.settings.voice !== 'off' && !!(AZ.hasRecordings() || SS || claudeTTS);
   AZ.hasClaudeTTS = () => !!claudeTTS;
 
   /* ---------------- Remote saving ---------------- */
