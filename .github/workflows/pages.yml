@@ -73,5 +73,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: public
+      # GitHub sometimes needs a moment before the upload can be found; without this pause the publish step can fail
+      - name: Wait for the upload
+        run: sleep 20
       - id: deployment
         uses: actions/deploy-pages@v5
