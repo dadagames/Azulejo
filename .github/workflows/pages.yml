@@ -40,11 +40,16 @@ jobs:
       - name: Install the voice
         run: |
           pip install --quiet piper-tts lameenc numpy
-          ls ~/.piper/*.onnx 2>/dev/null || python -m piper.download_voices pt_PT-tugão-medium --download-dir ~/.piper
+          if [ ! -f ~/.piper/pt_PT-tugao-medium.onnx ]; then
+            mkdir -p ~/.piper
+            url=https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_PT/tug%C3%A3o/medium/pt_PT-tug%C3%A3o-medium.onnx
+            curl -sSfL "$url" -o ~/.piper/pt_PT-tugao-medium.onnx
+            curl -sSfL "$url.json" -o ~/.piper/pt_PT-tugao-medium.onnx.json
+          fi
       - name: Record new texts
         run: |
           node tools/voice-texts.js > "$RUNNER_TEMP/texts.json"
-          python tools/voice.py "$RUNNER_TEMP/texts.json" public/audio --model "$(ls ~/.piper/*.onnx | head -1)"
+          python tools/voice.py "$RUNNER_TEMP/texts.json" public/audio --model ~/.piper/pt_PT-tugao-medium.onnx
       - name: Save the recordings
         run: |
           git add -A public/audio
