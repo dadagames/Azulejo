@@ -44,6 +44,7 @@ function checkText(id, text) {
     if (!/^\|/.test(l)) cols = 0;
     if (l.startsWith('@conj ')) { const [vs, t] = l.slice(6).split(/\s+/); if (!PTE.TENSE[t]) { console.log('BAD TENSE', id, l); bad++; } vs.split(',').forEach(v => { const F = PTE.conjugate(v); if (!F || !F[t]) { console.log('BAD CONJ', id, v, t); bad++; } }); return; }
     if (l.startsWith('@see ')) { l.slice(5).split(/[\s,]+/).filter(Boolean).forEach(x => { if (!linkOk(x)) { console.log('BAD SEE', id, x); bad++; } }); return; }
+    if (l.startsWith('@deel ')) { const m = l.match(/^@deel\s+(.+?)(?:\s*\{([\d,\s]*)\})?$/); if (!m || !m[1].trim()) { console.log('BAD DEEL', id, l); bad++; } else if (m[2] != null) m[2].split(',').forEach(n => { if (!(+n >= 1 && +n <= 9)) { console.log('BAD DEEL LESSON', id, l); bad++; } }); return; }
     if (l.startsWith('@')) { console.log('UNKNOWN MARKUP', id, l); bad++; }
     if (l.startsWith('> ') && !l.includes(' = ')) { console.log('EXAMPLE WITHOUT ENGLISH', id, l); bad++; }
     if (/^\|/.test(l)) {

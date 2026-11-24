@@ -35,6 +35,49 @@
   }
   AZ.levels = AZ.sections;
   AZ.units.forEach((u, i) => { u.idx = i; u.n = i + 1; u.goals = u.goals || []; u.text = u.text || u.guide; u.write = u.write || []; u.reads = u.reads || []; u.tenses = [u.tense || 'pres'].concat(EXTRA_TENSES[u.id] || []); });
+  /* ---------------- Chapters in short parts ----------------
+     "@deel Title" lines in a chapter's text start a new part. Each part gets a share of the chapter's
+     word lists and example sentences, and ends with a short test. Without markers, the ## sections are
+     grouped into parts of a few hundred words. */
+  function splitParts(u) {
+    const parts = []; let cur = null;
+    String(u.text || '').split('\n').forEach(l => {
+      const m = l.trim().match(/^@deel\s+(.+?)(?:\s*\{([\d,\s]*)\})?$/);
+      if (m) { cur = { title: m[1].trim(), lessons: m[2] != null ? m[2].split(',').map(x => +x.trim()).filter(Boolean) : null, lines: [] }; parts.push(cur); return; }
+      if (!cur) { cur = { title: '', lines: [] }; parts.push(cur); }
+      cur.lines.push(l);
+    });
+    let ps = parts.filter(p => p.title || p.lines.join('').trim());
+    if (ps.length > 1 && !ps[0].title) { ps[1].lines = ps[0].lines.concat(ps[1].lines); ps.shift(); }
+    if (ps.length === 1 && !ps[0].title) {
+      // no markers: group the ## sections, about 260 words a part, at most 3 parts
+      const secs = []; let sc = null;
+      ps[0].lines.forEach(l => { if (/^## /.test(l.trim()) || !sc) { sc = { title: (l.trim().match(/^## (.+)/) || [])[1] || '', lines: [] }; secs.push(sc); } sc.lines.push(l); });
+      const words = x => x.lines.join(' ').split(/\s+/).length;
+      const total = secs.reduce((a, x) => a + words(x), 0), n = Math.max(1, Math.min(3, Math.round(total / 260)));
+      ps = []; let acc = 0;
+      secs.forEach(x => { if (!ps.length || (acc >= total / n * ps.length && ps.length < n)) ps.push({ title: x.title, lines: [] }); ps[ps.length - 1].lines.push(...x.lines); acc += words(x); });
+    }
+    return ps.map((p, k) => ({ k, title: p.title.replace(/\*/g, '') || 'Deel ' + (k + 1), text: p.lines.join('\n').trim(), lessons: p.lessons || null }));
+  }
+  AZ.units.forEach(u => {
+    u.parts = splitParts(u);
+    const n = u.parts.length;
+    // lessons (word lists + their sentences) go to the part that names them ("@deel Title {1,2}"),
+    // otherwise they are shared out over the parts in order
+    const named = u.parts.some(P => P.lessons);
+    u.L.forEach((L, li) => {
+      const P = named && u.parts.find(Q => (Q.lessons || []).includes(li + 1));
+      L.part = P ? P.k : named ? n - 1 : Math.min(n - 1, Math.floor(li * n / Math.max(1, u.L.length)));
+    });
+    u.parts.forEach(P => {
+      P.L = u.L.filter(L => L.part === P.k);
+      P.S = u.S.filter(s => P.L.some(L => L.li === Math.max(0, s.lesson - 1)));
+      // examples and conjugation tables in the part's own text
+      P.ex = P.text.split('\n').map(l => l.trim()).filter(l => l.startsWith('> ')).map(l => { const [pt, nl] = l.slice(2).split(' = '); return { pt: pt.replace(/\*/g, '').trim(), en: (nl || '').replace(/\*/g, '').trim() }; }).filter(x => x.pt && x.en);
+      P.conj = P.text.split('\n').map(l => l.trim()).filter(l => l.startsWith('@conj ')).map(l => { const [vs, t] = l.slice(6).trim().split(/\s+/); return { verbs: vs.split(','), t: t || 'pres' }; });
+    });
+  });
   AZ.chapterOfRead = {};
   AZ.units.forEach(u => u.reads.forEach(r => { if (!AZ.chapterOfRead[r]) AZ.chapterOfRead[r] = u; }));
   AZ.word = id => G.LEX.get(id);
@@ -121,7 +164,8 @@
     out.days = {};
     new Set([...Object.keys(A.days), ...Object.keys(B.days), ...Object.keys(sumD)]).forEach(k => { out.days[k] = Math.max(sumD[k] || 0, A.days[k] || 0, B.days[k] || 0); });
     out.xp = Math.max(A.xp, B.xp, Object.values(out.days).reduce((x, y) => x + y, 0));
-    out.lessons = Object.assign({}, A.lessons); for (const k in B.lessons) { const x = out.lessons[k], y = B.lessons[k]; out.lessons[k] = !x ? y : { done: x.done || y.done, best: Math.max(x.best || 0, y.best || 0), at: Math.max(x.at || 0, y.at || 0), n: Math.max(x.n || 0, y.n || 0), seen: Math.max(x.seen || 0, y.seen || 0) }; }
+    const mergeParts = (p, q) => { const o = Object.assign({}, p || {}); for (const k in q || {}) o[k] = Math.max(o[k] || 0, q[k] || 0); return o; };
+    out.lessons = Object.assign({}, A.lessons); for (const k in B.lessons) { const x = out.lessons[k], y = B.lessons[k]; out.lessons[k] = !x ? y : { done: x.done || y.done, best: Math.max(x.best || 0, y.best || 0), at: Math.max(x.at || 0, y.at || 0), n: Math.max(x.n || 0, y.n || 0), seen: Math.max(x.seen || 0, y.seen || 0), parts: mergeParts(x.parts, y.parts) }; }
     out.srs = Object.assign({}, A.srs); for (const k in B.srs) { const x = out.srs[k], y = B.srs[k]; out.srs[k] = !x ? y : (y[2] || 0) > (x[2] || 0) ? y : x; }
     out.reads = Object.assign({}, A.reads, B.reads); for (const k in A.reads) if (B.reads[k]) out.reads[k] = (A.reads[k].score || 0) >= (B.reads[k].score || 0) ? A.reads[k] : B.reads[k];
     out.mine = [...new Set([...(A.mine || []), ...(B.mine || [])])];
@@ -147,11 +191,11 @@
   // stage 1..8 -> hours until the next review; 9 = done ("azulejo")
   const INTERVAL_H = [0, 4, 8, 23, 47, 167, 335, 719, 2879];
   AZ.STAGES = [
-    { key: 'sketch', pt: 'Esboço', en: 'Sketch', from: 1, to: 4, color: 'var(--st-sketch)' },
-    { key: 'paint', pt: 'Pintado', en: 'Painted', from: 5, to: 6, color: 'var(--st-paint)' },
-    { key: 'glaze', pt: 'Vidrado', en: 'Glazed', from: 7, to: 7, color: 'var(--st-glaze)' },
-    { key: 'fire', pt: 'Cozido', en: 'Fired', from: 8, to: 8, color: 'var(--st-fire)' },
-    { key: 'done', pt: 'Azulejo', en: 'Mastered', from: 9, to: 9, color: 'var(--st-done)' },
+    { key: 'sketch', pt: 'Esboço', en: 'Schets', from: 1, to: 4, color: 'var(--st-sketch)' },
+    { key: 'paint', pt: 'Pintado', en: 'Beschilderd', from: 5, to: 6, color: 'var(--st-paint)' },
+    { key: 'glaze', pt: 'Vidrado', en: 'Geglazuurd', from: 7, to: 7, color: 'var(--st-glaze)' },
+    { key: 'fire', pt: 'Cozido', en: 'Gebakken', from: 8, to: 8, color: 'var(--st-fire)' },
+    { key: 'done', pt: 'Azulejo', en: 'Beheerst', from: 9, to: 9, color: 'var(--st-done)' },
   ];
   AZ.stageOf = st => AZ.STAGES.find(s => st >= s.from && st <= s.to) || AZ.STAGES[0];
   // srs entry: [stage, dueMinute, lastMinute, right, wrong]
@@ -205,13 +249,29 @@
   };
 
   /* ---------------- Chapters: where you are ---------------- */
-  // AZ.S.lessons[chapterId] = { done, best, at, n, seen }: done = chapter test passed (or marked as studied)
+  // AZ.S.lessons[chapterId] = { done, best, at, n, seen, parts: { k: best% } }: done = every part's test passed (or marked as studied)
   AZ.chRec = u => AZ.S.lessons[u.id] || null;
   AZ.chDone = u => !!(AZ.S.lessons[u.id] || {}).done;
   AZ.currentChapter = () => AZ.units.find(u => !AZ.chDone(u)) || null;
   AZ.reached = () => { const c = AZ.currentChapter(); return c ? c.idx : AZ.units.length - 1; };
   // what you have studied so far: finished chapters plus the one you're on
   AZ.studied = () => AZ.units.filter(u => u.idx <= AZ.reached());
+  AZ.PASS = 70;
+  AZ.partBest = (u, k) => ((AZ.S.lessons[u.id] || {}).parts || {})[k] || 0;
+  AZ.partDone = (u, k) => AZ.chDone(u) || AZ.partBest(u, k) >= AZ.PASS;
+  AZ.partsDone = u => u.parts.filter(P => AZ.partDone(u, P.k)).length;
+  AZ.nextPart = u => u.parts.find(P => !AZ.partDone(u, P.k)) || null;
+  // a part's test result; passing the last open part completes the chapter
+  AZ.partResult = function (u, k, score) {
+    const r = AZ.S.lessons[u.id] || {}, parts = Object.assign({}, r.parts || {});
+    parts[k] = Math.max(parts[k] || 0, score);
+    AZ.S.lessons[u.id] = Object.assign({}, r, { parts, seen: r.seen || Date.now() });
+    if (!r.done && u.parts.every(P => (parts[P.k] || 0) >= AZ.PASS)) {
+      const avg = Math.round(u.parts.reduce((a, P) => a + parts[P.k], 0) / u.parts.length);
+      return Object.assign({ completed: true }, AZ.completeChapter(u, avg));
+    }
+    return { completed: false, fresh: [] };
+  };
   AZ.markSeen = u => { const r = AZ.S.lessons[u.id] || {}; if (!r.seen) { AZ.S.lessons[u.id] = Object.assign({}, r, { seen: Date.now() }); AZ.save(true); } };
   AZ.itemsOfLesson = function (u, li) {
     const out = [];
@@ -257,17 +317,17 @@
   };
   AZ.level = function (xp = AZ.S.xp) { let lv = 1, need = 60, acc = 0; while (xp >= acc + need) { acc += need; lv++; need = Math.round(need * 1.18); } return { lv, into: xp - acc, need }; };
   AZ.BADGES = {
-    'first-lesson': ['Primeiro capítulo', 'Finish your first chapter', 'star'],
-    'perfect': ['Perfeito!', '100% in a chapter test', 'target'],
-    'streak-3': ['Três dias', 'Study 3 days in a row', 'flame'], 'streak-7': ['Uma semana', 'Study 7 days in a row', 'flame'],
-    'streak-30': ['Um mês', 'Study 30 days in a row', 'flame'], 'streak-100': ['Cem dias', 'Study 100 days in a row', 'flame'],
-    'words-50': ['50 palavras', 'Get 50 words to Pintado', 'grid'], 'words-250': ['250 palavras', 'Get 250 words to Pintado', 'grid'],
-    'first-azulejo': ['Primeiro azulejo', 'Master an item completely', 'tile'],
-    'section-1': ['Nível A1', 'Finish every A1 chapter', 'crown'], 'section-2': ['Nível A1+', 'Finish every A1+ chapter', 'crown'],
-    'section-3': ['Nível A2', 'Finish every A2 chapter', 'crown'], 'section-4': ['Nível B1', 'Finish every B1 chapter', 'crown'],
-    'reader': ['Leitor', 'Finish 5 reading texts', 'book'], 'writer': ['Escritor', 'Finish 10 free-writing tasks', 'flag'],
-    'gym-100': ['Conjugador', '100 correct conjugations', 'bolt'],
-    'xp-1000': ['Mil pontos', 'Earn 1,000 points', 'bolt'], 'xp-5000': ['Cinco mil', 'Earn 5,000 points', 'bolt'],
+    'first-lesson': ['Primeiro capítulo', 'Rond je eerste hoofdstuk af', 'star'],
+    'perfect': ['Perfeito!', '100% in een toets', 'target'],
+    'streak-3': ['Três dias', '3 dagen op rij oefenen', 'flame'], 'streak-7': ['Uma semana', '7 dagen op rij oefenen', 'flame'],
+    'streak-30': ['Um mês', '30 dagen op rij oefenen', 'flame'], 'streak-100': ['Cem dias', '100 dagen op rij oefenen', 'flame'],
+    'words-50': ['50 palavras', '50 woorden tot Pintado', 'grid'], 'words-250': ['250 palavras', '250 woorden tot Pintado', 'grid'],
+    'first-azulejo': ['Primeiro azulejo', 'Beheers iets helemaal', 'tile'],
+    'section-1': ['Nível A1', 'Rond alle A1-hoofdstukken af', 'crown'], 'section-2': ['Nível A1+', 'Rond alle A1+-hoofdstukken af', 'crown'],
+    'section-3': ['Nível A2', 'Rond alle A2-hoofdstukken af', 'crown'], 'section-4': ['Nível B1', 'Rond alle B1-hoofdstukken af', 'crown'],
+    'reader': ['Leitor', 'Lees 5 teksten uit', 'book'], 'writer': ['Escritor', 'Maak 10 schrijfopdrachten', 'flag'],
+    'gym-100': ['Conjugador', '100 goede vervoegingen', 'bolt'],
+    'xp-1000': ['Mil pontos', 'Verdien 1.000 punten', 'bolt'], 'xp-5000': ['Cinco mil', 'Verdien 5.000 punten', 'bolt'],
   };
   AZ.badge = function (id) { if (!AZ.S.badges[id] && AZ.BADGES[id]) { AZ.S.badges[id] = Date.now(); AZ.newBadges = (AZ.newBadges || []).concat(id); } };
   AZ.wordsLearned = () => Object.keys(AZ.S.srs).filter(k => k[0] === 'w' && AZ.S.srs[k][0] >= 5).length;
@@ -469,8 +529,8 @@
     const hdr = extra => { const h = Object.assign({}, extra || {}); if (AZ.S.settings.sync.token) h['x-sync-token'] = AZ.S.settings.sync.token; const se = AZ.Account.session(); if (se) h.authorization = 'Bearer ' + se.token; return h; };
     const fail = async r => {
       const j = await r.json().catch(() => ({}));
-      if (r.status === 401 && j.login) { AZ.Account.expired(); throw new Error('Log in to keep syncing this progress'); }
-      throw new Error(r.status === 401 ? (j.error || 'Wrong sync password') : r.status === 503 ? 'The site has no database yet (see README)' : 'Server error ' + r.status);
+      if (r.status === 401 && j.login) { AZ.Account.expired(); throw new Error('Log in om deze voortgang te blijven synchroniseren'); }
+      throw new Error(r.status === 401 ? (j.error || 'Verkeerd synchronisatiewachtwoord') : r.status === 503 ? 'De site heeft nog geen database (zie README)' : 'Serverfout ' + r.status);
     };
     // rev = the server's version of the progress we last saw; a save only succeeds if nobody saved in between
     let rev = null, revFor = '', lastSent = '', clearPending = false;
@@ -506,7 +566,7 @@
           lastSent = data; clearPending = false;
           return;
         }
-        throw new Error('Could not save — please try again');
+        throw new Error('Opslaan mislukt — probeer het opnieuw');
       },
       // when the tab closes: hand over anything not yet saved (no answer comes back)
       beacon() {
@@ -562,7 +622,7 @@
           if (A !== sentA || replace) { await docState.set(JSON.parse(A)); sentA = A; }
           const parts = []; for (let i = 0; i < B.length; i += CHUNK) parts.push(B.slice(i, i + CHUNK));
           if (!parts.length) parts.push('{}');
-          if (parts.length > MAXC) throw new Error('Progress too large to save here — export a backup');
+          if (parts.length > MAXC) throw new Error('Voortgang te groot om hier op te slaan — maak een back-up');
           for (let i = 0; i < parts.length; i++) {
             if (!replace && sentB[i] === parts[i] && sentB.length === parts.length) continue;
             await srsDoc(i).set(i === 0 ? { part: parts[0], n: parts.length } : { part: parts[i] });
@@ -602,13 +662,13 @@
   }
   function setSession(se) { session = se; try { if (se) localStorage.setItem(SESSION_KEY, JSON.stringify(se)); else localStorage.removeItem(SESSION_KEY); } catch (e) {} }
   async function call(path, body, auth) {
-    const c = Remote.cloud; if (!c) throw new Error('Accounts work when Azulejo runs on its Cloudflare site.');
+    const c = Remote.cloud; if (!c) throw new Error('Accounts werken als Azulejo op zijn Cloudflare-site draait.');
     const headers = { 'content-type': 'application/json' };
     if (AZ.S.settings.sync.token) headers['x-sync-token'] = AZ.S.settings.sync.token;
     if (auth && session) headers.authorization = 'Bearer ' + session.token;
     const r = await withTimeout(fetch(c.base + '/api/account/' + path, { method: body ? 'POST' : 'GET', headers, body: body ? JSON.stringify(body) : undefined, cache: 'no-store' }), 20000);
     const j = await r.json().catch(() => ({}));
-    if (!r.ok) { const e = new Error(j.error || 'Something went wrong (' + r.status + ')'); e.status = r.status; throw e; }
+    if (!r.ok) { const e = new Error(j.error || 'Er ging iets mis (' + r.status + ')'); e.status = r.status; throw e; }
     return j;
   }
   // start fresh on this device under a new anonymous code, without touching the saved copy
@@ -661,7 +721,7 @@
   AZ.exportText = () => JSON.stringify({ app: 'azulejo', exported: new Date().toISOString(), state: AZ.S });
   AZ.importText = function (txt) {
     const j = JSON.parse(txt); const s = j && j.state ? j.state : j;
-    if (!s || typeof s !== 'object' || !('srs' in s)) throw new Error('This does not look like an Azulejo backup.');
+    if (!s || typeof s !== 'object' || !('srs' in s)) throw new Error('Dit lijkt geen Azulejo-back-up.');
     AZ.absorb(s); AZ.save();
   };
 })();

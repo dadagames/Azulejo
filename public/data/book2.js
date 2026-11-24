@@ -1,163 +1,194 @@
-/* Azulejo · the course book, part 2 (A2 and B1). Same format as book.js. */
+/* Azulejo · het cursusboek, deel 2 (A2 en B1). Zelfde opmaak als book.js. */
 Object.assign(window.AZ_BOOK.ch, {
 
 u14: {
-  pt: 'Planos', en: 'Plans, obligations and invitations',
-  goals: ['Talk about the future with ir + infinitive', 'Say what you have to do with ter de', 'Use verbs followed by an infinitive', 'Invite someone, and accept or say no politely'],
+  pt: 'Planos', en: 'Plannen, verplichtingen en uitnodigingen',
+  goals: ['Over de toekomst praten met ir + infinitief', 'Zeggen wat je moet doen met ter de', 'Werkwoorden gebruiken die een infinitief na zich hebben', 'Iemand uitnodigen, en beleefd ja of nee zeggen'],
   text: `
-## Ir + infinitive: the everyday future
-The easiest way to talk about plans is the present of **ir** + an **infinitive** — exactly like *going to* in English:
-> Vou jantar com a Sofia. = I'm going to have dinner with Sofia.
-> Amanhã vamos visitar os avós. = Tomorrow we're going to visit our grandparents.
-> Vais ficar em casa? = Are you going to stay at home?
+@deel Vou fazer: de toekomst van elke dag {1}
+## Ir + infinitief: de gewone toekomst
+De makkelijkste manier om over plannen te praten is de tegenwoordige tijd van **ir** + een **infinitief** — precies zoals het Nederlandse *gaan* + werkwoord:
+> Vou jantar com a Sofia. = Ik ga met Sofia eten.
+> Amanhã vamos visitar os avós. = Morgen gaan we bij opa en oma op bezoek.
+> Vais ficar em casa? = Blijf je thuis?
 @conj ir pres
-!tip This is how people in Portugal talk about the future almost all the time. The future tense proper (*farei*, *irei*) is mostly written — you'll meet it in chapter 24. Even the plain present often works: *Amanhã falo com ele.*
+!tip Zo praten mensen in Portugal bijna altijd over de toekomst. De echte toekomende tijd (*farei*, *irei*) is vooral schrijftaal — die komt in hoofdstuk 24. Vaak werkt zelfs de gewone tegenwoordige tijd: *Amanhã falo com ele.* (Morgen praat ik met hem.)
+## Woorden voor plannen
+| logo | straks, later vandaag |
+| esta noite · hoje à noite | vanavond |
+| amanhã de manhã | morgenochtend |
+| no fim de semana | in het weekend |
+| na próxima semana | volgende week |
+| no próximo ano · para o ano | volgend jaar |
+| daqui a dois dias | over twee dagen |
 
-## Ter de + infinitive: have to
-> Tenho de trabalhar amanhã. = I have to work tomorrow.
-> Tens de ver este filme! = You have to see this film!
-> Não temos de pagar. = We don't have to pay.
-!pt Portugal says **ter de**; Brazil says *ter que*. Both are understood, but *ter de* is the standard in Portugal.
+@deel Tenho de ir: moeten en willen {2}
+## Ter de + infinitief: moeten
+> Tenho de trabalhar amanhã. = Ik moet morgen werken.
+> Tens de ver este filme! = Je moet deze film zien!
+> Não temos de pagar. = We hoeven niet te betalen.
+!pt zegt men **ter de**; in Brazilië *ter que*. Allebei worden begrepen, maar *ter de* is de norm in Portugal.
+!tip **Não ter de** = niet hoeven. *Não tens de vir* betekent *je hoeft niet te komen*, niet *je mag niet komen*.
+## Werkwoorden met een infinitief
+|! Werkwoord | Betekenis | Voorbeeld |
+| querer + inf. | willen | Quero aprender a nadar. |
+| poder + inf. | kunnen, mogen | Podes ajudar-me? |
+| precisar de + inf. | moeten, nodig hebben | Preciso de descansar. |
+| gostar de + inf. | graag doen | Gosto de viajar. |
+| saber + inf. | kunnen (geleerd) | Sabes cozinhar? |
+| começar a + inf. | beginnen te | Começo a trabalhar às nove. |
+| acabar de + inf. | net gedaan hebben | Acabo de chegar. |
+| aprender a + inf. | leren | Quero aprender a conduzir. |
+!tip **Acabar de** is handig voor *ik heb net…*: *Acabámos de jantar* = We hebben net gegeten.
 
-## Verbs followed by an infinitive
-|! Verb | Meaning | Example |
-| querer + inf. | to want to | Quero aprender a nadar. |
-| poder + inf. | can, may | Podes ajudar-me? |
-| precisar de + inf. | to need to | Preciso de descansar. |
-| gostar de + inf. | to like doing | Gosto de viajar. |
-| saber + inf. | to know how to | Sabes cozinhar? |
-| começar a + inf. | to start doing | Começo a trabalhar às nove. |
-| acabar de + inf. | to have just done | Acabo de chegar. |
-| aprender a + inf. | to learn to | Quero aprender a conduzir. |
-!tip **Acabar de** is a handy way to say *I've just…*: *Acabámos de jantar* = We've just had dinner.
-
-## Invitations
-> Queres vir ao cinema? = Do you want to come to the cinema?
-> Vamos tomar um café? = Shall we have a coffee?
-> Combinado! = Deal! It's settled!
-> Hoje não posso, tenho de estudar. = I can't today, I have to study.
-> Fica para a próxima. = Maybe next time.
-- **Vamos** + infinitive is also *let's*: *Vamos embora!* (Let's go!)
-
-## Time words for plans
-| logo | later today |
-| esta noite · hoje à noite | tonight |
-| amanhã de manhã | tomorrow morning |
-| no fim de semana | at the weekend |
-| na próxima semana | next week |
-| no próximo ano · para o ano | next year |
-| daqui a dois dias | in two days' time |`,
+@deel Queres vir? Uitnodigen {3}
+## Uitnodigingen
+> Queres vir ao cinema? = Wil je mee naar de bioscoop?
+> Vamos tomar um café? = Zullen we koffie gaan drinken?
+> Combinado! = Afgesproken!
+> Hoje não posso, tenho de estudar. = Vandaag kan ik niet, ik moet studeren.
+> Fica para a próxima. = Een andere keer dan.
+- **Vamos** + infinitief betekent ook *laten we*: *Vamos embora!* (Kom, we gaan!)
+- Dank voor de uitnodiging: **Obrigado pelo convite!** (een vrouw zegt *obrigada*).
+`,
   write: [
-    { task: 'Write your plans for next weekend — at least four sentences with ir + infinitive.', model: 'No sábado de manhã vou dormir até tarde. À tarde vou jogar ténis com o meu irmão. No domingo vamos almoçar com os nossos pais e à noite vou ver um filme.', hint: 'vou + infinitive, vamos + infinitive' },
-    { task: 'A friend invites you to the beach on Saturday. Say you can\'t, explain what you have to do, and suggest another day.', model: 'Obrigado pelo convite, mas no sábado não posso. Tenho de trabalhar e depois tenho de arrumar a casa. Podemos ir no domingo?', hint: 'não posso, tenho de, podemos' },
+    { task: 'Schrijf je plannen voor volgend weekend — minstens vier zinnen met ir + infinitief.', model: 'No sábado de manhã vou dormir até tarde. À tarde vou jogar ténis com o meu irmão. No domingo vamos almoçar com os nossos pais e à noite vou ver um filme.', hint: 'vou + infinitief, vamos + infinitief' },
+    { task: 'Een vriend nodigt je uit om zaterdag naar het strand te gaan. Zeg dat je niet kunt, leg uit wat je moet doen en stel een andere dag voor.', model: 'Obrigado pelo convite, mas no sábado não posso. Tenho de trabalhar e depois tenho de arrumar a casa. Podemos ir no domingo?', hint: 'não posso, tenho de, podemos' },
   ],
 },
 
 u15: {
-  pt: 'Agora mesmo', en: 'What\'s happening now: estar a',
-  goals: ['Say what is happening right now with estar a + infinitive', 'Know when to use the simple present instead', 'Use andar a for things you\'ve been doing lately'],
+  pt: 'Agora mesmo', en: 'Wat er nu gebeurt: estar a',
+  goals: ['Zeggen wat er op dit moment gebeurt met estar a + infinitief', 'Weten wanneer je juist de gewone tegenwoordige tijd gebruikt', 'Andar a gebruiken voor wat je de laatste tijd doet'],
   text: `
-## Estar a + infinitive
-To say what's happening at this moment, European Portuguese uses **estar a + infinitive**:
-> Estou a comer. = I'm eating.
-> O que estás a fazer? = What are you doing?
-> Está a chover. = It's raining.
-> Eles estão a dormir. = They're sleeping.
+@deel Estou a comer: bezig zijn {1}
+## Estar a + infinitief
+Om te zeggen wat er op dit moment gebeurt, gebruikt het Europees Portugees **estar a + infinitief** — precies zoals het Nederlandse *aan het … zijn*:
+> Estou a comer. = Ik ben aan het eten.
+> Está a chover. = Het regent.
+> Eles estão a dormir. = Ze slapen. (Ze liggen te slapen.)
 @conj estar pres
-!pt This is one of the clearest differences between Portugal and Brazil. Brazil uses the gerund — *estou comendo* — while Portugal uses **a + infinitive**: *estou a comer*. You'll hear the gerund in the Alentejo and the Algarve, but *estar a* is the standard.
+!pt zie je hier een van de duidelijkste verschillen met Brazilië. Brazilië gebruikt het gerundium — *estou comendo* — en Portugal **a + infinitief**: *estou a comer*. In de Alentejo en de Algarve hoor je het gerundium ook, maar *estar a* is de norm.
+!tip Het Nederlands zegt het ook zo: *ik ben aan het eten* = **estou a comer**. Alleen gebruikt het Portugees het veel vaker dan wij.
 
-## With a pronoun
-With a reflexive or object pronoun, attach it to the infinitive:
-> Estou a vestir-me. = I'm getting dressed.
-> Ela está a lavar-se. = She's washing.
+@deel O que estás a fazer? Nu of altijd {2}
+## Met een voornaamwoord
+Een wederkerend voornaamwoord of een lijdend voorwerp plak je achter de infinitief:
+> Estou a vestir-me. = Ik ben me aan het aankleden.
+> Ela está a lavar-se. = Ze is zich aan het wassen.
+> O que estás a fazer? = Wat ben je aan het doen?
+## Gewone tegenwoordige tijd of estar a?
+De **gewone tegenwoordige tijd** is voor gewoontes, feiten en dingen die altijd waar zijn; **estar a** is voor wat nu (of rond deze tijd) aan de gang is:
+> Trabalho num banco. = Ik werk bij een bank. (dat is mijn baan)
+> Estou a trabalhar. = Ik ben aan het werken. (nu — niet bellen!)
+> Leio muito. = Ik lees veel.
+> Estou a ler um livro ótimo. = Ik lees (op dit moment) een geweldig boek.
 
-## Simple present or estar a?
-The **simple present** is for habits, facts and things that are generally true; **estar a** is for what's in progress now, or around now:
-> Trabalho num banco. = I work in a bank. (that's my job)
-> Estou a trabalhar. = I'm working. (right now — don't call!)
-> Leio muito. = I read a lot.
-> Estou a ler um livro ótimo. = I'm reading a great book (at the moment).
-
-## Andar a: lately
-**Andar a + infinitive** describes something you've been doing repeatedly lately:
-> Ando a estudar muito. = I've been studying a lot lately.
-> Ela anda a aprender guitarra. = She's been learning the guitar.
-
-## Continuar a: still doing
-> Continua a chover. = It's still raining.
-> Continuas a trabalhar no hotel? = Are you still working at the hotel?`,
+@deel Neste momento: andar a en continuar a {3}
+## Andar a: de laatste tijd
+**Andar a + infinitief** beschrijft iets wat je de laatste tijd steeds doet:
+> Ando a estudar muito. = Ik studeer de laatste tijd veel.
+> Ela anda a aprender guitarra. = Ze is gitaar aan het leren.
+## Continuar a: nog steeds
+> Continua a chover. = Het regent nog steeds.
+> Continuas a trabalhar no hotel? = Werk je nog steeds in het hotel?
+> Neste momento estou à espera do autocarro. = Op dit moment wacht ik op de bus.
+`,
   write: [
-    { task: 'It\'s Saturday afternoon. Write what five people (or animals!) around you are doing right now.', model: 'O meu pai está a ler o jornal na sala. A minha mãe está a falar ao telefone. O meu irmão está a jogar futebol no parque. O vizinho está a lavar o carro e o gato está a dormir no sofá.', hint: 'está a + infinitive' },
-    { task: 'Write two things you do regularly and two things you\'ve been doing lately (andar a).', model: 'Trabalho todos os dias e vou ao ginásio às segundas. Ultimamente ando a ler muito e ando a aprender a cozinhar.', hint: 'present for habits, ando a + infinitive' },
+    { task: 'Het is zaterdagmiddag. Schrijf wat vijf mensen (of dieren!) om je heen nu aan het doen zijn.', model: 'O meu pai está a ler o jornal na sala. A minha mãe está a falar ao telefone. O meu irmão está a jogar futebol no parque. O vizinho está a lavar o carro e o gato está a dormir no sofá.', hint: 'está a + infinitief' },
+    { task: 'Schrijf twee dingen die je regelmatig doet en twee dingen die je de laatste tijd doet (andar a).', model: 'Trabalho todos os dias e vou ao ginásio às segundas. Ultimamente ando a ler muito e ando a aprender a cozinhar.', hint: 'tegenwoordige tijd voor gewoontes, ando a + infinitief' },
   ],
 },
 
 u16: {
-  pt: 'Às compras', en: 'Shopping: this, that and colours',
-  goals: ['Point to things with este, esse, aquele and isto, isso, aquilo', 'Describe clothes and colours', 'Buy something in a shop'],
+  pt: 'Às compras', en: 'Winkelen: deze, die en kleuren',
+  goals: ['Iets aanwijzen met este, esse, aquele en isto, isso, aquilo', 'Kleding en kleuren beschrijven', 'Iets kopen in een winkel'],
   text: `
-## This, that, that over there
-Portuguese has **three** distances, which match *aqui, aí* and *ali*:
-|! | near me (aqui) | near you (aí) | far from both (ali) |
-| masc. singular | este | esse | aquele |
-| fem. singular | esta | essa | aquela |
-| masc. plural | estes | esses | aqueles |
-| fem. plural | estas | essas | aquelas |
-> Gosto deste casaco. = I like this coat.
-> Essa camisa é cara. = That shirt (near you) is expensive.
-> Aquela loja é nova. = That shop over there is new.
-- They join **de** and **em**: *deste, desse, daquele · neste, nesse, naquele*.
-- In everyday speech the line between *este* and *esse* is blurry, and *esse* is often used for "the one we're talking about".
+@deel Roupa: kleding {1}
+## Kleding
+o casaco (jas, jasje), a camisola (trui), a camisa (overhemd, blouse), a t-shirt, as calças (broek), as calças de ganga (spijkerbroek), o vestido (jurk), a saia (rok), os sapatos (schoenen), os ténis (sportschoenen).
+!pt is **a camisola** een trui (in Brazilië is het een nachtjapon!), en een spijkerbroek heet **calças de ganga**.
+- **Calças** is altijd meervoud, net als een broek in het Engels: *umas calças pretas* (een zwarte broek).
+- **vestir** = aantrekken, dragen (kleding) · **usar** = (gewoonlijk) dragen · **calçar** = aantrekken, dragen (schoenen) — *Que número calça?* (Welke schoenmaat hebt u?)
 
+@deel Cores: kleuren {2}
+## Kleuren
+| branco | wit | preto | zwart |
+| vermelho | rood | azul | blauw |
+| verde | groen | amarelo | geel |
+| castanho | bruin | cinzento | grijs |
+| cor de laranja | oranje | cor-de-rosa | roze |
+- Kleuren op **-o** passen zich aan in geslacht en getal: *uma camisa branca, uns sapatos pretos*.
+- **Azul** en **verde** veranderen alleen in het meervoud: *calças azuis, olhos verdes*.
+- **Cor de laranja** en **cor-de-rosa** veranderen nooit: *uma saia cor-de-rosa*.
+- De kleur staat **achter** het zelfstandig naamwoord: *o casaco preto* (de zwarte jas).
+!pt is bruin **castanho** (in Brazilië *marrom*) en grijs **cinzento** (in Brazilië *cinza*).
+
+@deel Este ou aquele? In de winkel {3}
+## Deze, die, die daar
+Het Portugees heeft **drie** afstanden, die passen bij *aqui, aí* en *ali*:
+|! | bij mij (aqui) | bij jou (aí) | ver van ons allebei (ali) |
+| mannelijk enkelvoud | este | esse | aquele |
+| vrouwelijk enkelvoud | esta | essa | aquela |
+| mannelijk meervoud | estes | esses | aqueles |
+| vrouwelijk meervoud | estas | essas | aquelas |
+> Gosto deste casaco. = Ik vind deze jas mooi.
+> Essa camisa é cara. = Dat overhemd (bij jou) is duur.
+> Aquela loja é nova. = Die winkel daar is nieuw.
+- Ze smelten samen met **de** en **em**: *deste, desse, daquele · neste, nesse, naquele*.
+- In de spreektaal is het verschil tussen *este* en *esse* vaag, en *esse* betekent vaak "die waar we het over hebben".
 ## Isto, isso, aquilo
-For things you don't name — no gender, never plural:
-> O que é isto? = What's this?
-> Isso é verdade. = That's true.
-> Quanto custa aquilo? = How much is that (over there)?
-- They join too: **disto, disso, daquilo · nisto, nisso, naquilo**: *Gosto disso.*
-!tip **Isso!** on its own means *Exactly! That's right!* — you'll hear it constantly.
-
-## Colours
-| branco | white | preto | black |
-| vermelho | red | azul | blue |
-| verde | green | amarelo | yellow |
-| castanho | brown | cinzento | grey |
-| cor de laranja | orange | cor-de-rosa | pink |
-- Colours in **-o** agree in gender and number: *uma camisa branca, uns sapatos pretos*.
-- **Azul** and **verde** only change in the plural: *calças azuis, olhos verdes*.
-- **Cor de laranja** and **cor-de-rosa** never change: *uma saia cor-de-rosa*.
-!pt Brown is **castanho** in Portugal (*marrom* in Brazil), and grey is **cinzento** (*cinza* in Brazil).
-
-## In the shop
-> Posso experimentar? = Can I try it on?
-> Que tamanho veste? = What size are you?
-> Tem isto noutra cor? = Do you have this in another colour?
-> Fica-me bem? = Does it suit me?
-> Levo este. = I'll take this one.
-> Posso pagar com cartão? = Can I pay by card?
-- **vestir** = to wear, to put on (clothes) · **usar** = to wear (usually) · **calçar** = to put on, to wear (shoes) — *Que número calça?* (What shoe size are you?)
-
-## Clothes
-o casaco (coat, jacket), a camisola (jumper), a camisa (shirt), a t-shirt, as calças (trousers), as calças de ganga (jeans), o vestido (dress), a saia (skirt), os sapatos (shoes), os ténis (trainers).
-!pt **A camisola** is a jumper in Portugal (in Brazil it's a nightdress!), and jeans are **calças de ganga**.`,
+Voor dingen die je niet bij naam noemt — zonder geslacht, nooit meervoud (zoals het Nederlandse *dit, dat*):
+> O que é isto? = Wat is dit?
+> Isso é verdade. = Dat is waar.
+> Quanto custa aquilo? = Hoeveel kost dat (daar)?
+- Ook die smelten samen: **disto, disso, daquilo · nisto, nisso, naquilo**: *Gosto disso.*
+!tip **Isso!** in zijn eentje betekent *Precies! Klopt!* — dat hoor je voortdurend.
+## In de winkel
+> Posso experimentar? = Mag ik het passen?
+> Que tamanho veste? = Welke maat hebt u?
+> Tem isto noutra cor? = Hebt u dit in een andere kleur?
+> Fica-me bem? = Staat het me goed?
+> Levo este. = Ik neem deze.
+> Posso pagar com cartão? = Kan ik met de kaart betalen?
+`,
   write: [
-    { task: 'Describe what you are wearing today, with the colours.', model: 'Hoje estou a usar umas calças de ganga azuis, uma camisola cinzenta e uns ténis brancos.', hint: 'estou a usar, colours that agree' },
-    { task: 'Write a short dialogue in a clothes shop: ask to try something on, ask for another size or colour, and pay.', model: '— Boa tarde. Posso experimentar este casaco?\n— Claro. Que tamanho veste?\n— O M. Tem este casaco noutra cor?\n— Temos em preto.\n— Então levo o preto. Posso pagar com cartão?', hint: 'posso experimentar, tem, levo' },
+    { task: 'Beschrijf wat je vandaag draagt, met de kleuren.', model: 'Hoje estou a usar umas calças de ganga azuis, uma camisola cinzenta e uns ténis brancos.', hint: 'estou a usar, kleuren die zich aanpassen' },
+    { task: 'Schrijf een kort gesprek in een kledingwinkel: vraag of je iets mag passen, vraag naar een andere maat of kleur, en betaal.', model: '— Boa tarde. Posso experimentar este casaco?\n— Claro. Que tamanho veste?\n— O M. Tem este casaco noutra cor?\n— Temos em preto.\n— Então levo o preto. Posso pagar com cartão?', hint: 'posso experimentar, tem, levo' },
   ],
 },
 
 u17: {
-  pt: 'Ontem', en: 'The past: pretérito perfeito',
-  goals: ['Talk about finished actions in the past', 'Conjugate regular -ar, -er and -ir verbs in the pretérito perfeito', 'Handle the spelling changes in the eu form', 'Use já, ainda não and há (ago)'],
+  pt: 'Ontem', en: 'De verleden tijd: pretérito perfeito',
+  goals: ['Praten over afgeronde handelingen in het verleden', 'Regelmatige werkwoorden op -ar, -er en -ir vervoegen in de pretérito perfeito', 'De spellingsveranderingen in de eu-vorm toepassen', 'Já, ainda não en há (geleden) gebruiken'],
   text: `
-## The pretérito perfeito
-The **pretérito perfeito** is the simple past: actions that happened and finished at a definite time — yesterday, last week, in 2019.
-@conj falar,comer,partir pret
-> Ontem falei com a minha mãe. = Yesterday I spoke to my mother.
-> Comemos bacalhau no domingo. = We ate salt cod on Sunday.
-> Eles partiram às oito. = They left at eight.
+@deel Ontem: werkwoorden op -ar {1}
+## De pretérito perfeito
+De **pretérito perfeito** is de gewone verleden tijd: handelingen die op een bepaald moment gebeurd en afgelopen zijn — gisteren, vorige week, in 2019.
+@conj falar pret
+> Ontem falei com a minha mãe. = Gisteren heb ik met mijn moeder gepraat.
+> Cheguei a casa às sete. = Ik kwam om zeven uur thuis.
+!pt krijgt de *nós*-vorm van werkwoorden op -ar in de verleden tijd een accent: **falámos** (we spraken) is iets anders dan **falamos** (we spreken) — de *á* klinkt open. Brazilië schrijft allebei *falamos*.
+## Spellingsveranderingen in de eu-vorm
+Om de klank voor **-ei** te bewaren, veranderen sommige werkwoorden op -ar hun spelling in de *eu*-vorm:
+|! Werkwoord eindigt op | Verandering | Voorbeelden |
+| -car | c → **qu** | ficar → fiquei, tocar → toquei |
+| -gar | g → **gu** | chegar → cheguei, pagar → paguei |
+| -çar | ç → **c** | começar → comecei, almoçar → almocei |
+## Wanneer?
+| ontem | gisteren |
+| ontem à noite | gisteravond |
+| anteontem | eergisteren |
+| na semana passada | vorige week |
+| no mês passado · no ano passado | vorige maand · vorig jaar |
+| há dois dias | twee dagen geleden |
+- **Há** + een tijdsduur = *geleden*: *Cheguei há uma hora.* (Ik ben een uur geleden aangekomen.)
 
-## The endings
+@deel Comi e bebi: werkwoorden op -er {2}
+@conj comer pret
+> Comemos bacalhau no domingo. = We hebben zondag bacalhau gegeten.
+> Bebeste o café todo? = Heb je de hele koffie opgedronken?
+## De uitgangen op een rij
 |! | -ar | -er | -ir |
 | eu | -ei | -i | -i |
 | tu | -aste | -este | -iste |
@@ -165,448 +196,512 @@ The **pretérito perfeito** is the simple past: actions that happened and finish
 | nós | -ámos | -emos | -imos |
 | vós | -astes | -estes | -istes |
 | eles · elas · vocês | -aram | -eram | -iram |
-!pt In Portugal the *nós* form of -ar verbs takes an accent in the past: **falámos** (we spoke) is different from **falamos** (we speak) — the *á* is open. Brazil writes both *falamos*.
-!tip For -er and -ir verbs, *nós* is the same in the present and the past (*comemos, partimos*): the context tells you which.
+!tip Bij werkwoorden op -er en -ir is *nós* in de tegenwoordige en de verleden tijd hetzelfde (*comemos, partimos*): de context vertelt je welke het is.
 
-## Spelling changes in the eu form
-To keep the sound before **-ei**, some -ar verbs change their spelling in the *eu* form:
-|! Verb ends in | Change | Examples |
-| -car | c → **qu** | ficar → fiquei, tocar → toquei |
-| -gar | g → **gu** | chegar → cheguei, pagar → paguei |
-| -çar | ç → **c** | começar → comecei, almoçar → almocei |
-
-## When?
-| ontem | yesterday |
-| ontem à noite | last night |
-| anteontem | the day before yesterday |
-| na semana passada | last week |
-| no mês passado · no ano passado | last month · last year |
-| há dois dias | two days ago |
-- **Há** + an amount of time = *ago*: *Cheguei há uma hora.* (I arrived an hour ago.)
-
-## Já and ainda não
-> Já almoçaste? = Have you had lunch (yet)?
-> Já. / Ainda não. = Yes. / Not yet.
-> Já visitaste o Porto? = Have you ever been to Porto?
-!warn English often says *have done* where Portuguese uses the simple past: *Have you eaten?* is **Já comeste?** The Portuguese *tenho comido* means something else (*I've been eating lately*), so don't translate *I have eaten* word for word.`,
+@deel Já partiste? Werkwoorden op -ir, já en ainda não {3}
+@conj partir pret
+> Eles partiram às oito. = Ze vertrokken om acht uur.
+> Abri a janela. = Ik heb het raam opengedaan.
+## Já en ainda não
+> Já almoçaste? = Heb je al geluncht?
+> Já. / Ainda não. = Ja. / Nog niet.
+> Já visitaste o Porto? = Ben je weleens in Porto geweest?
+!warn Het Nederlands zegt vaak *ik heb gegeten* waar het Portugees de gewone verleden tijd gebruikt: *Heb je al gegeten?* is **Já comeste?** Het Portugese *tenho comido* betekent iets anders (*ik eet de laatste tijd steeds*), dus vertaal *ik heb gegeten* niet woord voor woord.
+`,
   write: [
-    { task: 'Write about what you did yesterday — at least five verbs in the past.', model: 'Ontem acordei às oito e tomei o pequeno-almoço em casa. Trabalhei até às cinco e depois comprei pão. À noite jantei com a minha irmã e falámos muito. Deitei-me tarde.', hint: '-ei, -ou, -ámos' },
-    { task: 'Write a message asking a friend if they have already done three things, and their answer.', model: 'Já almoçaste? Já compraste os bilhetes? Já falaste com o João?\n— Já almocei e já comprei os bilhetes, mas ainda não falei com o João.', hint: 'já, ainda não' },
+    { task: 'Schrijf wat je gisteren hebt gedaan — minstens vijf werkwoorden in de verleden tijd.', model: 'Ontem acordei às oito e tomei o pequeno-almoço em casa. Trabalhei até às cinco e depois comprei pão. À noite jantei com a minha irmã e falámos muito. Deitei-me tarde.', hint: '-ei, -ou, -ámos' },
+    { task: 'Schrijf een bericht waarin je een vriend vraagt of hij drie dingen al heeft gedaan, en zijn antwoord.', model: 'Já almoçaste? Já compraste os bilhetes? Já falaste com o João?\n— Já almocei e já comprei os bilhetes, mas ainda não falei com o João.', hint: 'já, ainda não' },
   ],
 },
 
 u18: {
-  pt: 'Fui e fiz', en: 'The irregular past',
-  goals: ['Use the irregular past of the most common verbs', 'Tell fui (I went) and fui (I was) apart by context', 'Talk about trips and holidays'],
+  pt: 'Fui e fiz', en: 'De onregelmatige verleden tijd',
+  goals: ['De onregelmatige verleden tijd van de meest gebruikte werkwoorden gebruiken', 'Fui (ik ging) en fui (ik was) uit elkaar houden door de context', 'Over reizen en vakanties praten'],
   text: `
-## Ser and ir: the same past
-**Ser** and **ir** have exactly the same pretérito perfeito. The context always tells you which:
+@deel Fui a Sintra: ser, ir en estar {1}
+## Ser en ir: dezelfde verleden tijd
+**Ser** en **ir** hebben precies dezelfde pretérito perfeito. De context vertelt je altijd welke het is:
 @conj ir pret
-> Fui a Sintra no sábado. = I went to Sintra on Saturday. (ir)
-> Foi uma viagem fantástica. = It was a fantastic trip. (ser)
+> Fui a Sintra no sábado. = Ik ben zaterdag naar Sintra gegaan. (ir)
+> Foi uma viagem fantástica. = Het was een fantastische reis. (ser)
+## Estar
+@conj estar pret
+> Estive em Lisboa duas semanas. = Ik ben twee weken in Lissabon geweest.
+> Estivemos de férias no Algarve. = We waren op vakantie in de Algarve.
 
-## Estar and ter
-@conj estar,ter pret
-> Estive em Lisboa duas semanas. = I was in Lisbon for two weeks.
-> Tive muita sorte. = I was very lucky.
+@deel O que fizeste? Ter, fazer, ver, dar, dizer {2}
+## Ter
+@conj ter pret
+> Tive muita sorte. = Ik had veel geluk.
+## Fazer en dizer
+@conj fazer,dizer pret
+- **Fiz** (ik deed) maar **fez** (hij deed); *disse* is hetzelfde voor eu en ele.
+## Ver en dar
+@conj ver,dar pret
+> O que fizeste no fim de semana? = Wat heb je in het weekend gedaan?
+> Vi um filme e dei um passeio. = Ik heb een film gezien en een wandeling gemaakt.
+## Een handig patroon
+De meeste van deze werkwoorden hebben in de verleden tijd een speciale stam (*estiv-, tiv-, fiz-, diss-, troux-, pud-, quis-, soub-*) en gelijke uitgangen: *-e, -este, -e, -emos, -eram*. Leer de eu-vorm, de rest volgt vanzelf.
 
-## Fazer, dizer, trazer
-@conj fazer,dizer,trazer pret
-- **Fiz** (I did) but **fez** (he did); *disse* and *trouxe* are the same for eu and ele.
-!tip The *ss* in **trouxe** is pronounced like a plain *s*: "trôsse".
-
-## Ver, vir, dar, pôr
-@conj ver,vir,dar,pôr pret
-!warn **Vi** (I saw, from *ver*) and **vim** (I came, from *vir*) look alike: *Vi o filme.* · *Vim de comboio.*
-
+@deel Vieste? Vir, pôr, poder, querer, saber {3}
+## Vir, pôr, trazer
+@conj vir,pôr,trazer pret
+!warn **Vi** (ik zag, van *ver*) en **vim** (ik kwam, van *vir*) lijken op elkaar: *Vi o filme.* · *Vim de comboio.*
+!tip De *ss* in **trouxe** spreek je uit als een gewone *s*: "trôsse".
 ## Poder, querer, saber
 @conj poder,querer,saber pret
-In the past these verbs have a special meaning:
-- **pude** = I managed to · **não pude** = I couldn't
-- **quis** = I wanted to (and tried)
-- **soube** = I found out: *Soube a notícia ontem.* (I heard the news yesterday.)
-!pt **Pôde** (he could) has an accent to tell it apart from **pode** (he can).
-
+In de verleden tijd hebben deze werkwoorden een speciale betekenis:
+- **pude** = het is me gelukt · **não pude** = ik kon niet
+- **quis** = ik wilde (en probeerde het)
+- **soube** = ik kwam erachter: *Soube a notícia ontem.* (Ik hoorde het nieuws gisteren.)
+!pt krijgt **pôde** (hij kon) een accent, zodat je het kunt onderscheiden van **pode** (hij kan).
 ## Haver
-**Houve** = there was, there were (an event): *Houve um acidente na autoestrada.*
-
-## A pattern to help you
-Most of these verbs have a special stem in the past (*estiv-, tiv-, fiz-, diss-, troux-, pud-, quis-, soub-*) and similar endings: *-e, -este, -e, -emos, -eram*. Learn the eu form, and the rest follows.`,
+**Houve** = er was, er waren (een gebeurtenis): *Houve um acidente na autoestrada.*
+`,
   write: [
-    { task: 'Write about your last holiday: where you went, who with, what you did and what it was like.', model: 'No verão passado fui ao Algarve com a minha família. Estivemos lá uma semana. Fomos à praia todos os dias e fizemos um passeio de barco. Foi ótimo!', hint: 'fui, estivemos, fizemos, foi' },
-    { task: 'Tell a friend what you did last weekend, with at least four irregular verbs.', model: 'No sábado tive de trabalhar, mas à noite fui ao cinema e vi um filme ótimo. No domingo fiz um bolo e a minha irmã veio almoçar.', hint: 'tive, fui, vi, fiz, veio' },
+    { task: 'Schrijf over je laatste vakantie: waar je heen ging, met wie, wat je deed en hoe het was.', model: 'No verão passado fui ao Algarve com a minha família. Estivemos lá uma semana. Fomos à praia todos os dias e fizemos um passeio de barco. Foi ótimo!', hint: 'fui, estivemos, fizemos, foi' },
+    { task: 'Vertel een vriend wat je vorig weekend hebt gedaan, met minstens vier onregelmatige werkwoorden.', model: 'No sábado tive de trabalhar, mas à noite fui ao cinema e vi um filme ótimo. No domingo fiz um bolo e a minha irmã veio almoçar.', hint: 'tive, fui, vi, fiz, veio' },
   ],
 },
 
 u19: {
-  pt: 'Antigamente', en: 'The imperfect: how things used to be',
-  goals: ['Describe how things used to be', 'Talk about habits and background in the past', 'Choose between the perfeito and the imperfeito'],
+  pt: 'Antigamente', en: 'De imperfeito: hoe het vroeger was',
+  goals: ['Beschrijven hoe het vroeger was', 'Praten over gewoontes en achtergrond in het verleden', 'Kiezen tussen de perfeito en de imperfeito'],
   text: `
-## The imperfeito
-The **pretérito imperfeito** describes the past as a background: habits, descriptions, ongoing states — things with no clear beginning or end.
+@deel Em criança: de imperfeito {1}
+## De imperfeito
+De **pretérito imperfeito** beschrijft het verleden als achtergrond: gewoontes, beschrijvingen, toestanden die voortduurden — dingen zonder duidelijk begin of einde.
 @conj morar,viver,partir imp
-- **-ar** verbs: -ava, -avas, -ava, -ávamos, -áveis, -avam
-- **-er** and **-ir** verbs: -ia, -ias, -ia, -íamos, -íeis, -iam
-- (The fifth form is vós: *faláveis, comíeis* — see [[vos]].)
-- The **eu** and **ele** forms are identical: *eu morava, ele morava*.
+- Werkwoorden op **-ar**: -ava, -avas, -ava, -ávamos, -áveis, -avam
+- Werkwoorden op **-er** en **-ir**: -ia, -ias, -ia, -íamos, -íeis, -iam
+- (De vijfde vorm is vós: *faláveis, comíeis* — zie [[vos]].)
+- De vormen voor **eu** en **ele** zijn gelijk: *eu morava, ele morava*.
+## Gewoontes
+Voor wat je vroeger altijd of steeds deed — in het Nederlands vaak *vroeger…*, *altijd…* of *dan… altijd*:
+> Quando era pequeno, ia à praia todos os verões. = Toen ik klein was, ging ik elke zomer naar het strand.
+> Em criança morava numa aldeia. = Als kind woonde ik in een dorp.
+!warn Het Nederlands maakt dit onderscheid niet: *ik ging* kan in het Portugees **fui** (één keer) of **ia** (steeds weer) zijn. Vraag jezelf af: gebeurde het één keer, of was het een gewoonte?
+## Tijdswoorden
+antigamente (vroeger, in de oude tijd), dantes (vroeger), em criança / quando era pequeno (als kind), todos os dias, sempre, normalmente, enquanto (terwijl).
 
-## Only four irregular verbs
+@deel Era uma vez: beschrijven {2}
+## Maar vier onregelmatige werkwoorden
 @conj ser,ter,vir,pôr imp
-- **Haver** gives **havia** — there was, there were (a situation): *Havia muita gente.*
+- **Haver** wordt **havia** — er was, er waren (een situatie): *Havia muita gente.*
+## Beschrijvingen
+De imperfeito beschrijft mensen, plaatsen, het weer, leeftijd en tijd:
+> A casa era branca. = Het huis was wit.
+> Estava frio. = Het was koud.
+> Eram oito horas. = Het was acht uur.
+> Tinha dez anos. = Ik was tien jaar.
+> Era uma vez um rei… = Er was eens een koning…
+- Ook **beleefde verzoeken**: *Queria um café* (hoofdstuk 5).
 
-## When to use it
-- **Habits** — *used to*, *would*: *Quando era pequeno, ia à praia todos os verões.*
-- **Descriptions** of people, places, weather, age and time: *A casa era branca. Estava frio. Eram oito horas. Tinha dez anos.*
-- **Ongoing actions**, often interrupted by another one: *Estava a jantar quando o telefone tocou.*
-- **Polite requests**: *Queria um café* (chapter 5).
-
-## Perfeito or imperfeito?
+@deel Quando…: perfeito of imperfeito? {3}
+## Doorlopend en onderbroken
+Een handeling die bezig was, staat in de imperfeito; wat er dan ineens gebeurt, in de perfeito:
+> Estava a jantar quando o telefone tocou. = Ik was aan het eten toen de telefoon ging.
+> Quando cheguei, a minha mãe estava a cozinhar. = Toen ik aankwam, was mijn moeder aan het koken.
+## Perfeito of imperfeito?
 |! perfeito | imperfeito |
-| a finished event: *Ontem fui à praia.* | a habit: *Ia à praia todos os dias.* |
-| the main events of a story | the background, the scene |
+| een afgeronde gebeurtenis: *Ontem fui à praia.* | een gewoonte: *Ia à praia todos os dias.* |
+| de hoofdgebeurtenissen van een verhaal | de achtergrond, het decor |
 | *De repente, o telefone tocou.* | *Eu estava a dormir.* |
-> Quando cheguei, a minha mãe estava a cozinhar. = When I arrived, my mother was cooking.
-!tip Think of a film: the **imperfeito** sets the scene (it was night, it was raining, people were dancing); the **perfeito** is what happens (suddenly someone came in).
-!pt In everyday speech the imperfeito often replaces the conditional: *Eu gostava de ir* = I'd like to go. You'll see this again in chapters 24 and 26.
-
-## Time words
-antigamente (in the old days), dantes (before, formerly), em criança / quando era pequeno (as a child), todos os dias, sempre, normalmente, enquanto (while).`,
+!tip Denk aan een film: de **imperfeito** zet het decor neer (het was nacht, het regende, mensen dansten); de **perfeito** is wat er gebeurt (ineens kwam er iemand binnen).
+!pt vervangt de imperfeito in de spreektaal vaak de voorwaardelijke wijs: *Eu gostava de ir* = ik zou graag gaan. Dat zie je terug in hoofdstuk 24 en 26.
+`,
   write: [
-    { task: 'Describe where you lived as a child and what you used to do at weekends.', model: 'Quando era pequena, morava numa casa perto do mar. Ao fim de semana ia à praia com os meus pais e brincava com o meu irmão. O meu avô contava histórias e a minha avó fazia bolos.', hint: 'era, morava, ia, brincava' },
-    { task: 'Start a story: describe the scene with the imperfeito, then say what happened with the perfeito.', model: 'Era uma noite de inverno. Estava frio e chovia muito. Eu estava em casa a ler um livro. De repente, alguém bateu à porta.', hint: 'era, estava, chovia + bateu' },
+    { task: 'Beschrijf waar je als kind woonde en wat je in het weekend altijd deed.', model: 'Quando era pequena, morava numa casa perto do mar. Ao fim de semana ia à praia com os meus pais e brincava com o meu irmão. O meu avô contava histórias e a minha avó fazia bolos.', hint: 'era, morava, ia, brincava' },
+    { task: 'Begin een verhaal: zet het decor neer met de imperfeito en zeg dan wat er gebeurde met de perfeito.', model: 'Era uma noite de inverno. Estava frio e chovia muito. Eu estava em casa a ler um livro. De repente, alguém bateu à porta.', hint: 'era, estava, chovia + bateu' },
   ],
 },
 
 u20: {
-  pt: 'O corpo e a saúde', en: 'Health, and giving instructions',
-  goals: ['Name parts of the body and say what hurts', 'Explain how you feel at the doctor\'s or the pharmacy', 'Give instructions and advice with the imperative'],
+  pt: 'O corpo e a saúde', en: 'Gezondheid, en aanwijzingen geven',
+  goals: ['Lichaamsdelen noemen en zeggen wat er pijn doet', 'Bij de dokter of de apotheek uitleggen hoe je je voelt', 'Aanwijzingen en adviezen geven met de gebiedende wijs'],
   text: `
-## Where does it hurt?
-With **doer** (to hurt), the part that hurts is the subject and the person is a little pronoun:
-> Dói-me a cabeça. = My head hurts. (literally: the head hurts me)
-> Doem-me as costas. = My back hurts. (*as costas* is plural)
-> Dói-te o dente? = Does your tooth hurt?
-- **dói** for one thing, **doem** for more than one.
-- The pronouns: **me** (me), **te** (you), **lhe** (him, her, polite you), **nos** (us), **lhes** (them).
-- Also common: **Tenho dores de cabeça.** = I have a headache.
+@deel Dói-me: waar doet het pijn? {1}
+## Waar doet het pijn?
+Bij **doer** (pijn doen) is het lichaamsdeel dat pijn doet het onderwerp, en de persoon een klein voornaamwoord — net als het Nederlandse *mijn hoofd doet **me** pijn*:
+> Dói-me a cabeça. = Ik heb hoofdpijn. (letterlijk: het hoofd doet me pijn)
+> Doem-me as costas. = Mijn rug doet pijn. (*as costas* is meervoud)
+> Dói-te o dente? = Doet je tand pijn?
+- **dói** voor één ding, **doem** voor meer dingen.
+- De voornaamwoorden: **me** (mij), **te** (jou), **lhe** (hem, haar, u), **nos** (ons), **lhes** (hen).
+- Ook veel gebruikt: **Tenho dores de cabeça.** = Ik heb hoofdpijn.
+- Het lichaam: a cabeça (hoofd), a barriga (buik), o braço (arm), a perna (been), o pé (voet), as costas (rug), o dente (tand), a garganta (keel).
 
-## How do you feel?
-| Estou doente. | I'm ill. |
-| Estou constipado / constipada. | I've got a cold. |
-| Tenho febre. | I have a temperature. |
-| Tenho gripe. | I have the flu. |
-| Tenho tosse. | I have a cough. |
-| Sinto-me mal. · Não me sinto bem. | I feel bad. · I don't feel well. |
-| Estou melhor. | I'm better. |
-!pt **Constipado** means *having a cold* — not constipated! *Uma constipação* is a cold.
+@deel Estou doente: hoe voel je je? {2}
+## Hoe voel je je?
+| Estou doente. | Ik ben ziek. |
+| Estou constipado / constipada. | Ik ben verkouden. |
+| Tenho febre. | Ik heb koorts. |
+| Tenho gripe. | Ik heb griep. |
+| Tenho tosse. | Ik hoest. |
+| Sinto-me mal. · Não me sinto bem. | Ik voel me slecht. · Ik voel me niet goed. |
+| Estou melhor. | Ik ben beter. |
+!pt betekent **constipado** *verkouden* — niet *last van verstopping*! *Uma constipação* is een verkoudheid.
+- Naar de dokter: **ir ao médico**. Naar de apotheek: **ir à farmácia**. Het recept: **a receita**. Een pil: **um comprimido**.
 
-## The imperative: telling people what to do
-### To a friend (tu)
-The positive tu imperative looks like the **ele** form of the present:
-> Fala mais devagar! = Speak more slowly!
-> Come a sopa! = Eat your soup!
-> Abre a janela, por favor. = Open the window, please.
-### To everyone else
-For **você / o senhor / a senhora**, **nós** and **vocês**, take the *eu* form of the present, drop the **-o**, and swap the vowel: **-ar** verbs take **-e**, **-er** and **-ir** verbs take **-a**:
+@deel Descanse! De gebiedende wijs {3}
+## De gebiedende wijs: zeggen wat iemand moet doen
+### Tegen een vriend (tu)
+De bevestigende tu-vorm lijkt op de **ele**-vorm van de tegenwoordige tijd:
+> Fala mais devagar! = Praat eens wat langzamer!
+> Come a sopa! = Eet je soep op!
+> Abre a janela, por favor. = Doe het raam open, alsjeblieft.
+### Tegen alle anderen
+Voor **você / o senhor / a senhora**, **nós** en **vocês** neem je de *eu*-vorm van de tegenwoordige tijd, haal je de **-o** weg en wissel je de klinker: werkwoorden op **-ar** krijgen **-e**, op **-er** en **-ir** krijgen **-a**:
 |! | falar (falo) | comer (como) | abrir (abro) | fazer (faço) |
 | tu | fala | come | abre | faz |
 | você | fale | coma | abra | faça |
 | nós | falemos | comamos | abramos | façamos |
 | vocês | falem | comam | abram | façam |
 @conj tomar,beber impa
-- **Vós** has a form of its own — the present without the *-s*: *falai, comei, abri, fazei* (and *sede, ide*). You'll meet it in prayers and old texts. See [[imperativo]].
-### Saying don't
-The negative uses those "swapped" forms for every person — including tu:
-> Não fales! · Não fale! · Não falem! = Don't speak!
-> Não comas isso! = Don't eat that!
-!tip At the doctor's or the pharmacy you'll hear the polite form: *Tome um comprimido de oito em oito horas. Beba muita água. Descanse.*
-
-## Irregular imperatives
+- **Vós** heeft een eigen vorm — de tegenwoordige tijd zonder *-s*: *falai, comei, abri, fazei* (en *sede, ide*). Die kom je tegen in gebeden en oude teksten. Zie [[imperativo]].
+### Niet doen!
+De ontkenning gebruikt die "gewisselde" vormen voor iedereen — ook voor tu:
+> Não fales! · Não fale! · Não falem! = Niet praten!
+> Não comas isso! = Eet dat niet!
+!tip Bij de dokter of de apotheek hoor je de beleefde vorm: *Tome um comprimido de oito em oito horas. Beba muita água. Descanse.* (Neem om de acht uur een pil. Drink veel water. Rust uit.)
+## Onregelmatige gebiedende wijs
 | ser → sê · seja | ir → vai · vá |
 | estar → está · esteja | dar → dá · dê |
 | fazer → faz · faça | dizer → diz · diga |
 | ter → tem · tenha | pôr → põe · ponha |
 | vir → vem · venha | saber → sabe · saiba |
-> Diga! = Yes? / Go ahead! (what you'll hear when someone answers the phone or serves you)`,
+> Diga! = Zegt u het maar! (wat je hoort als iemand de telefoon opneemt of je helpt)
+`,
   write: [
-    { task: 'You\'re at the pharmacy. Explain your symptoms and ask what you should take.', model: 'Boa tarde. Não me sinto bem. Dói-me a cabeça e a garganta, e tenho tosse desde ontem. O que posso tomar?', hint: 'dói-me, tenho, sinto-me' },
-    { task: 'A friend has the flu. Give four pieces of advice with the tu imperative — positive and negative.', model: 'Fica em casa e descansa. Bebe muito chá com mel. Não vás trabalhar e não saias à noite!', hint: 'fica, bebe, não vás, não saias' },
+    { task: 'Je bent bij de apotheek. Leg je klachten uit en vraag wat je moet innemen.', model: 'Boa tarde. Não me sinto bem. Dói-me a cabeça e a garganta, e tenho tosse desde ontem. O que posso tomar?', hint: 'dói-me, tenho, sinto-me' },
+    { task: 'Een vriend heeft griep. Geef vier adviezen met de tu-gebiedende wijs — bevestigend en ontkennend.', model: 'Fica em casa e descansa. Bebe muito chá com mel. Não vás trabalhar e não saias à noite!', hint: 'fica, bebe, não vás, não saias' },
   ],
 },
 
 u21: {
-  pt: 'Viagens', en: 'Transport and directions',
-  goals: ['Talk about transport: de comboio, a pé', 'Buy tickets and understand timetables', 'Ask for and give directions', 'Use para and por'],
+  pt: 'Viagens', en: 'Vervoer en de weg wijzen',
+  goals: ['Praten over vervoer: de comboio, a pé', 'Kaartjes kopen en dienstregelingen begrijpen', 'De weg vragen en wijzen', 'Para en por gebruiken'],
   text: `
-## How do you travel?
-Use **de** + the vehicle, with no article: *de comboio, de autocarro, de metro, de carro, de avião, de barco, de bicicleta* — but **a pé** (on foot).
-> Vou para o trabalho de metro. = I go to work by metro.
-!pt The Portuguese words: **o comboio** (train; Brazil: *trem*), **o autocarro** (bus; Brazil: *ônibus*), **o elétrico** (tram), **a paragem** (stop), **a bilheteira** (ticket office), **apanhar** (to catch: *apanhar o autocarro*).
+@deel De comboio: hoe reis je? {1}
+## Hoe reis je?
+Gebruik **de** + het vervoermiddel, zonder lidwoord — het Nederlandse *met de*: *de comboio, de autocarro, de metro, de carro, de avião, de barco, de bicicleta* — maar **a pé** (te voet, lopend).
+> Vou para o trabalho de metro. = Ik ga met de metro naar mijn werk.
+> Vou a pé. = Ik ga lopend.
+!pt heten ze zo: **o comboio** (trein; Brazilië: *trem*), **o autocarro** (bus; Brazilië: *ônibus*), **o elétrico** (tram), **a paragem** (halte), **a bilheteira** (kaartjesloket), **apanhar** (nemen, halen: *apanhar o autocarro*).
+> Quanto tempo demora? = Hoe lang duurt het?
+> Demora duas horas. = Het duurt twee uur.
 
-## Tickets and timetables
-> Queria um bilhete para Coimbra, se faz favor. = A ticket to Coimbra, please.
-> Ida e volta. · Só ida. = Return. · Single.
-> A que horas parte o próximo comboio? = What time does the next train leave?
-> Quanto tempo demora? = How long does it take?
-> Demora duas horas. = It takes two hours.
-- **partir** (to leave) → **a partida** (departure) · **chegar** (to arrive) → **a chegada** (arrival).
+@deel Bilhetes: kaartjes en para of por {2}
+## Kaartjes en dienstregelingen
+> Queria um bilhete para Coimbra, se faz favor. = Een kaartje naar Coimbra, alstublieft.
+> Ida e volta. · Só ida. = Retour. · Enkele reis.
+> A que horas parte o próximo comboio? = Hoe laat vertrekt de volgende trein?
+- **partir** (vertrekken) → **a partida** (vertrek) · **chegar** (aankomen) → **a chegada** (aankomst).
+- Op het vliegveld: **o voo** (de vlucht), **a mala** (de koffer), **o passaporte**. Reserveren: **reservar**.
+## Para en por
+- **para** = bestemming en doel: *o comboio para o Porto, um bilhete para amanhã*.
+- **por** = door, langs, via: *passar por Coimbra, ir pela ponte, por aqui* (hierlangs).
+- **por** smelt samen met het lidwoord: **pelo, pela, pelos, pelas**.
 
-## Para and por
-- **para** = destination and purpose: *o comboio para o Porto, um bilhete para amanhã*.
-- **por** = through, along, via: *passar por Coimbra, ir pela ponte, por aqui* (this way).
-- **por** joins the article: **pelo, pela, pelos, pelas**.
-
-## Asking the way
-> Desculpe, onde fica a estação? = Excuse me, where is the station?
-> Como vou para o castelo? = How do I get to the castle?
-> É longe? = Is it far?
-> É já ali. = It's just over there.
-
-## Giving directions
-Directions use the polite imperative (chapter 20):
-| siga em frente | go straight on |
-| vire à direita · à esquerda | turn right · left |
-| atravesse a rua | cross the street |
-| a primeira (rua) à direita | the first street on the right |
-| no semáforo | at the traffic lights |
-| na esquina | on the corner |
-| suba · desça a rua | go up · down the street |
-- To a friend: *segue em frente, vira à direita, atravessa a rua*.`,
+@deel Vire à direita: de weg vragen {3}
+## De weg vragen
+> Desculpe, onde fica a estação? = Pardon, waar is het station?
+> Como vou para o castelo? = Hoe kom ik bij het kasteel?
+> É longe? = Is het ver?
+> É já ali. = Het is daar vlakbij.
+## De weg wijzen
+Bij het wijzen van de weg gebruik je de beleefde gebiedende wijs (hoofdstuk 20):
+| siga em frente | ga rechtdoor |
+| vire à direita · à esquerda | sla rechtsaf · linksaf |
+| atravesse a rua | steek de straat over |
+| a primeira (rua) à direita | de eerste straat rechts |
+| no semáforo | bij het stoplicht |
+| na esquina | op de hoek |
+| suba · desça a rua | ga de straat op · af |
+- Tegen een vriend: *segue em frente, vira à direita, atravessa a rua*.
+`,
   write: [
-    { task: 'Explain to a tourist how to get from your home to the nearest café or shop.', model: 'Saia de casa e vire à esquerda. Siga em frente até ao semáforo. Atravesse a rua e vire na primeira à direita. O café fica na esquina, ao lado da farmácia.', hint: 'siga, vire, atravesse, fica' },
-    { task: 'Buy a train ticket: say where to, single or return, and ask when the train leaves and how long it takes.', model: 'Boa tarde. Queria um bilhete de ida e volta para o Porto, se faz favor. A que horas parte o próximo comboio? E quanto tempo demora?', hint: 'queria, ida e volta, a que horas, demora' },
+    { task: 'Leg een toerist uit hoe hij van jouw huis naar het dichtstbijzijnde café of de dichtstbijzijnde winkel komt.', model: 'Saia de casa e vire à esquerda. Siga em frente até ao semáforo. Atravesse a rua e vire na primeira à direita. O café fica na esquina, ao lado da farmácia.', hint: 'siga, vire, atravesse, fica' },
+    { task: 'Koop een treinkaartje: zeg waarheen, enkele reis of retour, en vraag hoe laat de trein vertrekt en hoe lang de reis duurt.', model: 'Boa tarde. Queria um bilhete de ida e volta para o Porto, se faz favor. A que horas parte o próximo comboio? E quanto tempo demora?', hint: 'queria, ida e volta, a que horas, demora' },
   ],
 },
 
 u22: {
-  pt: 'Pronomes', en: 'Object pronouns: him, her, it, them',
-  goals: ['Replace nouns with object pronouns: o, a, os, as, lhe, lhes', 'Put them in the right place: vejo-o but não o vejo', 'Handle the changes: comprá-lo, compram-no'],
+  pt: 'Pronomes', en: 'Persoonlijke voornaamwoorden als voorwerp: hem, haar, het, ze',
+  goals: ['Zelfstandige naamwoorden vervangen door voornaamwoorden: o, a, os, as, lhe, lhes', 'Ze op de goede plek zetten: vejo-o maar não o vejo', 'De vormveranderingen toepassen: comprá-lo, compram-no'],
   text: `
-## Direct and indirect objects
-- The **direct object** receives the action: *I see **Maria*** → *I see **her***.
-- The **indirect object** is the person you give, say or show something **to**: *I give **Maria** a book* → *I give **her** a book*.
-|! | direct | indirect (to…) |
-| me | me | me |
-| you (tu) | te | te |
-| him, her, it, you (polite) | o · a | lhe |
-| us | nos | nos |
-| you (vocês) | vos | vos |
-| them, you all (polite) | os · as | lhes |
-> Conheço o Rui. → Conheço-o. = I know him.
-> Dou o livro à Ana. → Dou-lhe o livro. = I give her the book.
-!tip **Vos** is how Portugal says *you* (plural) as an object: *Vejo-vos amanhã* = See you (all) tomorrow. It's the one part of *vós* still in daily use.
+@deel Vejo-o: hem, haar, het {1}
+## Lijdend en meewerkend voorwerp
+- Het **lijdend voorwerp** ondergaat de handeling: *ik zie **Maria*** → *ik zie **haar***.
+- Het **meewerkend voorwerp** is de persoon **aan** wie je iets geeft, zegt of laat zien: *ik geef **Maria** een boek* → *ik geef **haar** een boek*.
+|! | lijdend | meewerkend (aan…) |
+| mij | me | me |
+| jou (tu) | te | te |
+| hem, haar, het, u | o · a | lhe |
+| ons | nos | nos |
+| jullie (vocês) | vos | vos |
+| hen, ze, u (meervoud) | os · as | lhes |
+> Conheço o Rui. → Conheço-o. = Ik ken hem.
+!tip **Vos** is hoe Portugal *jullie* als voorwerp zegt: *Vejo-vos amanhã* = Tot morgen (allemaal). Het is het enige stukje *vós* dat nog dagelijks gebruikt wordt.
+## Waar staan ze?
+Precies waar de wederkerende voornaamwoorden staan (hoofdstuk 13): achter het werkwoord met een streepje in een gewone zin, en vóór het werkwoord na *não*, vraagwoorden, *já, também, que*…
+> Vejo-o amanhã. = Ik zie hem morgen.
+> Não o vejo. = Ik zie hem niet.
+> Quando o vês? = Wanneer zie je hem?
+!warn **O** en **a** betekenen ook *het*: een ding is in het Portugees altijd mannelijk of vrouwelijk. *O livro? Comprei-o.* (Het boek? Ik heb het gekocht.) · *A casa? Vendemo-la.* (Het huis? We hebben het verkocht.)
 
-## Where do they go?
-Exactly where the reflexive pronouns go (chapter 13): after the verb with a hyphen in a plain statement, and in front of the verb after *não*, question words, *já, também, que*…
-> Vejo-o amanhã. = I'll see him tomorrow.
-> Não o vejo. = I don't see him.
-> Quando o vês? = When are you seeing him?
+@deel Dá-me: aan wie? {2}
+## Lhe en lhes
+> Dou o livro à Ana. → Dou-lhe o livro. = Ik geef haar het boek.
+> Digo-lhes a verdade. = Ik vertel hun de waarheid.
+> Dá-me o sal, por favor. = Geef me het zout even, alsjeblieft.
+- **Lhe** is voor hem en haar en u — de context maakt het duidelijk.
+- Werkwoorden die vaak een meewerkend voorwerp hebben: **dar, dizer, mostrar** (laten zien), **emprestar** (lenen aan), **oferecer** (cadeau geven), **telefonar a** (bellen): *Telefonei-lhe ontem.*
+## Twee voornaamwoorden samen
+Op schrift kom je **lho** tegen (lhe + o): *Dei-lho* = Ik heb het hem gegeven. In de spreektaal zeggen veel mensen gewoon *Dei-lhe*. Je hoeft het alleen te herkennen.
 
-## O and a change shape
-**O, a, os, as** change after certain verb endings:
-|! The verb ends in | What happens | Examples |
-| -r, -s, -z | the letter drops; the pronoun becomes **lo, la, los, las** | comprar + o → **comprá-lo** · fazemos + o → **fazemo-lo** · fiz + o → **fi-lo** |
-| -m, -ão, -õe (a nasal sound) | the pronoun becomes **no, na, nos, nas** | compram + o → **compram-no** · dão + a → **dão-na** |
-| anything else | no change | compro-o, comprei-a |
-- An accent keeps the stress when an -ar or -er infinitive loses its -r: *comprá-lo, vendê-la, fazê-lo* — but *abri-lo*, with no accent.
-!tip It sounds harder than it is. By far the most common case is **infinitive + lo / la**: *Vou comprá-lo* (I'm going to buy it), *Posso ajudá-la?* (Can I help you? — to a woman).
-
-## Two pronouns together
-In writing you'll meet **lho** (lhe + o): *Dei-lho* = I gave it to him. In speech many people just say *Dei-lhe*. You only need to recognise it.`,
+@deel Vou comprá-lo: de vorm verandert {3}
+## O en a veranderen van vorm
+**O, a, os, as** veranderen na bepaalde uitgangen van het werkwoord:
+|! Het werkwoord eindigt op | Wat er gebeurt | Voorbeelden |
+| -r, -s, -z | de letter valt weg; het voornaamwoord wordt **lo, la, los, las** | comprar + o → **comprá-lo** · fazemos + o → **fazemo-lo** · fiz + o → **fi-lo** |
+| -m, -ão, -õe (een neusklank) | het voornaamwoord wordt **no, na, nos, nas** | compram + o → **compram-no** · dão + a → **dão-na** |
+| iets anders | geen verandering | compro-o, comprei-a |
+- Een accent bewaart de klemtoon als een infinitief op -ar of -er zijn -r verliest: *comprá-lo, vendê-la, fazê-lo* — maar *abri-lo*, zonder accent.
+!tip Het klinkt moeilijker dan het is. Verreweg het vaakst kom je **infinitief + lo / la** tegen: *Vou comprá-lo* (Ik ga het kopen), *Posso ajudá-la?* (Kan ik u helpen? — tegen een vrouw).
+`,
   write: [
-    { task: 'Answer with pronouns instead of the nouns: Viste o filme? Conheces a Ana? Compraste os bilhetes? Telefonaste ao João?', model: 'Sim, vi-o ontem. Não, não a conheço. Sim, comprei-os hoje. Ainda não lhe telefonei.', hint: 'vi-o, não a conheço, comprei-os, lhe' },
-    { task: 'Write about presents you gave last Christmas or birthday, using lhe and o/a.', model: 'No Natal dei um livro à minha mãe. Ao meu pai ofereci uma camisola e ele adorou-a. A minha irmã queria uns brincos, por isso comprei-os em Lisboa e dei-lhos no dia de Natal.', hint: 'dei-lhe, adorou-a, comprei-os' },
+    { task: 'Antwoord met voornaamwoorden in plaats van de zelfstandige naamwoorden: Viste o filme? Conheces a Ana? Compraste os bilhetes? Telefonaste ao João?', model: 'Sim, vi-o ontem. Não, não a conheço. Sim, comprei-os hoje. Ainda não lhe telefonei.', hint: 'vi-o, não a conheço, comprei-os, lhe' },
+    { task: 'Schrijf over cadeaus die je met de laatste kerst of verjaardag gaf, met lhe en o/a.', model: 'No Natal dei um livro à minha mãe. Ao meu pai ofereci uma camisola e ele adorou-a. A minha irmã queria uns brincos, por isso comprei-os em Lisboa e dei-lhos no dia de Natal.', hint: 'dei-lhe, adorou-a, comprei-os' },
   ],
 },
 
 u23: {
-  pt: 'Comparar', en: 'Comparing things',
-  goals: ['Compare with mais… do que, menos… do que and tão… como', 'Use melhor, pior, maior and menor', 'Say the most and the least, and use -íssimo'],
+  pt: 'Comparar', en: 'Dingen vergelijken',
+  goals: ['Vergelijken met mais… do que, menos… do que en tão… como', 'Melhor, pior, maior en menor gebruiken', 'De meeste en de minste zeggen, en -íssimo gebruiken'],
   text: `
-## More and less
-> O comboio é mais rápido do que o autocarro. = The train is faster than the bus.
-> O Porto é menos caro do que Lisboa. = Porto is less expensive than Lisbon.
-- **mais … do que** and **menos … do que**. In speech, *do que* is often shortened to **que**: *mais caro que*.
-- With nouns: *mais tempo do que, menos pessoas do que*.
-- With verbs: *Ele trabalha mais do que eu.* (Note: **eu**, not *mim*.)
+@deel Mais do que: meer en minder {1}
+## Meer en minder
+> O comboio é mais rápido do que o autocarro. = De trein is sneller dan de bus.
+> O Porto é menos caro do que Lisboa. = Porto is minder duur dan Lissabon.
+- **mais … do que** en **menos … do que**. In de spreektaal wordt *do que* vaak ingekort tot **que**: *mais caro que*.
+- Het Portugees heeft geen uitgang zoals *-er*: *sneller* is altijd **mais rápido**.
+- Met zelfstandige naamwoorden: *mais tempo do que, menos pessoas do que*.
+- Met werkwoorden: *Ele trabalha mais do que eu.* (Let op: **eu**, niet *mim* — net als *dan ik*.)
 
-## As … as
-> O Rui é tão alto como o irmão. = Rui is as tall as his brother.
-> Tenho tantos livros como tu. = I have as many books as you.
-- **tão** + adjective or adverb + **como** (or *quanto*)
-- **tanto, tanta, tantos, tantas** + noun + **como**
+@deel Tão… como: even … als {2}
+## Even … als
+> O Rui é tão alto como o irmão. = Rui is even lang als zijn broer.
+> Tenho tantos livros como tu. = Ik heb evenveel boeken als jij.
+- **tão** + bijvoeglijk naamwoord of bijwoord + **como** (of *quanto*)
+- **tanto, tanta, tantos, tantas** + zelfstandig naamwoord + **como**
+- **igual a** (gelijk aan, hetzelfde als) · **diferente de** (anders dan): *O meu é igual ao teu.*
 
-## Irregular comparatives
-| bom → melhor | good → better |
-| mau → pior | bad → worse |
-| grande → maior | big → bigger |
-| pequeno → menor · mais pequeno | small → smaller |
-| bem → melhor · mal → pior | well → better · badly → worse |
-!pt In Portugal **mais pequeno** is completely normal — more common than *menor* for physical size. *Mais grande* and *mais bom*, though, are always wrong.
-
-## The most, the least
-Use **o / a / os / as + mais / menos + adjective**, and **de** for *in* or *of*:
-> É a cidade mais bonita de Portugal. = It's the most beautiful city in Portugal.
-> É o melhor restaurante do bairro. = It's the best restaurant in the neighbourhood.
-> São os sapatos menos caros da loja. = They're the least expensive shoes in the shop.
-
-## Really, really: -íssimo
-Add **-íssimo** to say *extremely*:
-| caro → caríssimo | very expensive |
-| lindo → lindíssimo | gorgeous |
-| rápido → rapidíssimo | extremely fast |
-| difícil → dificílimo | extremely difficult |
-- **Ótimo** (excellent) and **péssimo** (awful) are the strongest forms of *bom* and *mau*.`,
+@deel O melhor: het beste, het meeste {3}
+## Onregelmatige vergelijkingen
+| bom → melhor | goed → beter |
+| mau → pior | slecht → slechter |
+| grande → maior | groot → groter |
+| pequeno → menor · mais pequeno | klein → kleiner |
+| bem → melhor · mal → pior | goed → beter · slecht → slechter |
+!pt is **mais pequeno** heel gewoon — voor afmetingen zelfs vaker dan *menor*. Maar *mais grande* en *mais bom* zijn altijd fout.
+## Het meest, het minst
+Gebruik **o / a / os / as + mais / menos + bijvoeglijk naamwoord**, en **de** voor *in* of *van*:
+> É a cidade mais bonita de Portugal. = Het is de mooiste stad van Portugal.
+> É o melhor restaurante do bairro. = Het is het beste restaurant van de wijk.
+> São os sapatos menos caros da loja. = Het zijn de minst dure schoenen van de winkel.
+## Heel erg: -íssimo
+Plak **-íssimo** eraan om *heel erg* te zeggen:
+| caro → caríssimo | heel duur |
+| lindo → lindíssimo | prachtig |
+| rápido → rapidíssimo | razendsnel |
+| difícil → dificílimo | heel moeilijk |
+- **Ótimo** (uitstekend) en **péssimo** (vreselijk) zijn de sterkste vormen van *bom* en *mau*.
+`,
   write: [
-    { task: 'Compare two cities you know: size, prices, weather and people.', model: 'Londres é maior do que Lisboa, mas Lisboa é mais bonita. Em Lisboa a comida é mais barata e o tempo é melhor. As pessoas são tão simpáticas como em Londres.', hint: 'maior, mais … do que, tão … como' },
-    { task: 'Write about the best and the worst things about where you live.', model: 'O melhor da minha cidade é o parque perto do rio. O pior é o trânsito: é péssimo! O restaurante mais famoso é italiano e é caríssimo.', hint: 'o melhor, o pior, o mais, -íssimo' },
+    { task: 'Vergelijk twee steden die je kent: grootte, prijzen, weer en mensen.', model: 'Amesterdão é maior do que Coimbra, mas Coimbra é mais bonita. Em Coimbra a comida é mais barata e o tempo é melhor. As pessoas são tão simpáticas como em Amesterdão.', hint: 'maior, mais … do que, tão … como' },
+    { task: 'Schrijf over het beste en het slechtste van de plek waar je woont.', model: 'O melhor da minha cidade é o parque perto do rio. O pior é o trânsito: é péssimo! O restaurante mais famoso é italiano e é caríssimo.', hint: 'o melhor, o pior, o mais, -íssimo' },
   ],
 },
 
 u24: {
-  pt: 'O futuro', en: 'The future and the conditional',
-  goals: ['Form and recognise the futuro simples', 'Use the conditional for wishes, polite requests and hypotheses', 'Know when Portuguese people actually use them'],
+  pt: 'O futuro', en: 'De toekomende tijd en de voorwaardelijke wijs',
+  goals: ['De futuro simples maken en herkennen', 'De voorwaardelijke wijs gebruiken voor wensen, beleefde verzoeken en veronderstellingen', 'Weten wanneer Portugezen ze echt gebruiken'],
   text: `
+@deel Farei: de toekomende tijd {1}
 ## Futuro simples
-Take the **whole infinitive** and add **-ei, -ás, -á, -emos, -eis, -ão** — the same endings for every verb:
+Neem de **hele infinitief** en plak er **-ei, -ás, -á, -emos, -eis, -ão** achter — dezelfde uitgangen voor elk werkwoord:
 @conj falar,comer,partir fut
-> Amanhã choverá no norte. = Tomorrow it will rain in the north.
-Only three verbs are irregular — they lose a syllable: **fazer → farei, dizer → direi, trazer → trarei**.
+> Amanhã choverá no norte. = Morgen zal het regenen in het noorden.
+Maar drie werkwoorden zijn onregelmatig — ze verliezen een lettergreep: **fazer → farei, dizer → direi, trazer → trarei**.
 @conj fazer,dizer fut
-!pt In conversation Portuguese people rarely use the futuro simples. They say **vou fazer** (chapter 14) or simply use the present: *Amanhã falo com ele.* The futuro is for writing, forecasts, formal speeches — and for guessing: *Onde estará o João?* (Where can João be?)
+!pt gebruiken mensen de futuro simples zelden in gesprekken. Ze zeggen **vou fazer** (hoofdstuk 14) of gebruiken gewoon de tegenwoordige tijd: *Amanhã falo com ele.* De futuro is voor schrijftaal, weersverwachtingen, plechtige toespraken — en om te gissen: *Onde estará o João?* (Waar zou João zijn?)
+## Voornaamwoorden in het midden
+In formele schrijftaal staat een voornaamwoord bij de toekomende tijd of de voorwaardelijke wijs **midden in** het werkwoord: *Dar-lhe-ei* (ik zal hem geven), *Dir-me-ia* (hij zou me zeggen). Dat zie je in boeken en kranten. In de spreektaal omzeilen mensen het met *vou dar-lhe* of door het voornaamwoord ervoor te zetten.
 
-## The conditional: would
-The same idea — the infinitive + **-ia, -ias, -ia, -íamos, -íeis, -iam**:
-@conj gostar,ser cond
-- Irregular like the future: **faria, diria, traria**.
-### When to use it
-- **Polite requests and wishes**: *Gostaria de reservar uma mesa. Poderia ajudar-me?*
-- **Hypotheses**: *Com mais dinheiro, viajaria pelo mundo.* (With more money, I'd travel the world.)
-- **The future seen from the past**: *Ele disse que viria.* (He said he would come.)
-!pt In speech the **imperfeito** very often replaces the conditional: *Gostava de reservar uma mesa*, *Eu ia, mas não posso*. Both are correct; the conditional sounds a little more formal.
+@deel Gostaria de…: beleefd vragen {2}
+## De voorwaardelijke wijs: zou
+Hetzelfde idee — de infinitief + **-ia, -ias, -ia, -íamos, -íeis, -iam**:
+@conj gostar,poder cond
+- Onregelmatig net als de toekomende tijd: **faria, diria, traria**.
+## Beleefde verzoeken en wensen
+> Gostaria de reservar uma mesa. = Ik zou graag een tafel willen reserveren.
+> Poderia ajudar-me? = Zou u me kunnen helpen?
+!pt vervangt de **imperfeito** de voorwaardelijke wijs in de spreektaal heel vaak: *Gostava de reservar uma mesa*, *Eu ia, mas não posso*. Allebei zijn correct; de voorwaardelijke wijs klinkt iets formeler.
 
-## Pronouns in the middle
-In formal writing, a pronoun with the future or conditional goes **inside** the verb: *Dar-lhe-ei* (I will give him), *Dir-me-ia* (he would tell me). You'll see this in books and newspapers. In speech people avoid it with *vou dar-lhe* or by putting the pronoun first.`,
+@deel Seria bom: als het zou kunnen {3}
+@conj ser,ter cond
+## Veronderstellingen
+> Com mais dinheiro, viajaria pelo mundo. = Met meer geld zou ik de wereld rondreizen.
+> Seria bom ter uma casa perto do mar. = Het zou fijn zijn om een huis aan zee te hebben.
+## De toekomst vanuit het verleden
+> Ele disse que viria. = Hij zei dat hij zou komen.
+> Prometeste que me telefonarias. = Je beloofde dat je me zou bellen.
+`,
   write: [
-    { task: 'Write five predictions about your life in ten years, with the futuro simples.', model: 'Daqui a dez anos viverei em Portugal. Falarei português muito bem e trabalharei numa escola. Terei uma casa perto do mar e farei muitas viagens.', hint: 'viverei, falarei, terei, farei' },
-    { task: 'Write a polite email to a hotel asking for a room, using the conditional.', model: 'Boa tarde. Gostaria de reservar um quarto duplo para os dias 3 e 4 de maio. Seria possível ter um quarto com vista para o mar? Poderiam dizer-me o preço? Obrigado.', hint: 'gostaria, seria, poderiam' },
+    { task: 'Schrijf vijf voorspellingen over je leven over tien jaar, met de futuro simples.', model: 'Daqui a dez anos viverei em Portugal. Falarei português muito bem e trabalharei numa escola. Terei uma casa perto do mar e farei muitas viagens.', hint: 'viverei, falarei, terei, farei' },
+    { task: 'Schrijf een beleefde e-mail aan een hotel waarin je om een kamer vraagt, met de voorwaardelijke wijs.', model: 'Boa tarde. Gostaria de reservar um quarto duplo para os dias 3 e 4 de maio. Seria possível ter um quarto com vista para o mar? Poderiam dizer-me o preço? Obrigado.', hint: 'gostaria, seria, poderiam' },
   ],
 },
 
 u25: {
-  pt: 'O conjuntivo', en: 'The present subjunctive',
-  goals: ['Form the presente do conjuntivo', 'Use it after wishes, feelings, doubt and some conjunctions', 'Use talvez, espero que and quero que'],
+  pt: 'O conjuntivo', en: 'De aanvoegende wijs: presente do conjuntivo',
+  goals: ['De presente do conjuntivo maken', 'Hem gebruiken na wensen, gevoelens, twijfel en sommige voegwoorden', 'Talvez, espero que en quero que gebruiken'],
   text: `
-## What is the subjunctive?
-The **conjuntivo** (subjunctive) is a set of verb forms for things that are wished, doubted, feared or not yet real. English has a few traces of it (*I suggest he **be** on time*), but Portuguese uses it all the time.
+@deel Espero que…: de vorm {1}
+## Wat is de conjuntivo?
+De **conjuntivo** (aanvoegende wijs) is een reeks werkwoordsvormen voor dingen die gewenst, betwijfeld of gevreesd worden, of die (nog) niet echt zijn. Het Nederlands heeft er nog een paar sporen van (*Leve de koning!*, *Het zij zo*, *God zegene u*), maar het Portugees gebruikt hem de hele tijd.
+## De vorm
+Neem de **eu**-vorm van de tegenwoordige tijd, haal de **-o** weg en plak de "omgekeerde" klinker eraan — net als bij de beleefde gebiedende wijs (hoofdstuk 20):
+- Werkwoorden op **-ar** krijgen **-e**: falo → fal**e**, fal**es**, fal**e**, fal**emos**, fal**eis**, fal**em**
+- Werkwoorden op **-er** en **-ir** krijgen **-a**: como → com**a**, com**as**, com**a**, com**amos**, com**ais**, com**am** · parto → part**a**
+@conj falar,comer cpres
+- Spelling: om de klank te bewaren wordt *chegue, pague, fique, comece*.
+## Wensen: esperar que
+> Espero que gostes. = Ik hoop dat je het leuk vindt.
+> Espero que chegues bem. = Ik hoop dat je goed aankomt.
 
-## Forming it
-Take the **eu** form of the present, drop the **-o**, and add the "opposite" vowel:
-- **-ar** verbs take **-e**: falo → fal**e**, fal**es**, fal**e**, fal**emos**, fal**eis**, fal**em**
-- **-er** and **-ir** verbs take **-a**: como → com**a**, com**as**, com**a**, com**amos**, com**ais**, com**am** · parto → part**a**
-@conj falar,comer,fazer,ter cpres
-Because it's built on the *eu* form, irregular presents carry over: *digo → diga, venho → venha, posso → possa, ouço → ouça*.
-### Seven verbs to learn by heart
+@deel Quero que…: onregelmatige vormen {2}
+Omdat de vorm op de *eu*-vorm gebouwd is, gaan onregelmatige vormen mee: *digo → diga, venho → venha, posso → possa, ouço → ouça, faço → faça*.
+@conj fazer,ter cpres
+## Zeven werkwoorden om uit je hoofd te leren
 | ser → seja | estar → esteja |
 | ir → vá | haver → haja |
 | saber → saiba | querer → queira |
 | dar → dê | |
+## Wensen: querer que, preferir que
+> Quero que venhas à festa. = Ik wil dat je naar het feest komt.
+> Prefiro que estudes em casa. = Ik heb liever dat je thuis studeert.
+!warn Bij **hetzelfde** onderwerp gebruik je de infinitief: *Quero ir* (Ik wil gaan). De conjuntivo komt pas als er een nieuw onderwerp is: *Quero que tu vás* (Ik wil dat jij gaat).
+## Gevoelens, oordelen en noodzaak
+> É bom que estejas aqui. = Het is goed dat je er bent.
+> É pena que não possas vir. = Jammer dat je niet kunt komen.
+> É preciso que estudes. = Je moet studeren.
+> É importante que sejas pontual. = Het is belangrijk dat je op tijd bent.
 
-## When to use it
-### Wishes: querer que, esperar que, preferir que
-> Espero que gostes. = I hope you like it.
-> Quero que venhas à festa. = I want you to come to the party.
-!warn With the **same** subject, use the infinitive: *Quero ir* (I want to go). The subjunctive only comes in when there's a new subject: *Quero que tu vás* (I want you to go).
-### Feelings and judgements: é bom que, ter medo que, é pena que
-> É bom que estejas aqui. = It's good that you're here.
-### Doubt and possibility: talvez, duvidar que, é possível que
-> Talvez chova amanhã. = Maybe it will rain tomorrow.
-### Necessity: é preciso que, é importante que
-> É preciso que estudes. = You need to study.
-### After some conjunctions: para que, embora, antes que, até que, caso
-> Embora seja caro, vale a pena. = Although it's expensive, it's worth it.
-> Fala devagar para que eu perceba. = Speak slowly so that I understand.
-### Oxalá
-> Oxalá faça sol! = I hope it's sunny! (from Arabic *in sha Allah*)
-
-## Not after certainty
-Verbs of certainty take the normal indicative: *Acho que **é** verdade* (I think it's true), *Sei que **vens***. In the negative they switch: *Não acho que **seja** verdade.*`,
+@deel Talvez: twijfel en voegwoorden {3}
+## Twijfel en mogelijkheid: talvez, duvidar que, é possível que
+> Talvez chova amanhã. = Misschien regent het morgen.
+> Duvido que ele saiba. = Ik betwijfel of hij het weet.
+## Na sommige voegwoorden: para que, embora, antes que, até que, caso
+> Embora seja caro, vale a pena. = Hoewel het duur is, is het de moeite waard.
+> Fala devagar para que eu perceba. = Praat langzaam, zodat ik het begrijp.
+## Oxalá
+> Oxalá faça sol! = Hopelijk schijnt de zon! (uit het Arabisch *in sha Allah*)
+## Niet na zekerheid
+Werkwoorden van zekerheid krijgen de gewone aantonende wijs: *Acho que **é** verdade* (Ik denk dat het waar is), *Sei que **vens***. In de ontkenning wisselen ze: *Não acho que **seja** verdade.*
+`,
   write: [
-    { task: 'Write a message to a friend who is starting a new job: what you hope and want for them (espero que, quero que, talvez).', model: 'Parabéns pelo novo trabalho! Espero que gostes muito e que os teus colegas sejam simpáticos. Quero que me contes tudo. Talvez possamos jantar no sábado para celebrar!', hint: 'espero que, quero que, talvez' },
-    { task: 'Give advice to someone learning Portuguese with é importante que and é preciso que.', model: 'É importante que fales português todos os dias. É preciso que ouças música e vejas filmes portugueses. Não é preciso que percebas tudo!', hint: 'é importante que, é preciso que' },
+    { task: 'Schrijf een bericht aan een vriend die aan een nieuwe baan begint: wat je hoopt en wilt voor hem (espero que, quero que, talvez).', model: 'Parabéns pelo novo trabalho! Espero que gostes muito e que os teus colegas sejam simpáticos. Quero que me contes tudo. Talvez possamos jantar no sábado para celebrar!', hint: 'espero que, quero que, talvez' },
+    { task: 'Geef iemand die Portugees leert advies met é importante que en é preciso que.', model: 'É importante que fales português todos os dias. É preciso que ouças música e vejas filmes portugueses. Não é preciso que percebas tudo!', hint: 'é importante que, é preciso que' },
   ],
 },
 
 u26: {
-  pt: 'Se eu pudesse', en: 'If I could: the imperfect subjunctive',
-  goals: ['Form the imperfeito do conjuntivo', 'Talk about imaginary or unlikely situations with se', 'Use it after a past trigger: queria que…'],
+  pt: 'Se eu pudesse', en: 'Als ik kon: de imperfeito do conjuntivo',
+  goals: ['De imperfeito do conjuntivo maken', 'Praten over denkbeeldige of onwaarschijnlijke situaties met se', 'Hem gebruiken na een aanleiding in het verleden: queria que…'],
   text: `
-## Forming it
-Take the **eles** form of the pretérito perfeito, drop **-ram**, and add **-sse, -sses, -sse, -ssemos, -sseis, -ssem**:
+@deel Se eu tivesse…: de vorm {1}
+## De vorm
+Neem de **eles**-vorm van de pretérito perfeito, haal **-ram** weg en plak er **-sse, -sses, -sse, -ssemos, -sseis, -ssem** achter:
 | falaram → falasse | comeram → comesse |
 | fizeram → fizesse | tiveram → tivesse |
 | foram → fosse | puderam → pudesse |
-@conj falar,ter,ser,poder cimp
-- The nós and vós forms take an accent: *falássemos, comêssemos, fizéssemos, partíssemos* · *falásseis, fizésseis*.
+@conj ter,poder cimp
+- De vormen voor nós en vós krijgen een accent: *falássemos, comêssemos, fizéssemos, partíssemos* · *falásseis, fizésseis*.
+## Als … (denkbeeldig of onwaarschijnlijk)
+Gebruik **se + imperfeito do conjuntivo**, en in de andere helft de voorwaardelijke wijs (of de imperfeito):
+> Se tivesse tempo, aprenderia piano. = Als ik tijd had, zou ik piano leren.
+> Se tivesse mais dinheiro, comprava uma casa. = Als ik meer geld had, kocht ik een huis.
 
-## If … (imaginary or unlikely)
-Use **se + imperfeito do conjuntivo**, and the conditional (or the imperfeito) in the other half:
-> Se tivesse tempo, aprenderia piano. = If I had time, I'd learn the piano.
-> Se eu fosse tu, não ia. = If I were you, I wouldn't go.
-> Se ganhasse a lotaria, comprava uma casa no Algarve. = If I won the lottery, I'd buy a house in the Algarve.
-!pt In speech the second half is usually in the **imperfeito**: *Se pudesse, ia* rather than *iria*.
-
-## After a past trigger
-When the main verb is in the past or the conditional, the subjunctive moves to the imperfeito too:
-> Quero que venhas. → Queria que viesses. = I wanted you to come.
-> Espero que gostes. → Esperava que gostasses. = I hoped you'd like it.
-> Pediu-me que falasse devagar. = She asked me to speak slowly.
-
-## Como se: as if
-> Fala como se fosse o chefe. = He talks as if he were the boss.
-
+@deel Se fosses…: als ik jou was {2}
+@conj ser,falar cimp
+> Se eu fosse tu, não ia. = Als ik jou was, zou ik niet gaan.
+> Se ganhasse a lotaria, comprava uma casa no Algarve. = Als ik de loterij won, kocht ik een huis in de Algarve.
+> Se soubesses falar português, vivias cá? = Als je Portugees kon spreken, zou je hier wonen?
+!pt staat de tweede helft in de spreektaal meestal in de **imperfeito**: *Se pudesse, ia* in plaats van *iria*. Net zoals het Nederlands *als ik kon, ging ik* naast *zou ik gaan* kent.
 ## Quem me dera!
-> Quem me dera ter férias! = I wish I had a holiday!
-> Quem me dera que fosse sexta-feira! = I wish it were Friday!`,
+> Quem me dera ter férias! = Had ik maar vakantie!
+> Quem me dera que fosse sexta-feira! = Was het maar vrijdag!
+
+@deel Queria que…: na het verleden {3}
+## Na een aanleiding in het verleden
+Als het hoofdwerkwoord in de verleden tijd of de voorwaardelijke wijs staat, schuift de conjuntivo ook op naar de imperfeito:
+> Quero que venhas. → Queria que viesses. = Ik wilde dat je kwam.
+> Espero que gostes. → Esperava que gostasses. = Ik hoopte dat je het leuk zou vinden.
+> Pediu-me que falasse devagar. = Ze vroeg me langzaam te praten.
+## Como se: alsof
+> Fala como se fosse o chefe. = Hij praat alsof hij de baas is.
+!tip Na **como se** volgt altijd de imperfeito do conjuntivo — ook als het Nederlands de tegenwoordige tijd gebruikt.
+`,
   write: [
-    { task: 'What would you do if you won the lottery? Write at least four sentences.', model: 'Se ganhasse a lotaria, deixava de trabalhar e viajava pelo mundo. Comprava uma casa perto do mar e dava dinheiro à minha família. Se fosse muito rica, ajudava os animais.', hint: 'se ganhasse, se fosse, comprava / compraria' },
-    { task: 'Write two wishes with "Quem me dera" and two sentences beginning "Se eu fosse…".', model: 'Quem me dera falar português perfeitamente! Quem me dera que fosse verão. Se eu fosse presidente, mudava muitas coisas. Se eu fosse mais novo, estudava música.', hint: 'quem me dera, se eu fosse' },
+    { task: 'Wat zou je doen als je de loterij won? Schrijf minstens vier zinnen.', model: 'Se ganhasse a lotaria, deixava de trabalhar e viajava pelo mundo. Comprava uma casa perto do mar e dava dinheiro à minha família. Se fosse muito rica, ajudava os animais.', hint: 'se ganhasse, se fosse, comprava / compraria' },
+    { task: 'Schrijf twee wensen met "Quem me dera" en twee zinnen die beginnen met "Se eu fosse…".', model: 'Quem me dera falar português perfeitamente! Quem me dera que fosse verão. Se eu fosse presidente, mudava muitas coisas. Se eu fosse mais novo, estudava música.', hint: 'quem me dera, se eu fosse' },
   ],
 },
 
 u27: {
-  pt: 'Quando chegares', en: 'The future subjunctive',
-  goals: ['Form the futuro do conjuntivo', 'Use it after se, quando, assim que and enquanto about the future', 'Tell the three kinds of "if" apart'],
+  pt: 'Quando chegares', en: 'De futuro do conjuntivo',
+  goals: ['De futuro do conjuntivo maken', 'Hem gebruiken na se, quando, assim que en enquanto als het over de toekomst gaat', 'De drie soorten "als" uit elkaar houden'],
   text: `
-## A tense English doesn't have
-Portuguese has a special subjunctive for **conditions in the future**: *when you arrive*, *if you have time*, *as soon as I know*. English uses the present; Portuguese uses the **futuro do conjuntivo**.
-
-## Forming it
-Start from the **eles** form of the pretérito perfeito, drop **-ram**, and add **-r, -res, -r, -rmos, -rdes, -rem**:
+@deel Quando chegares: de vorm {1}
+## Een tijd die het Nederlands niet heeft
+Het Portugees heeft een speciale aanvoegende wijs voor **voorwaarden in de toekomst**: *als je aankomt*, *als je tijd hebt*, *zodra ik het weet*. Het Nederlands gebruikt daar de tegenwoordige tijd; het Portugees de **futuro do conjuntivo**.
+## De vorm
+Begin bij de **eles**-vorm van de pretérito perfeito, haal **-ram** weg en plak er **-r, -res, -r, -rmos, -rdes, -rem** achter:
 | falaram → falar | comeram → comer |
 | tiveram → tiver | fizeram → fizer |
 | foram → for | puderam → puder |
 | quiseram → quiser | souberam → souber |
-@conj chegar,ter,fazer,ir cfut
-!tip For regular verbs it looks like the infinitive (*quando chegar*), with endings for tu, nós and eles: *quando chegares, quando chegarmos, quando chegarem*. For irregular verbs it's built on the past: *se tiver, quando fizer, se for*.
+@conj chegar,ir cfut
+!tip Bij regelmatige werkwoorden lijkt hij op de infinitief (*quando chegar*), met uitgangen voor tu, nós en eles: *quando chegares, quando chegarmos, quando chegarem*. Bij onregelmatige werkwoorden is hij gebouwd op de verleden tijd: *se tiver, quando fizer, se for*.
+> Quando chegares, liga-me. = Bel me als je aankomt.
+> Quando acabar o trabalho, saio. = Als ik klaar ben met werken, ga ik weg.
 
-## When to use it
-After **se, quando, assim que, logo que, enquanto, sempre que, como, onde** and **quem**, talking about the future:
-> Quando chegares, liga-me. = When you arrive, call me.
-> Se tiveres tempo, vem jantar. = If you have time, come for dinner.
-> Assim que souber, digo-te. = As soon as I know, I'll tell you.
-> Enquanto estiveres cá, fica em minha casa. = While you're here, stay at my place.
-> Faz como quiseres. = Do as you like.
-- The other half of the sentence is in the **present**, the **future** (*ir* + infinitive) or the **imperative**.
+@deel Se tiveres tempo: als… {2}
+@conj ter,poder cfut
+> Se tiveres tempo, vem jantar. = Als je tijd hebt, kom dan eten.
+> Se puderes, traz pão. = Neem brood mee, als het kan.
+> Se fizer sol, vamos à praia. = Als het mooi weer is, gaan we naar het strand.
+- De andere helft van de zin staat in de **tegenwoordige tijd**, de **toekomende tijd** (*ir* + infinitief) of de **gebiedende wijs**.
+## Drie soorten "als"
+|! | Betekenis |
+| *Se tenho tempo, vou.* | als ik tijd heb, ga ik (altijd; een gewoonte) |
+| *Se tiver tempo, vou.* | als ik tijd heb (een echte mogelijkheid in de toekomst) |
+| *Se tivesse tempo, ia.* | als ik tijd had (denkbeeldig of onwaarschijnlijk — hoofdstuk 26) |
 
-## Three kinds of "if"
-|! | Meaning |
-| *Se tenho tempo, vou.* | whenever I have time, I go (a general habit) |
-| *Se tiver tempo, vou.* | if I have time (a real possibility in the future) |
-| *Se tivesse tempo, ia.* | if I had time (imaginary or unlikely — chapter 26) |`,
+@deel Assim que souber: zodra, zolang {3}
+@conj saber,fazer cfut
+## Wanneer gebruik je hem?
+Na **se, quando, assim que, logo que, enquanto, sempre que, como, onde** en **quem**, als het over de toekomst gaat:
+> Assim que souber, digo-te. = Zodra ik het weet, vertel ik het je.
+> Enquanto estiveres cá, fica em minha casa. = Zolang je hier bent, logeer je bij mij.
+> Faz como quiseres. = Doe maar wat je wilt.
+> Quem vier primeiro, abre a porta. = Wie het eerst komt, doet de deur open.
+`,
   write: [
-    { task: 'A friend is coming to visit. Write them a message with instructions: when you arrive…, if you are hungry…, as soon as…', model: 'Quando chegares à estação, apanha o metro até ao centro. Se tiveres fome, há um café ótimo ao lado da minha casa. Assim que estiveres perto, manda-me uma mensagem!', hint: 'quando chegares, se tiveres, assim que' },
-    { task: 'Write about your plans with conditions: what you will do if or when…', model: 'Se fizer sol no sábado, vou à praia. Quando acabar o curso, vou viajar. Se puder, vou passar o verão em Portugal.', hint: 'se fizer, quando acabar, se puder' },
+    { task: 'Een vriend komt op bezoek. Stuur hem een bericht met aanwijzingen: als je aankomt…, als je honger hebt…, zodra…', model: 'Quando chegares à estação, apanha o metro até ao centro. Se tiveres fome, há um café ótimo ao lado da minha casa. Assim que estiveres perto, manda-me uma mensagem!', hint: 'quando chegares, se tiveres, assim que' },
+    { task: 'Schrijf over je plannen met voorwaarden: wat je gaat doen als of wanneer…', model: 'Se fizer sol no sábado, vou à praia. Quando acabar o curso, vou viajar. Se puder, vou passar o verão em Portugal.', hint: 'se fizer, quando acabar, se puder' },
   ],
 },
 
