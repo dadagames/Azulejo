@@ -14,25 +14,25 @@
   const PRON = ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'];
 
   const TENSES = [
-    { k: 'pres', pt: 'Presente', en: 'Present', g: 'Indicativo', use: 'Habits, facts and what is true now. For “right now” add estar a + infinitive (estou a comer).' },
-    { k: 'pret', pt: 'Pretérito perfeito', en: 'Simple past', g: 'Indicativo', use: 'Finished actions at a definite moment: Ontem comi bacalhau. Also English “I have done” for one-off events: Já comi.' },
-    { k: 'imp', pt: 'Pretérito imperfeito', en: 'Imperfect', g: 'Indicativo', use: 'Past habits (used to), descriptions and background (was -ing), and polite requests: Queria um café.' },
-    { k: 'mqp', pt: 'Mais-que-perfeito', en: 'Pluperfect (literary)', g: 'Indicativo', use: '“Had done” in books and formal writing. In speech people say tinha + particípio.' },
-    { k: 'fut', pt: 'Futuro', en: 'Future', g: 'Indicativo', use: '“Will”, mostly in writing and formal speech. Day to day, Portuguese people say ir + infinitive (vou fazer). Also guesses: Onde estará ele?' },
-    { k: 'cond', pt: 'Condicional', en: 'Conditional', g: 'Indicativo', use: '“Would”: Gostaria de ir. In everyday European Portuguese the imperfeito often replaces it: Se pudesse, ia.' },
-    { k: 'cpres', pt: 'Presente do conjuntivo', en: 'Present subjunctive', g: 'Conjuntivo', use: 'After wishes, doubts, feelings and some conjunctions: espero que, quero que, talvez, é importante que, embora, para que.' },
-    { k: 'cimp', pt: 'Imperfeito do conjuntivo', en: 'Imperfect subjunctive', g: 'Conjuntivo', use: 'Hypotheses with se (Se eu tivesse tempo…) and after past triggers (Queria que viesses).' },
-    { k: 'cfut', pt: 'Futuro do conjuntivo', en: 'Future subjunctive', g: 'Conjuntivo', use: 'Future conditions after se, quando, assim que, enquanto, sempre que: Quando chegares, liga-me.' },
-    { k: 'impa', pt: 'Imperativo afirmativo', en: 'Commands', g: 'Imperativo', use: 'Tu form = 3rd person of the present (fala!, come!). Você / o senhor forms come from the conjuntivo (fale!).' },
-    { k: 'impn', pt: 'Imperativo negativo', en: 'Negative commands', g: 'Imperativo', use: 'Always não + present conjuntivo: não fales, não fale, não falem.' },
-    { k: 'infp', pt: 'Infinitivo pessoal', en: 'Personal infinitive', g: 'Infinitivo', use: 'An infinitive with its own subject, after prepositions and impersonal phrases: para nós irmos, antes de saíres, é melhor fazerem isso.' },
-    { k: 'ppc', pt: 'Pretérito perfeito composto', en: 'have been doing (lately)', g: 'Compostos', aux: 'pres', use: 'Careful: tenho feito means “I have been doing (repeatedly, lately)”, not a one-off “I have done”.' },
-    { k: 'mqpc', pt: 'Mais-que-perfeito composto', en: 'had done', g: 'Compostos', aux: 'imp', use: 'Past before the past: Quando cheguei, ele já tinha saído.' },
-    { k: 'futc', pt: 'Futuro composto', en: 'will have done', g: 'Compostos', aux: 'fut', use: 'Terei acabado até às cinco.' },
-    { k: 'condc', pt: 'Condicional composto', en: 'would have done', g: 'Compostos', aux: 'cond', use: 'Teria ido, se soubesse.' },
-    { k: 'cppc', pt: 'Pretérito perfeito do conjuntivo', en: 'have done (subjunctive)', g: 'Compostos', aux: 'cpres', use: 'Espero que tenhas gostado.' },
-    { k: 'cmqpc', pt: 'Mais-que-perfeito do conjuntivo', en: 'had done (subjunctive)', g: 'Compostos', aux: 'cimp', use: 'Se tivesse sabido, tinha vindo.' },
-    { k: 'cfutc', pt: 'Futuro composto do conjuntivo', en: 'will have done (subjunctive)', g: 'Compostos', aux: 'cfut', use: 'Quando tiveres acabado, avisa-me.' },
+    { k: 'pres', pt: 'Presente', en: 'Tegenwoordige tijd', g: 'Indicativo', use: 'Gewoontes, feiten en wat nu waar is. Voor ‘nu op dit moment’ gebruik je estar a + infinitief (estou a comer).' },
+    { k: 'pret', pt: 'Pretérito perfeito', en: 'Verleden tijd (afgerond)', g: 'Indicativo', use: 'Afgeronde handelingen op een bepaald moment: Ontem comi bacalhau. Ook voor het Nederlandse ‘ik heb gedaan’ bij eenmalige dingen: Já comi.' },
+    { k: 'imp', pt: 'Pretérito imperfeito', en: 'Onvoltooid verleden tijd', g: 'Indicativo', use: 'Gewoontes in het verleden (‘vroeger deed ik’), beschrijvingen en achtergrond (‘was bezig met’), en beleefde verzoeken: Queria um café.' },
+    { k: 'mqp', pt: 'Mais-que-perfeito', en: 'Voltooid verleden tijd (boekentaal)', g: 'Indicativo', use: '‘Had gedaan’ in boeken en formele teksten. In spreektaal zeg je tinha + particípio.' },
+    { k: 'fut', pt: 'Futuro', en: 'Toekomende tijd', g: 'Indicativo', use: '‘Zal’, vooral in geschreven en formele taal. In het dagelijks leven zeggen Portugezen ir + infinitief (vou fazer). Ook voor vermoedens: Onde estará ele?' },
+    { k: 'cond', pt: 'Condicional', en: 'Voorwaardelijke wijs', g: 'Indicativo', use: '‘Zou’: Gostaria de ir. In het dagelijks Europees-Portugees vervangt de imperfeito hem vaak: Se pudesse, ia.' },
+    { k: 'cpres', pt: 'Presente do conjuntivo', en: 'Aanvoegende wijs (tegenwoordig)', g: 'Conjuntivo', use: 'Na wensen, twijfel, gevoelens en sommige voegwoorden: espero que, quero que, talvez, é importante que, embora, para que.' },
+    { k: 'cimp', pt: 'Imperfeito do conjuntivo', en: 'Aanvoegende wijs (verleden)', g: 'Conjuntivo', use: 'Onwerkelijke situaties met se (Se eu tivesse tempo…) en na een verleden-tijd-aanleiding (Queria que viesses).' },
+    { k: 'cfut', pt: 'Futuro do conjuntivo', en: 'Aanvoegende wijs (toekomst)', g: 'Conjuntivo', use: 'Voorwaarden in de toekomst na se, quando, assim que, enquanto, sempre que: Quando chegares, liga-me.' },
+    { k: 'impa', pt: 'Imperativo afirmativo', en: 'Gebiedende wijs', g: 'Imperativo', use: 'De tu-vorm = de ele-vorm van de presente (fala!, come!). De vormen voor você / o senhor komen uit de conjuntivo (fale!).' },
+    { k: 'impn', pt: 'Imperativo negativo', en: 'Ontkennende gebiedende wijs', g: 'Imperativo', use: 'Altijd não + presente do conjuntivo: não fales, não fale, não falem.' },
+    { k: 'infp', pt: 'Infinitivo pessoal', en: 'Persoonlijke infinitief', g: 'Infinitivo', use: 'Een infinitief met een eigen onderwerp, na voorzetsels en onpersoonlijke uitdrukkingen: para nós irmos, antes de saíres, é melhor fazerem isso.' },
+    { k: 'ppc', pt: 'Pretérito perfeito composto', en: 'de laatste tijd steeds doen', g: 'Compostos', aux: 'pres', use: 'Let op: tenho feito betekent ‘ik doe het de laatste tijd steeds’, niet een eenmalig ‘ik heb gedaan’.' },
+    { k: 'mqpc', pt: 'Mais-que-perfeito composto', en: 'had gedaan', g: 'Compostos', aux: 'imp', use: 'Verleden vóór het verleden: Quando cheguei, ele já tinha saído.' },
+    { k: 'futc', pt: 'Futuro composto', en: 'zal hebben gedaan', g: 'Compostos', aux: 'fut', use: 'Terei acabado até às cinco.' },
+    { k: 'condc', pt: 'Condicional composto', en: 'zou hebben gedaan', g: 'Compostos', aux: 'cond', use: 'Teria ido, se soubesse.' },
+    { k: 'cppc', pt: 'Pretérito perfeito do conjuntivo', en: 'heeft gedaan (conjuntivo)', g: 'Compostos', aux: 'cpres', use: 'Espero que tenhas gostado.' },
+    { k: 'cmqpc', pt: 'Mais-que-perfeito do conjuntivo', en: 'had gedaan (conjuntivo)', g: 'Compostos', aux: 'cimp', use: 'Se tivesse sabido, tinha vindo.' },
+    { k: 'cfutc', pt: 'Futuro composto do conjuntivo', en: 'zal hebben gedaan (conjuntivo)', g: 'Compostos', aux: 'cfut', use: 'Quando tiveres acabado, avisa-me.' },
   ];
   const SIMPLE = ['pres', 'pret', 'imp', 'mqp', 'fut', 'cond', 'cpres', 'cimp', 'cfut', 'impa', 'impn', 'infp'];
   const TENSE = {}; TENSES.forEach(t => (TENSE[t.k] = t));
@@ -74,7 +74,7 @@
     proibir: { pres: L('proíbo,proíbes,proíbe,proibimos,proibis,proíbem'), cpres: L('proíba,proíbas,proíba,proibamos,proibais,proíbam') },
     reunir: { pres: L('reúno,reúnes,reúne,reunimos,reunis,reúnem'), cpres: L('reúna,reúnas,reúna,reunamos,reunais,reúnam') },
     saudar: { pres: L('saúdo,saúdas,saúda,saudamos,saudais,saúdam'), cpres: L('saúde,saúdes,saúde,saudemos,saudeis,saúdem') },
-    ouvir: { s1: 'ouç', note: 'In Portugal you will also hear oiço / oiça.' },
+    ouvir: { s1: 'ouç', note: 'In Portugal hoor je ook oiço / oiça.' },
     pedir: { s1: 'peç' }, medir: { s1: 'meç' }, impedir: { s1: 'impeç' }, despedir: { s1: 'despeç' }, expedir: { s1: 'expeç' },
     perder: { s1: 'perc' }, valer: { s1: 'valh' },
   };
@@ -175,24 +175,24 @@
     const set = (arr, idx, stem, ends) => idx.forEach(i => (arr[i] = ortho(stem, ends[i], cls)));
     const hiPret = s => [s + 'í', s + 'íste', s + 'iu', s + 'ímos', s + 'ístes', s + 'íram'];
     if (cls === 'ar') {
-      if (/ear$/.test(inf)) { set(F.pres, [0, 1, 2, 5], st + 'i', E.pres); set(F.cpres, [0, 1, 2, 5], st + 'i', E.cpres); tags.push('-ear: e → ei when stressed'); }
-      else if (MARIO.has(inf)) { const s2 = st.slice(0, -1) + 'ei'; set(F.pres, [0, 1, 2, 5], s2, E.pres); set(F.cpres, [0, 1, 2, 5], s2, E.cpres); tags.push('like odiar: i → ei when stressed'); }
+      if (/ear$/.test(inf)) { set(F.pres, [0, 1, 2, 5], st + 'i', E.pres); set(F.cpres, [0, 1, 2, 5], st + 'i', E.cpres); tags.push('-ear: e → ei met klemtoon'); }
+      else if (MARIO.has(inf)) { const s2 = st.slice(0, -1) + 'ei'; set(F.pres, [0, 1, 2, 5], s2, E.pres); set(F.cpres, [0, 1, 2, 5], s2, E.cpres); tags.push('zoals odiar: i → ei met klemtoon'); }
     } else if (/air$/.test(inf)) {
       F.pres = [st + 'io', st + 'is', st + 'i', st + 'ímos', st + 'ís', st + 'em']; F.pret = hiPret(st);
-      F.cpres = E.cpres.map(e => st + 'i' + e); tags.push('-air verb (like sair)');
+      F.cpres = E.cpres.map(e => st + 'i' + e); tags.push('-air-werkwoord (zoals sair)');
     } else if (/[^gq]uir$/.test(inf)) {
       F.pres = [st + 'o', st + 'is', st + 'i', st + 'ímos', st + 'ís', st + 'em']; F.pret = hiPret(st);
       if (UIR2.has(inf)) { const s0 = st.slice(0, -1); F.pres[1] = s0 + 'óis'; F.pres[2] = s0 + 'ói'; F.pres[5] = s0 + 'oem'; tags.push('u → ó (constrói)'); }
-      else tags.push('-uir verb (like incluir)');
+      else tags.push('-uir-werkwoord (zoals incluir)');
     } else if (/oer$/.test(inf)) {
       const s0 = st.slice(0, -1);
       F.pres = [st + 'o', s0 + 'óis', s0 + 'ói', st + 'emos', st + 'eis', st + 'em'];
-      F.pret = [st + 'í', st + 'este', st + 'eu', st + 'emos', st + 'estes', st + 'eram']; tags.push('-oer verb (like roer)');
+      F.pret = [st + 'í', st + 'este', st + 'eu', st + 'emos', st + 'estes', st + 'eram']; tags.push('-oer-werkwoord (zoals roer)');
     } else {
-      if (EI.has(inf)) { const s2 = replLast(st, 'e', 'i'); F.pres[0] = ortho(s2, 'o', cls); F.cpres = E.cpres.map(e => ortho(s2, e, cls)); tags.push('e → i in eu + conjuntivo'); }
-      if (EI2.has(inf)) { const s2 = replLast(st, 'e', 'i'); set(F.pres, [0, 1, 2, 5], s2, E.pres); F.cpres = E.cpres.map(e => ortho(s2, e, cls)); tags.push('e → i when stressed'); }
-      if (OU.has(inf)) { const s2 = replLast(st, 'o', 'u'); F.pres[0] = ortho(s2, 'o', cls); F.cpres = E.cpres.map(e => ortho(s2, e, cls)); tags.push('o → u in eu + conjuntivo'); }
-      if (UO.has(inf)) { const s2 = replLast(st, 'u', 'o'); set(F.pres, [1, 2, 5], s2, E.pres); tags.push('u → o in tu / ele / eles'); }
+      if (EI.has(inf)) { const s2 = replLast(st, 'e', 'i'); F.pres[0] = ortho(s2, 'o', cls); F.cpres = E.cpres.map(e => ortho(s2, e, cls)); tags.push('e → i bij eu + conjuntivo'); }
+      if (EI2.has(inf)) { const s2 = replLast(st, 'e', 'i'); set(F.pres, [0, 1, 2, 5], s2, E.pres); F.cpres = E.cpres.map(e => ortho(s2, e, cls)); tags.push('e → i met klemtoon'); }
+      if (OU.has(inf)) { const s2 = replLast(st, 'o', 'u'); F.pres[0] = ortho(s2, 'o', cls); F.cpres = E.cpres.map(e => ortho(s2, e, cls)); tags.push('o → u bij eu + conjuntivo'); }
+      if (UO.has(inf)) { const s2 = replLast(st, 'u', 'o'); set(F.pres, [1, 2, 5], s2, E.pres); tags.push('u → o bij tu / ele / eles'); }
       if (/uzir$/.test(inf)) { F.pres[2] = st; tags.push('-uzir: ele produz'); }
     }
     return { F, tags };
@@ -240,7 +240,7 @@
       F.ger = fix(B.ger); F.pp = fix(B.pp);
       if (B.pp2) F.pp2 = fix(B.pp2);
       F.infp = persInf(inf);
-      tags.push('like ' + b);
+      tags.push('zoals ' + b);
     } else if (IRR[inf]) {
       const D = IRR[inf];
       F = finish(irregular(inf, D), inf, D);
@@ -369,11 +369,15 @@
     analyze: 'analyse', summarize: 'summarise', burnt: 'burned', learnt: 'learned', dreamt: 'dreamed', spelt: 'spelled', smelt: 'smelled',
     spoilt: 'spoiled', leapt: 'leaped', spilt: 'spilled', okay: 'ok', 'o.k.': 'ok', cellphone: 'mobile', cell: 'mobile', apartment: 'flat',
   };
+  // Dutch: short forms and the informal / stressed pronoun pairs count as the same word
+  const NL_SAME = { "'t": 'het', "m'n": 'mijn', "z'n": 'zijn', "d'r": 'haar', jij: 'je', jou: 'je', jouw: 'je', wij: 'we', zij: 'ze', mij: 'me', hullie: 'zij', ok: 'oké', okay: 'oké' };
   function normalize(s, lang) {
     let t = String(s || '').normalize('NFC').toLowerCase()
       .replace(/[’‘`´]/g, "'").replace(/[“”«»"]/g, '').replace(/[–—]/g, ' ')
       .replace(/[.,!?;:¿¡…()]/g, ' ').replace(/\s+/g, ' ').trim();
-    if (lang === 'en') {
+    if (lang === 'nl') {
+      t = t.split(' ').map(w => NL_SAME[w] || w).join(' ');
+    } else if (lang === 'en') {
       t = t.split(' ').map(w => EN_CONTR[w] || w).join(' ').split(' ').map(w => EN_SPELL[w] || w).join(' ');
     } else {
       t = t.replace(/\s*-\s*/g, '-');
@@ -395,6 +399,7 @@
     return d[m][n];
   }
   const ARTICLES_EN = /\b(the|a|an)\b/g;
+  const ARTICLES_NL = /(^| )(de|het|een|'t)(?= |$)/g;
 
   /* Compare an answer with a list of accepted answers.
      opts: { lang:'pt'|'en', strict:bool (accents count), typos:bool, isWord:(w)=>bool } */
@@ -418,8 +423,8 @@
         return { ok: !opts.strict, kind: accentOnly ? 'accent' : 'hyphen', best: a };
       }
     }
-    if (lang === 'en') {
-      const na = s => loose(s).replace(ARTICLES_EN, ' ').replace(/\s+/g, ' ').trim();
+    if (lang === 'en' || lang === 'nl') {
+      const na = s => loose(s).replace(lang === 'nl' ? ARTICLES_NL : ARTICLES_EN, ' ').replace(/\s+/g, ' ').trim();
       for (const a of list) if (na(a) === na(input)) return { ok: true, kind: 'article', best: a };
     }
     if (opts.typos !== false) {

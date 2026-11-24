@@ -131,14 +131,14 @@ async function readJSON(request) {
 }
 async function checkKey(db, name, key) {
   const u = await db.prepare('SELECT * FROM users WHERE name = ?1').bind(name).first();
-  if (!u) return { error: json({ error: 'Wrong username or password.' }, 401) };
-  if (u.locked > Date.now()) return { error: json({ error: `Too many wrong passwords. Try again in ${Math.ceil((u.locked - Date.now()) / 60000)} minutes.` }, 429) };
+  if (!u) return { error: json({ error: 'Verkeerde gebruikersnaam of wachtwoord.' }, 401) };
+  if (u.locked > Date.now()) return { error: json({ error: `Te vaak een verkeerd wachtwoord. Probeer het over ${Math.ceil((u.locked - Date.now()) / 60000)} minuten opnieuw.` }, 429) };
   const ok = sameText(await hashKey(key, u.salt, u.iter), u.hash);
   if (!ok) {
     const fails = u.fails + 1;
     await db.prepare('UPDATE users SET fails = ?1, locked = ?2 WHERE name = ?3')
       .bind(fails >= MAX_FAILS ? 0 : fails, fails >= MAX_FAILS ? Date.now() + LOCK_MINUTES * 60000 : 0, name).run();
-    return { error: json({ error: 'Wrong username or password.' }, 401) };
+    return { error: json({ error: 'Verkeerde gebruikersnaam of wachtwoord.' }, 401) };
   }
   if (u.fails) await db.prepare('UPDATE users SET fails = 0 WHERE name = ?1').bind(name).run();
   return { user: u };
@@ -148,20 +148,20 @@ async function account(request, env, url, action) {
   const db = env.DB;
   if (request.method === 'GET' && action === 'me') {
     const name = await sessionUser(db, request, url);
-    if (!name) return json({ error: 'Not logged in.' }, 401);
+    if (!name) return json({ error: 'Niet ingelogd.' }, 401);
     const u = await db.prepare('SELECT name, code FROM users WHERE name = ?1').bind(name).first();
-    return u ? json({ username: u.name, code: u.code }) : json({ error: 'Not logged in.' }, 401);
+    return u ? json({ username: u.name, code: u.code }) : json({ error: 'Niet ingelogd.' }, 401);
   }
-  if (request.method !== 'POST') return json({ error: 'Method not allowed.' }, 405);
+  if (request.method !== 'POST') return json({ error: 'Methode niet toegestaan.' }, 405);
   const body = (await readJSON(request)) || {};
   const name = String(body.username || '').trim().toLowerCase();
 
   switch (action) {
     case 'signup': {
-      if (env.SYNC_TOKEN && !sameText(request.headers.get('x-sync-token') || '', env.SYNC_TOKEN)) return json({ error: 'This site needs its sync password to create accounts.' }, 401);
-      if (!NAME.test(name)) return json({ error: 'Usernames are 3–24 letters, numbers, dots, dashes or underscores.' }, 400);
-      if (!KEY.test(body.key || '')) return json({ error: 'Bad request.' }, 400);
-      if (await db.prepare('SELECT 1 FROM users WHERE name = ?1').bind(name).first()) return json({ error: 'That username is taken.' }, 409);
+      if (env.SYNC_TOKEN && !sameText(request.headers.get('x-sync-token') || '', env.SYNC_TOKEN)) return json({ error: 'Voor een nieuw account heeft deze site het synchronisatiewachtwoord nodig.' }, 401);
+      if (!NAME.test(name)) return json({ error: 'Een gebruikersnaam heeft 3 tot 24 letters, cijfers, punten, streepjes of liggende streepjes.' }, 400);
+      if (!KEY.test(body.key || '')) return json({ error: 'Ongeldig verzoek.' }, 400);
+      if (await db.prepare('SELECT 1 FROM users WHERE name = ?1').bind(name).first()) return json({ error: 'Die gebruikersnaam is al bezet.' }, 409);
       // keep this device's progress: adopt its sync code unless another account already owns it
       let code = CODE.test(body.code || '') ? body.code : newCode();
       if (await db.prepare('SELECT 1 FROM users WHERE code = ?1').bind(code).first()) code = newCode();
@@ -171,7 +171,7 @@ async function account(request, env, url, action) {
       return json({ token: await newSession(db, name), username: name, code });
     }
     case 'login': {
-      if (!NAME.test(name) || !KEY.test(body.key || '')) return json({ error: 'Wrong username or password.' }, 401);
+      if (!NAME.test(name) || !KEY.test(body.key || '')) return json({ error: 'Verkeerde gebruikersnaam of wachtwoord.' }, 401);
       const r = await checkKey(db, name, body.key);
       if (r.error) return r.error;
       return json({ token: await newSession(db, name), username: name, code: r.user.code });
@@ -184,12 +184,12 @@ async function account(request, env, url, action) {
     case 'password':
     case 'delete': {
       const who = await sessionUser(db, request, url);
-      if (!who) return json({ error: 'Please log in again.' }, 401);
-      if (!KEY.test(body.key || '')) return json({ error: 'Bad request.' }, 400);
+      if (!who) return json({ error: 'Log opnieuw in.' }, 401);
+      if (!KEY.test(body.key || '')) return json({ error: 'Ongeldig verzoek.' }, 400);
       const r = await checkKey(db, who, body.key);
       if (r.error) return r.error;
       if (action === 'password') {
-        if (!KEY.test(body.newKey || '')) return json({ error: 'Bad request.' }, 400);
+        if (!KEY.test(body.newKey || '')) return json({ error: 'Ongeldig verzoek.' }, 400);
         const salt = b64(crypto.getRandomValues(new Uint8Array(16)));
         await db.batch([
           db.prepare('UPDATE users SET hash = ?1, salt = ?2, iter = ?3 WHERE name = ?4').bind(await hashKey(body.newKey, salt, SERVER_ROUNDS), salt, SERVER_ROUNDS, who),
@@ -206,7 +206,7 @@ async function account(request, env, url, action) {
       return json({ ok: true });
     }
   }
-  return json({ error: 'Not found.' }, 404);
+  return json({ error: 'Niet gevonden.' }, 404);
 }
 
 function sameText(a, b) {
@@ -230,15 +230,15 @@ async function current(db, id) {
 
 async function save(request, env, id) {
   const text = await request.text();
-  if (text.length > MAX_BYTES) return json({ error: 'Progress is too large to save.' }, 413);
+  if (text.length > MAX_BYTES) return json({ error: 'De voortgang is te groot om op te slaan.' }, 413);
   let body;
   try {
     body = JSON.parse(text);
   } catch {
-    return json({ error: 'Not JSON.' }, 400);
+    return json({ error: 'Geen JSON.' }, 400);
   }
   if (!body || typeof body.data !== 'object' || body.data === null || Array.isArray(body.data)) {
-    return json({ error: 'Nothing to save.' }, 400);
+    return json({ error: 'Niets om op te slaan.' }, 400);
   }
 
   const db = env.DB;
@@ -297,25 +297,25 @@ async function api(request, env, url) {
   }
   const acc = url.pathname.match(/^\/api\/account\/(signup|login|logout|me|password|delete)\/?$/);
   if (acc) {
-    if (!env.DB) return json({ error: 'No database is connected to this Worker (see README).' }, 503);
+    if (!env.DB) return json({ error: 'Er is geen database aan deze Worker gekoppeld (zie de README).' }, 503);
     await schema(env.DB);
     return account(request, env, url, acc[1]);
   }
   const m = url.pathname.match(/^\/api\/progress\/([^/]+)\/?$/);
-  if (!m) return json({ error: 'Not found.' }, 404);
+  if (!m) return json({ error: 'Niet gevonden.' }, 404);
 
   const id = decodeURIComponent(m[1]);
-  if (!CODE.test(id)) return json({ error: 'That is not a sync code.' }, 400);
-  if (!env.DB) return json({ error: 'No database is connected to this Worker (see README).' }, 503);
+  if (!CODE.test(id)) return json({ error: 'Dat is geen synchronisatiecode.' }, 400);
+  if (!env.DB) return json({ error: 'Er is geen database aan deze Worker gekoppeld (zie de README).' }, 503);
   if (env.SYNC_TOKEN) {
     const given = request.headers.get('x-sync-token') || url.searchParams.get('t') || '';
-    if (!sameText(given, env.SYNC_TOKEN)) return json({ error: 'Wrong sync password.' }, 401);
+    if (!sameText(given, env.SYNC_TOKEN)) return json({ error: 'Verkeerd synchronisatiewachtwoord.' }, 401);
   }
   await schema(env.DB);
   // progress that belongs to an account: only that account
   const owner = await env.DB.prepare('SELECT name FROM users WHERE code = ?1').bind(id).first();
   if (owner && (await sessionUser(env.DB, request, url)) !== owner.name) {
-    return json({ error: 'Log in to use this progress.', login: true }, 401);
+    return json({ error: 'Log in om deze voortgang te gebruiken.', login: true }, 401);
   }
 
   switch (request.method) {
@@ -327,11 +327,11 @@ async function api(request, env, url) {
     case 'POST':
       return save(request, env, id);
     case 'DELETE':
-      if (owner) return json({ error: 'Delete the account instead.' }, 403);
+      if (owner) return json({ error: 'Verwijder in plaats daarvan het account.' }, 403);
       await env.DB.prepare('DELETE FROM progress WHERE id = ?').bind(id).run();
       return json({ ok: true });
     default:
-      return json({ error: 'Method not allowed.' }, 405);
+      return json({ error: 'Methode niet toegestaan.' }, 405);
   }
 }
 
@@ -344,7 +344,7 @@ export default {
       return await api(request, env, url);
     } catch (err) {
       console.error(err);
-      return json({ error: 'Server error.' }, 500);
+      return json({ error: 'Serverfout.' }, 500);
     }
   },
 };

@@ -1,1025 +1,1025 @@
 /* Azulejo · vocabulary decks (European Portuguese, AO1990).
-   Line: portuguese|english|type|picture|key=value…
+   Line: portuguese|nederlands (nouns with de/het)|type|picture|key=value…
    type: m f mf (both genders) m.pl f.pl adj adv prep conj pron det num int phr
    picture: an emoji, or #text for a text tile. Extras: pl= plural, f= feminine form, id= unique id, note= tip. */
 window.AZ_DECKS = [
-{ id: 'ola', pt: 'Olá!', en: 'Greetings & courtesy', pic: '👋', words: `
-olá|hello, hi|int|👋
-bom dia|good morning|phr|🌅
-boa tarde|good afternoon|phr|☀️
-boa noite|good evening, good night|phr|🌙
-adeus|goodbye|int|👋
-tchau|bye|int|✌️
-até logo|see you later|phr|🕐
-até amanhã|see you tomorrow|phr|📅
-até já|see you in a moment|phr|⏱️|note=Very Portuguese: you will be back soon.
-obrigado|thank you (said by a man)|int|🙏|note=Men say obrigado, women say obrigada.
-obrigada|thank you (said by a woman)|int|🙏
-de nada|you're welcome|phr|😊
-por favor|please|phr|🙂
-se faz favor|please; excuse me (to get attention)|phr|☝️|note=Used in Portugal to call a waiter: Se faz favor!
-desculpe|sorry, excuse me (formal)|int|😬
-desculpa|sorry (informal)|int|😅
-com licença|excuse me (to get past)|phr|🚶
-sim|yes|adv|👍
-não|no, not|adv|👎
-tudo bem?|how's it going?|phr|🙂
-tudo bem|all good, fine|phr|👌
-como estás?|how are you? (informal)|phr|🤔
-como está?|how are you? (formal)|phr|🎩
-estou bem|I'm fine|phr|😀
-mais ou menos|so-so|phr|🤷
-muito prazer|nice to meet you|phr|🤝
-bem-vindo|welcome|adj|🚪|f=bem-vinda
-parabéns|congratulations; happy birthday|int|🎉
-boa sorte|good luck|phr|🍀
-bom apetite|enjoy your meal|phr|🍽️
-saúde!|cheers! bless you!|int|🥂
-claro|of course|adv|✅
-com certeza|certainly|phr|💯
-não faz mal|never mind, no problem|phr|🙆
-não sei|I don't know|phr|🤷
-não percebo|I don't understand|phr|😕
-pode repetir?|can you repeat that? (formal)|phr|🔁
-mais devagar, por favor|slower, please|phr|🐢
-como se diz…?|how do you say…?|phr|💬
-fala inglês?|do you speak English? (formal)|phr|💬
-bom fim de semana|have a good weekend|phr|🎈
-boas férias|have a good holiday|phr|🏖️
-pois|yes, right, indeed|int|💭
-pronto|OK then, that's it|int|🆗
-está bem|OK, alright|phr|👌
-oxalá|let's hope so|int|🤞
+{ id: 'ola', pt: 'Olá!', en: 'Begroeten en beleefdheid', pic: '👋', words: `
+olá|hallo, hoi|int|👋
+bom dia|goedemorgen|phr|🌅
+boa tarde|goedemiddag|phr|☀️
+boa noite|goedenavond, goedenacht|phr|🌙
+adeus|dag, vaarwel|int|👋
+tchau|doei|int|✌️
+até logo|tot straks|phr|🕐
+até amanhã|tot morgen|phr|📅
+até já|tot zo|phr|⏱️|note=Heel Portugees: je bent zo terug.
+obrigado|dank je, bedankt (gezegd door een man)|int|🙏|note=Mannen zeggen obrigado, vrouwen zeggen obrigada.
+obrigada|dank je, bedankt (gezegd door een vrouw)|int|🙏
+de nada|graag gedaan|phr|😊
+por favor|alstublieft, alsjeblieft|phr|🙂
+se faz favor|alstublieft; pardon (om iemands aandacht te trekken)|phr|☝️|note=In Portugal roep je zo een ober: Se faz favor!
+desculpe|sorry, pardon (beleefd)|int|😬
+desculpa|sorry (informeel)|int|😅
+com licença|pardon (om erlangs te mogen)|phr|🚶
+sim|ja|adv|👍
+não|nee, niet|adv|👎
+tudo bem?|hoe gaat het?|phr|🙂
+tudo bem|alles goed, prima|phr|👌
+como estás?|hoe gaat het met je? (informeel)|phr|🤔
+como está?|hoe gaat het met u? (beleefd)|phr|🎩
+estou bem|het gaat goed|phr|😀
+mais ou menos|zo-zo|phr|🤷
+muito prazer|aangenaam|phr|🤝
+bem-vindo|welkom|adj|🚪|f=bem-vinda
+parabéns|gefeliciteerd; van harte|int|🎉
+boa sorte|succes, veel geluk|phr|🍀
+bom apetite|eet smakelijk|phr|🍽️
+saúde!|proost! gezondheid!|int|🥂
+claro|natuurlijk|adv|✅
+com certeza|zeker|phr|💯
+não faz mal|geeft niet, geen probleem|phr|🙆
+não sei|ik weet het niet|phr|🤷
+não percebo|ik begrijp het niet|phr|😕
+pode repetir?|kunt u dat herhalen? (beleefd)|phr|🔁
+mais devagar, por favor|langzamer, alstublieft|phr|🐢
+como se diz…?|hoe zeg je…?|phr|💬
+fala inglês?|spreekt u Engels? (beleefd)|phr|💬
+bom fim de semana|fijn weekend|phr|🎈
+boas férias|fijne vakantie|phr|🏖️
+pois|ja, precies, inderdaad|int|💭
+pronto|oké dan, zo, klaar|int|🆗
+está bem|oké, goed|phr|👌
+oxalá|laten we het hopen|int|🤞
 ` },
-{ id: 'paises', pt: 'Países', en: 'Countries & nationalities', pic: '🌍', words: `
-país|country|m|🌍|pl=países
-mundo|world|m|🌐
-nacionalidade|nationality|f|🛂
-estrangeiro|foreign; foreigner|adj|✈️
-Portugal|Portugal|prop|#PT|note=No article: em Portugal, de Portugal.
-Lisboa|Lisbon|prop|#LIS
-Porto|Porto|prop|#OPO|art=o|note=Porto takes the article: no Porto, do Porto.
+{ id: 'paises', pt: 'Países', en: 'Landen en nationaliteiten', pic: '🌍', words: `
+país|het land|m|🌍|pl=países
+mundo|de wereld|m|🌐
+nacionalidade|de nationaliteit|f|🛂
+estrangeiro|buitenlands; buitenlander|adj|✈️
+Portugal|Portugal|prop|#PT|note=Zonder lidwoord: em Portugal, de Portugal.
+Lisboa|Lissabon|prop|#LIS
+Porto|Porto|prop|#OPO|art=o|note=Porto krijgt wel een lidwoord: no Porto, do Porto.
 Coimbra|Coimbra|prop|#COI
 Faro|Faro|prop|#FAO
 Braga|Braga|prop|#BRG
 Sintra|Sintra|prop|#SIN
 Évora|Évora|prop|#EVO
 Madeira|Madeira|prop|#MAD|art=a
-Açores|the Azores|prop|#AÇO|art=os
-Espanha|Spain|prop|#ES
-França|France|prop|#FR
-Itália|Italy|prop|#IT
-Inglaterra|England|prop|#ENG
-Alemanha|Germany|prop|#DE|art=a
-Brasil|Brazil|prop|#BR|art=o
-Estados Unidos|the United States|prop|#USA|art=os
-Reino Unido|the United Kingdom|prop|#UK|art=o
-Europa|Europe|prop|#EU|art=a
+Açores|de Azoren|prop|#AÇO|art=os
+Espanha|Spanje|prop|#ES
+França|Frankrijk|prop|#FR
+Itália|Italië|prop|#IT
+Inglaterra|Engeland|prop|#ENG
+Alemanha|Duitsland|prop|#DE|art=a
+Brasil|Brazilië|prop|#BR|art=o
+Estados Unidos|de Verenigde Staten|prop|#USA|art=os
+Reino Unido|het Verenigd Koninkrijk|prop|#UK|art=o
+Europa|Europa|prop|#EU|art=a
 Madrid|Madrid|prop|#MAD
-Paris|Paris|prop|#PAR
-Londres|London|prop|#LON
+Paris|Parijs|prop|#PAR
+Londres|Londen|prop|#LON
 Roma|Rome|prop|#ROM
-português|Portuguese|adj|#pt|note=Nationalities and languages take a small letter: o português.
-inglês|English|adj|#en
-espanhol|Spanish|adj|#es|pl=espanhóis|f=espanhola
-francês|French|adj|#fr
-italiano|Italian|adj|#it
-alemão|German|adj|#de|f=alemã|pl=alemães
-brasileiro|Brazilian|adj|#br
-americano|American|adj|#us
-europeu|European|adj|#eu|f=europeia
-chinês|Chinese|adj|#zh
-japonês|Japanese|adj|#ja
+português|Portugees|adj|#pt|note=Nationaliteiten en talen schrijf je met een kleine letter: o português.
+inglês|Engels|adj|#en
+espanhol|Spaans|adj|#es|pl=espanhóis|f=espanhola
+francês|Frans|adj|#fr
+italiano|Italiaans|adj|#it
+alemão|Duits|adj|#de|f=alemã|pl=alemães
+brasileiro|Braziliaans|adj|#br
+americano|Amerikaans|adj|#us
+europeu|Europees|adj|#eu|f=europeia
+chinês|Chinees|adj|#zh
+japonês|Japans|adj|#ja
 ` },
-{ id: 'pessoas', pt: 'Pessoas', en: 'People & family', pic: '👨‍👩‍👧', words: `
-eu|I|pron|🙋
-tu|you (informal)|pron|👉|note=In Portugal tu is the normal way to talk to friends, family and people your age.
-ele|he; it|pron|👨
-ela|she; it|pron|👩
-você|you (polite; use with care)|pron|🧑|note=In Portugal você can sound distant. Polite speech often uses o senhor / a senhora, or just the verb.
-o senhor|you (formal, to a man)|pron|🎩
-a senhora|you (formal, to a woman)|pron|👒
-nós|we|pron|👥
-vocês|you (plural)|pron|👥
-eles|they (men or mixed group)|pron|👥
-elas|they (women)|pron|👭
-vós|you all (old-fashioned; Bible, literature, some northern villages)|pron|📜|note=Replaced by vocês in everyday Portuguese. Its verb forms end in -is: vós sois, vós falais.
-a gente|we (informal; literally "the people")|pron|🙌|note=Takes the ele/ela form of the verb: a gente vai, a gente é.
-pessoa|person|f|🧍
-homem|man|m|👨|pl=homens
-mulher|woman; wife|f|👩|pl=mulheres
-rapaz|boy, young man|m|👦|pl=rapazes
-rapariga|girl, young woman|f|👧
-criança|child|f|🧒
-bebé|baby|m|👶
-menino|little boy|m|👦|f=menina
-miúdo|kid (informal)|m|🧒|f=miúda
-amigo|friend|m|🧑‍🤝‍🧑|f=amiga
-família|family|f|👨‍👩‍👧
-pai|father, dad|m|👨
-mãe|mother, mum|f|👩|pl=mães
-pais|parents|m.pl|👪
-filho|son|m|👦|f=filha
-irmão|brother|m|👦|pl=irmãos|f=irmã
-avô|grandfather|m|👴
-avó|grandmother|f|👵
-avós|grandparents|m.pl|👴
-neto|grandson|m|👶|f=neta
-tio|uncle|m|🧔|f=tia
-primo|cousin|m|🧑|f=prima
-sobrinho|nephew|m|🧒|f=sobrinha
-marido|husband|m|🤵
-namorado|boyfriend|m|💑|f=namorada
-noivo|fiancé; groom|m|💍|f=noiva
-sogro|father-in-law|m|👴|f=sogra
-cunhado|brother-in-law|m|🧑|f=cunhada
-vizinho|neighbour|m|🏘️|f=vizinha
-colega|colleague, classmate|mf|🧑‍💼
-senhor|gentleman; Mr|m|🎩|pl=senhores
-senhora|lady; Mrs|f|👒
-gente|people|f|👥
-nome|name|m|🏷️
-apelido|surname|m|📛
-idade|age|f|🎂
-aniversário|birthday|m|🎂
-casado|married|adj|💍
-solteiro|single|adj|🙋
-jovem|young; young person|adj|🧑|pl=jovens
-velho|old|adj|👴
+{ id: 'pessoas', pt: 'Pessoas', en: 'Mensen en familie', pic: '👨‍👩‍👧', words: `
+eu|ik|pron|🙋
+tu|jij, je (informeel)|pron|👉|note=In Portugal is tu de gewone manier om tegen vrienden, familie en leeftijdgenoten te praten.
+ele|hij; het|pron|👨
+ela|zij, ze; het|pron|👩
+você|u, jij (beleefd; voorzichtig mee zijn)|pron|🧑|note=In Portugal kan você afstandelijk klinken. Beleefd zeg je vaak o senhor / a senhora, of je gebruikt alleen het werkwoord.
+o senhor|u (beleefd, tegen een man)|pron|🎩
+a senhora|u (beleefd, tegen een vrouw)|pron|👒
+nós|wij, we|pron|👥
+vocês|jullie|pron|👥
+eles|zij, ze (mannen of een gemengde groep)|pron|👥
+elas|zij, ze (vrouwen)|pron|👭
+vós|jullie (ouderwets; Bijbel, literatuur, sommige dorpen in het noorden)|pron|📜|note=In het dagelijks Portugees vervangen door vocês. De werkwoordsvormen eindigen op -is: vós sois, vós falais.
+a gente|wij, we (informeel; letterlijk "de mensen")|pron|🙌|note=Krijgt de ele/ela-vorm van het werkwoord: a gente vai, a gente é.
+pessoa|de persoon|f|🧍
+homem|de man|m|👨|pl=homens
+mulher|de vrouw; de echtgenote|f|👩|pl=mulheres
+rapaz|de jongen, de jongeman|m|👦|pl=rapazes
+rapariga|het meisje, de jonge vrouw|f|👧
+criança|het kind|f|🧒
+bebé|de baby|m|👶
+menino|het jongetje|m|👦|f=menina
+miúdo|het joch, het kind (informeel)|m|🧒|f=miúda
+amigo|de vriend|m|🧑‍🤝‍🧑|f=amiga
+família|de familie, het gezin|f|👨‍👩‍👧
+pai|de vader, papa|m|👨
+mãe|de moeder, mama|f|👩|pl=mães
+pais|de ouders|m.pl|👪
+filho|de zoon|m|👦|f=filha
+irmão|de broer|m|👦|pl=irmãos|f=irmã
+avô|de opa, de grootvader|m|👴
+avó|de oma, de grootmoeder|f|👵
+avós|de grootouders|m.pl|👴
+neto|de kleinzoon|m|👶|f=neta
+tio|de oom|m|🧔|f=tia
+primo|de neef (zoon van oom of tante)|m|🧑|f=prima
+sobrinho|de neef (zoon van broer of zus)|m|🧒|f=sobrinha
+marido|de man, de echtgenoot|m|🤵
+namorado|het vriendje, de vriend|m|💑|f=namorada
+noivo|de verloofde; de bruidegom|m|💍|f=noiva
+sogro|de schoonvader|m|👴|f=sogra
+cunhado|de zwager|m|🧑|f=cunhada
+vizinho|de buurman|m|🏘️|f=vizinha
+colega|de collega, de klasgenoot|mf|🧑‍💼
+senhor|de meneer; heer|m|🎩|pl=senhores
+senhora|de mevrouw; dame|f|👒
+gente|de mensen|f|👥
+nome|de naam|m|🏷️
+apelido|de achternaam|m|📛
+idade|de leeftijd|f|🎂
+aniversário|de verjaardag|m|🎂
+casado|getrouwd|adj|💍
+solteiro|vrijgezel, ongetrouwd|adj|🙋
+jovem|jong; jongere|adj|🧑|pl=jovens
+velho|oud|adj|👴
 ` },
-{ id: 'comida', pt: 'Comida', en: 'Food', pic: '🍞', words: `
-pão|bread|m|🍞|pl=pães
-manteiga|butter|f|🧈
-queijo|cheese|m|🧀
-fiambre|ham|m|🥓
-presunto|cured ham|m|🍖
-ovo|egg|m|🥚
-carne|meat|f|🥩
-frango|chicken|m|🍗
-peixe|fish|m|🐟
-bacalhau|salt cod|m|🐟
-sardinha|sardine|f|🐟
-marisco|seafood|m|🦐
-arroz|rice|m|🍚|pl=arrozes
-massa|pasta|f|🍝
-batata|potato|f|🥔
-batatas fritas|chips, fries|f.pl|🍟
-sopa|soup|f|🍲
-salada|salad|f|🥗
-legumes|vegetables|m.pl|🥦
-fruta|fruit|f|🍇
-maçã|apple|f|🍎|pl=maçãs
-laranja|orange|f|🍊
-banana|banana|f|🍌
-pera|pear|f|🍐
-uva|grape|f|🍇
-morango|strawberry|m|🍓
-ananás|pineapple|m|🍍|pl=ananases
-limão|lemon|m|🍋|pl=limões
-melancia|watermelon|f|🍉
-tomate|tomato|m|🍅
-cebola|onion|f|🧅
-alho|garlic|m|🧄
-cenoura|carrot|f|🥕
-alface|lettuce|f|🥬
-feijão|beans|m|🥘|pl=feijões
-cogumelo|mushroom|m|🍄
-bolo|cake|m|🍰
-pastel de nata|custard tart|m|🥧|pl=pastéis de nata
-gelado|ice cream|m|🍨
-chocolate|chocolate|m|🍫
-bolacha|biscuit|f|🍪
-açúcar|sugar|m|🍬|pl=açúcares
-sal|salt|m|🧂|pl=sais
-pimenta|pepper (spice)|f|🌶️
-azeite|olive oil|m|🫒
-mel|honey|m|🍯|pl=méis
-iogurte|yoghurt|m|🥛
-torrada|toast|f|🍞
-sandes|sandwich|f|🥪|pl=sandes
-tosta mista|toasted ham and cheese sandwich|f|🥪|pl=tostas mistas
-prego|steak sandwich|m|🥩
-bifana|pork sandwich|f|🥖
-pequeno-almoço|breakfast|m|🥐|pl=pequenos-almoços
-almoço|lunch|m|🍱
-lanche|afternoon snack|m|🧁
-jantar|dinner|m|🍽️|pl=jantares
-refeição|meal|f|🍽️|pl=refeições
-sobremesa|dessert|f|🍮
-ementa|menu|f|📜
-prato|dish; plate|m|🍛
-conta|bill|f|🧾
-gorjeta|tip|f|💶
-fome|hunger|f|😋
-delicioso|delicious|adj|😋
-doce|sweet|adj|🍬
-salgado|salty|adj|🧂
-picante|spicy|adj|🌶️
-vegetariano|vegetarian|adj|🥦
+{ id: 'comida', pt: 'Comida', en: 'Eten', pic: '🍞', words: `
+pão|het brood|m|🍞|pl=pães
+manteiga|de boter|f|🧈
+queijo|de kaas|m|🧀
+fiambre|de ham|m|🥓
+presunto|de rauwe ham|m|🍖
+ovo|het ei|m|🥚
+carne|het vlees|f|🥩
+frango|de kip|m|🍗
+peixe|de vis|m|🐟
+bacalhau|de bakkeljauw (gezouten kabeljauw)|m|🐟
+sardinha|de sardine|f|🐟
+marisco|de zeevruchten|m|🦐
+arroz|de rijst|m|🍚|pl=arrozes
+massa|de pasta|f|🍝
+batata|de aardappel|f|🥔
+batatas fritas|de patat, de friet|f.pl|🍟
+sopa|de soep|f|🍲
+salada|de salade|f|🥗
+legumes|de groente|m.pl|🥦
+fruta|het fruit|f|🍇
+maçã|de appel|f|🍎|pl=maçãs
+laranja|de sinaasappel|f|🍊
+banana|de banaan|f|🍌
+pera|de peer|f|🍐
+uva|de druif|f|🍇
+morango|de aardbei|m|🍓
+ananás|de ananas|m|🍍|pl=ananases
+limão|de citroen|m|🍋|pl=limões
+melancia|de watermeloen|f|🍉
+tomate|de tomaat|m|🍅
+cebola|de ui|f|🧅
+alho|de knoflook|m|🧄
+cenoura|de wortel|f|🥕
+alface|de sla|f|🥬
+feijão|de bonen|m|🥘|pl=feijões
+cogumelo|de paddenstoel, de champignon|m|🍄
+bolo|de taart, de cake|m|🍰
+pastel de nata|het roomtaartje|m|🥧|pl=pastéis de nata
+gelado|het ijsje, het ijs|m|🍨
+chocolate|de chocolade|m|🍫
+bolacha|het koekje|f|🍪
+açúcar|de suiker|m|🍬|pl=açúcares
+sal|het zout|m|🧂|pl=sais
+pimenta|de peper|f|🌶️
+azeite|de olijfolie|m|🫒
+mel|de honing|m|🍯|pl=méis
+iogurte|de yoghurt|m|🥛
+torrada|de toast|f|🍞
+sandes|de sandwich, het broodje|f|🥪|pl=sandes
+tosta mista|de tosti met ham en kaas|f|🥪|pl=tostas mistas
+prego|het broodje biefstuk|m|🥩
+bifana|het broodje varkensvlees|f|🥖
+pequeno-almoço|het ontbijt|m|🥐|pl=pequenos-almoços
+almoço|de lunch|m|🍱
+lanche|het tussendoortje (middag)|m|🧁
+jantar|het avondeten|m|🍽️|pl=jantares
+refeição|de maaltijd|f|🍽️|pl=refeições
+sobremesa|het toetje, het dessert|f|🍮
+ementa|het menu, de menukaart|f|📜
+prato|het gerecht; het bord|m|🍛
+conta|de rekening|f|🧾
+gorjeta|de fooi|f|💶
+fome|de honger|f|😋
+delicioso|heerlijk|adj|😋
+doce|zoet|adj|🍬
+salgado|zout, hartig|adj|🧂
+picante|pittig|adj|🌶️
+vegetariano|vegetarisch|adj|🥦
 ` },
-{ id: 'bebidas', pt: 'Bebidas', en: 'Drinks', pic: '☕', words: `
-água|water|f|💧
-leite|milk|m|🥛
-café|coffee; café|m|☕
-bica|espresso (in Lisbon)|f|☕|note=In Porto people say um cimbalino; everywhere else um café.
-galão|milky coffee in a glass|m|🥛|pl=galões
-meia de leite|white coffee (in a cup)|f|☕|pl=meias de leite
-chá|tea|m|🍵
-sumo|juice|m|🧃
-vinho|wine|m|🍷
-vinho tinto|red wine|m|🍷|pl=vinhos tintos
-vinho branco|white wine|m|🥂|pl=vinhos brancos
-vinho verde|vinho verde (young wine)|m|🍾|pl=vinhos verdes
-cerveja|beer|f|🍺
-imperial|small draught beer (Lisbon)|f|🍺|pl=imperiais
-fino|small draught beer (Porto)|m|🍺
-refrigerante|soft drink|m|🥤
-água com gás|sparkling water|f|💧
-gelo|ice|m|🧊
-garrafa|bottle|f|🍾
-copo|glass|m|🥛
-chávena|cup|f|☕
-sede|thirst|f|🥵
-bebida|drink|f|🍹
+{ id: 'bebidas', pt: 'Bebidas', en: 'Drinken', pic: '☕', words: `
+água|het water|f|💧
+leite|de melk|m|🥛
+café|de koffie; het café|m|☕
+bica|de espresso (in Lissabon)|f|☕|note=In Porto zeggen ze um cimbalino; overal anders um café.
+galão|de koffie met veel melk in een glas|m|🥛|pl=galões
+meia de leite|de koffie verkeerd (in een kopje)|f|☕|pl=meias de leite
+chá|de thee|m|🍵
+sumo|het sap|m|🧃
+vinho|de wijn|m|🍷
+vinho tinto|de rode wijn|m|🍷|pl=vinhos tintos
+vinho branco|de witte wijn|m|🥂|pl=vinhos brancos
+vinho verde|de vinho verde (jonge wijn)|m|🍾|pl=vinhos verdes
+cerveja|het bier|f|🍺
+imperial|het kleine biertje van de tap (Lissabon)|f|🍺|pl=imperiais
+fino|het kleine biertje van de tap (Porto)|m|🍺
+refrigerante|de frisdrank|m|🥤
+água com gás|het bruisende water|f|💧
+gelo|het ijs (ijsblokjes)|m|🧊
+garrafa|de fles|f|🍾
+copo|het glas|m|🥛
+chávena|het kopje|f|☕
+sede|de dorst|f|🥵
+bebida|het drankje|f|🍹
 ` },
-{ id: 'casa', pt: 'Casa', en: 'Home', pic: '🏠', words: `
-casa|house, home|f|🏠
-apartamento|flat, apartment|m|🏢
-andar|floor (storey); flat|m|🏢|pl=andares
-rés-do-chão|ground floor|m|⬇️|pl=rés-do-chão
-quarto|bedroom; room|m|🛏️
-sala|living room|f|🛋️
-cozinha|kitchen|f|🍳
-casa de banho|bathroom|f|🚽|pl=casas de banho
-jardim|garden|m|🌷|pl=jardins
-varanda|balcony|f|🌇
-porta|door|f|🚪
-janela|window|f|🪟
-parede|wall|f|🧱
-chão|floor, ground|m|🟫|pl=chãos
-teto|ceiling|m|⬆️
-escada|stairs|f|🪜
-elevador|lift|m|🛗|pl=elevadores
-chave|key|f|🔑
-mesa|table|f|🍽️
-cadeira|chair|f|🪑
-sofá|sofa|m|🛋️
-cama|bed|f|🛏️
-armário|cupboard, wardrobe|m|🗄️
-frigorífico|fridge|m|🧊
-fogão|cooker|m|🔥|pl=fogões
-forno|oven|m|♨️
-máquina de lavar|washing machine|f|🌀|pl=máquinas de lavar
-televisão|television|f|📺|pl=televisões
-candeeiro|lamp|m|💡
-luz|light|f|💡|pl=luzes
-espelho|mirror|m|🪞
-duche|shower|m|🚿
-banheira|bathtub|f|🛁
-toalha|towel|f|🧖
-sabonete|soap|m|🧼
-escova de dentes|toothbrush|f|🪥|pl=escovas de dentes
-garfo|fork|m|🍴
-faca|knife|f|🔪
-colher|spoon|f|🥄|pl=colheres
-lixo|rubbish|m|🗑️
-vaso|plant pot; vase|m|🪴
-telhado|roof|m|🏠
-almofada|pillow, cushion|f|💤
-cobertor|blanket|m|🛌|pl=cobertores
+{ id: 'casa', pt: 'Casa', en: 'Thuis', pic: '🏠', words: `
+casa|het huis, thuis|f|🏠
+apartamento|het appartement|m|🏢
+andar|de verdieping; de etage|m|🏢|pl=andares
+rés-do-chão|de begane grond|m|⬇️|pl=rés-do-chão
+quarto|de slaapkamer; de kamer|m|🛏️
+sala|de woonkamer|f|🛋️
+cozinha|de keuken|f|🍳
+casa de banho|de badkamer|f|🚽|pl=casas de banho
+jardim|de tuin|m|🌷|pl=jardins
+varanda|het balkon|f|🌇
+porta|de deur|f|🚪
+janela|het raam|f|🪟
+parede|de muur|f|🧱
+chão|de vloer, de grond|m|🟫|pl=chãos
+teto|het plafond|m|⬆️
+escada|de trap|f|🪜
+elevador|de lift|m|🛗|pl=elevadores
+chave|de sleutel|f|🔑
+mesa|de tafel|f|🍽️
+cadeira|de stoel|f|🪑
+sofá|de bank|m|🛋️
+cama|het bed|f|🛏️
+armário|de kast|m|🗄️
+frigorífico|de koelkast|m|🧊
+fogão|het fornuis|m|🔥|pl=fogões
+forno|de oven|m|♨️
+máquina de lavar|de wasmachine|f|🌀|pl=máquinas de lavar
+televisão|de televisie|f|📺|pl=televisões
+candeeiro|de lamp|m|💡
+luz|het licht|f|💡|pl=luzes
+espelho|de spiegel|m|🪞
+duche|de douche|m|🚿
+banheira|het bad|f|🛁
+toalha|de handdoek|f|🧖
+sabonete|de zeep|m|🧼
+escova de dentes|de tandenborstel|f|🪥|pl=escovas de dentes
+garfo|de vork|m|🍴
+faca|het mes|f|🔪
+colher|de lepel|f|🥄|pl=colheres
+lixo|het afval, de vuilnis|m|🗑️
+vaso|de bloempot; de vaas|m|🪴
+telhado|het dak|m|🏠
+almofada|het kussen|f|💤
+cobertor|de deken|m|🛌|pl=cobertores
 ` },
-{ id: 'cidade', pt: 'Na cidade', en: 'Around town', pic: '🏙️', words: `
-cidade|city, town|f|🏙️
-aldeia|village|f|🏘️
-rua|street|f|🛣️
-avenida|avenue|f|🛣️
-praça|square|f|⛲
-bairro|neighbourhood|m|🏘️
-loja|shop|f|🏪
-mercado|market|m|🧺
-supermercado|supermarket|m|🛒
-restaurante|restaurant|m|🍽️
-pastelaria|café and pastry shop|f|🥐
-padaria|bakery|f|🥖
-talho|butcher's|m|🥩
-farmácia|chemist's, pharmacy|f|💊
-banco|bank; bench|m|🏦
-correios|post office|m.pl|📮
-hospital|hospital|m|🏥|pl=hospitais
-centro de saúde|health centre|m|🩺|pl=centros de saúde
-escola|school|f|🏫
-universidade|university|f|🎓
-biblioteca|library|f|📚
-museu|museum|m|🏛️
-igreja|church|f|⛪
-castelo|castle|m|🏰
-cinema|cinema|m|🎬
-teatro|theatre|m|🎭
-parque|park|m|🌳
-jardim zoológico|zoo|m|🦁|pl=jardins zoológicos
-praia|beach|f|🏖️
-ponte|bridge|f|🌉
-rio|river|m|🏞️
-mar|sea|m|🌊|pl=mares
-hotel|hotel|m|🏨|pl=hotéis
-câmara municipal|town hall|f|🏛️|pl=câmaras municipais
-estação|station|f|🚉|pl=estações
-aeroporto|airport|m|🛫
-esquina|corner|f|↩️
-semáforo|traffic lights|m|🚦
-passadeira|zebra crossing|f|🦓
-multibanco|cash machine|m|🏧
-miradouro|viewpoint|m|🔭
-sítio|place, spot|m|📍
-edifício|building|m|🏢
-escritório|office|m|🗄️
-ginásio|gym|m|🏋️
-piscina|swimming pool|f|🏊
-estádio|stadium|m|🏟️
-centro comercial|shopping centre|m|🛍️|pl=centros comerciais
-perto|near, close by|adv|📍
-longe|far away|adv|🔭
+{ id: 'cidade', pt: 'Na cidade', en: 'In de stad', pic: '🏙️', words: `
+cidade|de stad|f|🏙️
+aldeia|het dorp|f|🏘️
+rua|de straat|f|🛣️
+avenida|de laan|f|🛣️
+praça|het plein|f|⛲
+bairro|de wijk, de buurt|m|🏘️
+loja|de winkel|f|🏪
+mercado|de markt|m|🧺
+supermercado|de supermarkt|m|🛒
+restaurante|het restaurant|m|🍽️
+pastelaria|de banketbakkerij met koffie|f|🥐
+padaria|de bakkerij|f|🥖
+talho|de slagerij|m|🥩
+farmácia|de apotheek|f|💊
+banco|de bank (geld); het bankje|m|🏦
+correios|het postkantoor|m.pl|📮
+hospital|het ziekenhuis|m|🏥|pl=hospitais
+centro de saúde|het gezondheidscentrum|m|🩺|pl=centros de saúde
+escola|de school|f|🏫
+universidade|de universiteit|f|🎓
+biblioteca|de bibliotheek|f|📚
+museu|het museum|m|🏛️
+igreja|de kerk|f|⛪
+castelo|het kasteel|m|🏰
+cinema|de bioscoop|m|🎬
+teatro|het theater|m|🎭
+parque|het park|m|🌳
+jardim zoológico|de dierentuin|m|🦁|pl=jardins zoológicos
+praia|het strand|f|🏖️
+ponte|de brug|f|🌉
+rio|de rivier|m|🏞️
+mar|de zee|m|🌊|pl=mares
+hotel|het hotel|m|🏨|pl=hotéis
+câmara municipal|het gemeentehuis|f|🏛️|pl=câmaras municipais
+estação|het station|f|🚉|pl=estações
+aeroporto|het vliegveld|m|🛫
+esquina|de hoek|f|↩️
+semáforo|het stoplicht|m|🚦
+passadeira|het zebrapad|f|🦓
+multibanco|de geldautomaat|m|🏧
+miradouro|het uitkijkpunt|m|🔭
+sítio|de plek, de plaats|m|📍
+edifício|het gebouw|m|🏢
+escritório|het kantoor|m|🗄️
+ginásio|de sportschool|m|🏋️
+piscina|het zwembad|f|🏊
+estádio|het stadion|m|🏟️
+centro comercial|het winkelcentrum|m|🛍️|pl=centros comerciais
+perto|dichtbij|adv|📍
+longe|ver weg|adv|🔭
 ` },
-{ id: 'viagens', pt: 'Transportes', en: 'Getting around', pic: '🚋', words: `
-carro|car|m|🚗
-autocarro|bus|m|🚌
-comboio|train|m|🚆
-metro|underground, metro|m|🚇
-elétrico|tram|m|🚋
-avião|plane|m|✈️|pl=aviões
-barco|boat|m|⛵
-bicicleta|bicycle|f|🚲
-mota|motorbike|f|🏍️
-táxi|taxi|m|🚕
-camião|lorry, truck|m|🚚|pl=camiões
-bilhete|ticket|m|🎫
-passe|travel pass|m|🎟️
-paragem|bus stop|f|🚏|pl=paragens
-viagem|trip, journey|f|🧳|pl=viagens
-mala|suitcase; bag|f|🧳
-mochila|backpack|f|🎒
-passaporte|passport|m|🛂
-mapa|map|m|🗺️
-férias|holidays|f.pl|🏖️
-turista|tourist|mf|📸
-estrada|road|f|🛣️
-autoestrada|motorway|f|🛣️
-portagem|toll|f|💰|pl=portagens
-gasolina|petrol|f|⛽
-carta de condução|driving licence|f|🪪|pl=cartas de condução
-partida|departure|f|🛫
-chegada|arrival|f|🛬
-voo|flight|m|✈️
-atraso|delay|m|⏳
-reserva|booking, reservation|f|📋
-esquerda|left|f|⬅️
-direita|right|f|➡️
-em frente|straight ahead|adv|⬆️
-norte|north|m|🧭
-sul|south|m|🧭|pl=suis
-leste|east|m|🧭
-oeste|west|m|🧭
-condutor|driver|m|🚗|f=condutora|pl=condutores
-peão|pedestrian|m|🚶|pl=peões
-lugar|seat; place|m|💺|pl=lugares
-bagagem|luggage|f|🧳|pl=bagagens
-a pé|on foot|phr|🚶
-ida e volta|return (ticket)|phr|🔁
+{ id: 'viagens', pt: 'Transportes', en: 'Onderweg', pic: '🚋', words: `
+carro|de auto|m|🚗
+autocarro|de bus|m|🚌
+comboio|de trein|m|🚆
+metro|de metro|m|🚇
+elétrico|de tram|m|🚋
+avião|het vliegtuig|m|✈️|pl=aviões
+barco|de boot|m|⛵
+bicicleta|de fiets|f|🚲
+mota|de motor|f|🏍️
+táxi|de taxi|m|🚕
+camião|de vrachtwagen|m|🚚|pl=camiões
+bilhete|het kaartje|m|🎫
+passe|het abonnement (ov)|m|🎟️
+paragem|de bushalte|f|🚏|pl=paragens
+viagem|de reis|f|🧳|pl=viagens
+mala|de koffer; de tas|f|🧳
+mochila|de rugzak|f|🎒
+passaporte|het paspoort|m|🛂
+mapa|de kaart, de plattegrond|m|🗺️
+férias|de vakantie|f.pl|🏖️
+turista|de toerist|mf|📸
+estrada|de weg|f|🛣️
+autoestrada|de snelweg|f|🛣️
+portagem|de tol|f|💰|pl=portagens
+gasolina|de benzine|f|⛽
+carta de condução|het rijbewijs|f|🪪|pl=cartas de condução
+partida|het vertrek|f|🛫
+chegada|de aankomst|f|🛬
+voo|de vlucht|m|✈️
+atraso|de vertraging|m|⏳
+reserva|de reservering|f|📋
+esquerda|links|f|⬅️
+direita|rechts|f|➡️
+em frente|rechtdoor|adv|⬆️
+norte|het noorden|m|🧭
+sul|het zuiden|m|🧭|pl=suis
+leste|het oosten|m|🧭
+oeste|het westen|m|🧭
+condutor|de bestuurder, de chauffeur|m|🚗|f=condutora|pl=condutores
+peão|de voetganger|m|🚶|pl=peões
+lugar|de zitplaats; de plaats|m|💺|pl=lugares
+bagagem|de bagage|f|🧳|pl=bagagens
+a pé|te voet, lopend|phr|🚶
+ida e volta|retour|phr|🔁
 ` },
-{ id: 'tempo', pt: 'Tempo', en: 'Time & calendar', pic: '🗓️', words: `
-dia|day|m|📅|note=Dia ends in -a but is masculine: o dia, bom dia.
-noite|night|f|🌙
-manhã|morning|f|🌅|pl=manhãs
-tarde|afternoon|f|🌇
-semana|week|f|🗓️
-fim de semana|weekend|m|🎉|pl=fins de semana
-mês|month|m|🗓️|pl=meses
-ano|year|m|📆
-hora|hour; time (o'clock)|f|🕐
-minuto|minute|m|⏱️
-segundo|second|m|⏱️
-hoje|today|adv|📍
-ontem|yesterday|adv|⏪
-amanhã|tomorrow|adv|⏩
-agora|now|adv|⏰
-depois|afterwards, later|adv|⏭️
-antes|before|adv|⏮️
-cedo|early|adv|🐓
-tarde|late|adv|🦉|id=tarde-adv
-já|already; right away|adv|✔️
-ainda|still, yet|adv|⏳
-sempre|always|adv|♾️
-nunca|never|adv|🚫
-às vezes|sometimes|adv|🔀
-logo|soon, later on|adv|🔜
-meio-dia|midday|m|🕛
-meia-noite|midnight|f|🕛
-segunda-feira|Monday|f|#Seg|pl=segundas-feiras
-terça-feira|Tuesday|f|#Ter|pl=terças-feiras
-quarta-feira|Wednesday|f|#Qua|pl=quartas-feiras
-quinta-feira|Thursday|f|#Qui|pl=quintas-feiras
-sexta-feira|Friday|f|#Sex|pl=sextas-feiras
-sábado|Saturday|m|#Sáb
-domingo|Sunday|m|#Dom
-janeiro|January|m|❄️|note=Months take a small letter in Portuguese.
-fevereiro|February|m|💘
-março|March|m|🌱
-abril|April|m|🌧️
-maio|May|m|🌼
-junho|June|m|🐟
-julho|July|m|☀️
-agosto|August|m|🏖️
-setembro|September|m|🍇
-outubro|October|m|🍂
-novembro|November|m|🌰
-dezembro|December|m|🎄
-primavera|spring|f|🌸
-verão|summer|m|🌞|pl=verões
-outono|autumn|m|🍁
-inverno|winter|m|⛄
-data|date|f|📅
-relógio|clock, watch|m|⌚
-século|century|m|🏺
-passado|past; last|adj|⏪
-próximo|next|adj|⏩
+{ id: 'tempo', pt: 'Tempo', en: 'Tijd en kalender', pic: '🗓️', words: `
+dia|de dag|m|📅|note=Dia eindigt op -a maar is mannelijk: o dia, bom dia.
+noite|de nacht, de avond|f|🌙
+manhã|de ochtend|f|🌅|pl=manhãs
+tarde|de middag|f|🌇
+semana|de week|f|🗓️
+fim de semana|het weekend|m|🎉|pl=fins de semana
+mês|de maand|m|🗓️|pl=meses
+ano|het jaar|m|📆
+hora|het uur; de tijd (op de klok)|f|🕐
+minuto|de minuut|m|⏱️
+segundo|de seconde|m|⏱️
+hoje|vandaag|adv|📍
+ontem|gisteren|adv|⏪
+amanhã|morgen|adv|⏩
+agora|nu|adv|⏰
+depois|daarna, later|adv|⏭️
+antes|eerst, vroeger|adv|⏮️
+cedo|vroeg|adv|🐓
+tarde|laat|adv|🦉|id=tarde-adv
+já|al; meteen|adv|✔️
+ainda|nog|adv|⏳
+sempre|altijd|adv|♾️
+nunca|nooit|adv|🚫
+às vezes|soms|adv|🔀
+logo|straks|adv|🔜
+meio-dia|de middag (12 uur)|m|🕛
+meia-noite|de middernacht|f|🕛
+segunda-feira|maandag|f|#Seg|pl=segundas-feiras
+terça-feira|dinsdag|f|#Ter|pl=terças-feiras
+quarta-feira|woensdag|f|#Qua|pl=quartas-feiras
+quinta-feira|donderdag|f|#Qui|pl=quintas-feiras
+sexta-feira|vrijdag|f|#Sex|pl=sextas-feiras
+sábado|zaterdag|m|#Sáb
+domingo|zondag|m|#Dom
+janeiro|januari|m|❄️|note=Maanden schrijf je in het Portugees met een kleine letter.
+fevereiro|februari|m|💘
+março|maart|m|🌱
+abril|april|m|🌧️
+maio|mei|m|🌼
+junho|juni|m|🐟
+julho|juli|m|☀️
+agosto|augustus|m|🏖️
+setembro|september|m|🍇
+outubro|oktober|m|🍂
+novembro|november|m|🌰
+dezembro|december|m|🎄
+primavera|de lente|f|🌸
+verão|de zomer|m|🌞|pl=verões
+outono|de herfst|m|🍁
+inverno|de winter|m|⛄
+data|de datum|f|📅
+relógio|de klok, het horloge|m|⌚
+século|de eeuw|m|🏺
+passado|vorig; verleden|adj|⏪
+próximo|volgend|adj|⏩
 ` },
-{ id: 'numeros', pt: 'Números', en: 'Numbers', pic: '🔢', words: `
-zero|zero|num|#0
-um|one|num|#1|f=uma
-dois|two|num|#2|f=duas
-três|three|num|#3
-quatro|four|num|#4
-cinco|five|num|#5
-seis|six|num|#6
-sete|seven|num|#7
-oito|eight|num|#8
-nove|nine|num|#9
-dez|ten|num|#10
-onze|eleven|num|#11
-doze|twelve|num|#12
-treze|thirteen|num|#13
-catorze|fourteen|num|#14
-quinze|fifteen|num|#15
-dezasseis|sixteen|num|#16|note=European spelling. In Brazil: dezesseis.
-dezassete|seventeen|num|#17
-dezoito|eighteen|num|#18
-dezanove|nineteen|num|#19
-vinte|twenty|num|#20
-vinte e um|twenty-one|num|#21
-trinta|thirty|num|#30
-quarenta|forty|num|#40
-cinquenta|fifty|num|#50
-sessenta|sixty|num|#60
-setenta|seventy|num|#70
-oitenta|eighty|num|#80
-noventa|ninety|num|#90
-cem|a hundred|num|#100|note=Cem is exactly 100. From 101 it becomes cento: cento e um.
-cento e um|a hundred and one|num|#101
-duzentos|two hundred|num|#200|f=duzentas
-trezentos|three hundred|num|#300|f=trezentas
-quinhentos|five hundred|num|#500|f=quinhentas
-mil|a thousand|num|#1000
-um milhão|a million|num|#1M
-primeiro|first|adj|🥇
-segundo|second (in order)|adj|🥈|id=segundo-ord
-terceiro|third|adj|🥉
-último|last|adj|🔚
-metade|half|f|🌗
-dúzia|dozen|f|🥚
+{ id: 'numeros', pt: 'Números', en: 'Getallen', pic: '🔢', words: `
+zero|nul|num|#0
+um|een|num|#1|f=uma
+dois|twee|num|#2|f=duas
+três|drie|num|#3
+quatro|vier|num|#4
+cinco|vijf|num|#5
+seis|zes|num|#6
+sete|zeven|num|#7
+oito|acht|num|#8
+nove|negen|num|#9
+dez|tien|num|#10
+onze|elf|num|#11
+doze|twaalf|num|#12
+treze|dertien|num|#13
+catorze|veertien|num|#14
+quinze|vijftien|num|#15
+dezasseis|zestien|num|#16|note=Europese spelling. In Brazilië: dezesseis.
+dezassete|zeventien|num|#17
+dezoito|achttien|num|#18
+dezanove|negentien|num|#19
+vinte|twintig|num|#20
+vinte e um|eenentwintig|num|#21
+trinta|dertig|num|#30
+quarenta|veertig|num|#40
+cinquenta|vijftig|num|#50
+sessenta|zestig|num|#60
+setenta|zeventig|num|#70
+oitenta|tachtig|num|#80
+noventa|negentig|num|#90
+cem|honderd|num|#100|note=Cem is precies 100. Vanaf 101 wordt het cento: cento e um.
+cento e um|honderdeen|num|#101
+duzentos|tweehonderd|num|#200|f=duzentas
+trezentos|driehonderd|num|#300|f=trezentas
+quinhentos|vijfhonderd|num|#500|f=quinhentas
+mil|duizend|num|#1000
+um milhão|een miljoen|num|#1M
+primeiro|eerste|adj|🥇
+segundo|tweede|adj|🥈|id=segundo-ord
+terceiro|derde|adj|🥉
+último|laatste|adj|🔚
+metade|de helft|f|🌗
+dúzia|het dozijn|f|🥚
 meio|half (meio quilo)|adj|🌓
 ` },
-{ id: 'cores', pt: 'Cores', en: 'Colours', pic: '🎨', words: `
-cor|colour|f|🎨|pl=cores
-branco|white|adj|⚪
-preto|black|adj|⚫
-vermelho|red|adj|🔴
-azul|blue|adj|🔵|pl=azuis
-verde|green|adj|🟢
-amarelo|yellow|adj|🟡
-cor de laranja|orange|adj|🟠|inv=1
-cor-de-rosa|pink|adj|🌸|inv=1
-roxo|purple|adj|🟣
-castanho|brown|adj|🟤
-cinzento|grey|adj|🌫️
+{ id: 'cores', pt: 'Cores', en: 'Kleuren', pic: '🎨', words: `
+cor|de kleur|f|🎨|pl=cores
+branco|wit|adj|⚪
+preto|zwart|adj|⚫
+vermelho|rood|adj|🔴
+azul|blauw|adj|🔵|pl=azuis
+verde|groen|adj|🟢
+amarelo|geel|adj|🟡
+cor de laranja|oranje|adj|🟠|inv=1
+cor-de-rosa|roze|adj|🌸|inv=1
+roxo|paars|adj|🟣
+castanho|bruin|adj|🟤
+cinzento|grijs|adj|🌫️
 bege|beige|adj|🏜️|inv=1
-dourado|golden|adj|🥇
-prateado|silver|adj|🥈
-claro|light (colour); clear|adj|🌤️|id=claro-adj
-escuro|dark|adj|🌑
+dourado|goudkleurig|adj|🥇
+prateado|zilverkleurig|adj|🥈
+claro|licht (kleur); helder|adj|🌤️|id=claro-adj
+escuro|donker|adj|🌑
 ` },
-{ id: 'roupa', pt: 'Roupa', en: 'Clothes', pic: '👕', words: `
-roupa|clothes|f|👕
-camisa|shirt|f|👔
-t-shirt|T-shirt|f|👕
-camisola|jumper|f|🧶
-casaco|coat, jacket|m|🧥
-calças|trousers|f.pl|👖
-calças de ganga|jeans|f.pl|👖
-calções|shorts|m.pl|🩳
-saia|skirt|f|#saia
-vestido|dress|m|👗
-fato|suit|m|🕴️
-gravata|tie|f|👔
-sapato|shoe|m|👞
-sapatilha|trainer|f|👟
-bota|boot|f|👢
-meia|sock|f|🧦
-chapéu|hat|m|👒|pl=chapéus
-boné|cap|m|🧢
-óculos|glasses|m.pl|👓
-óculos de sol|sunglasses|m.pl|🕶️
-cachecol|scarf|m|🧣|pl=cachecóis
-luva|glove|f|🧤
-carteira|wallet|f|👛
-fato de banho|swimsuit|m|🩱|pl=fatos de banho
-pijama|pyjamas|m|🛌
-anel|ring|m|💍|pl=anéis
-brinco|earring|m|💎
-tamanho|size|m|📏
-bolso|pocket|m|👖
-elegante|smart, elegant|adj|✨
-confortável|comfortable|adj|☁️|pl=confortáveis
-largo|loose; wide|adj|↔️
-apertado|tight|adj|🤏
+{ id: 'roupa', pt: 'Roupa', en: 'Kleding', pic: '👕', words: `
+roupa|de kleren, de kleding|f|👕
+camisa|het overhemd|f|👔
+t-shirt|het T-shirt|f|👕
+camisola|de trui|f|🧶
+casaco|de jas|m|🧥
+calças|de broek|f.pl|👖
+calças de ganga|de spijkerbroek|f.pl|👖
+calções|de korte broek|m.pl|🩳
+saia|de rok|f|#saia
+vestido|de jurk|m|👗
+fato|het pak|m|🕴️
+gravata|de stropdas|f|👔
+sapato|de schoen|m|👞
+sapatilha|de sportschoen, de sneaker|f|👟
+bota|de laars|f|👢
+meia|de sok|f|🧦
+chapéu|de hoed|m|👒|pl=chapéus
+boné|de pet|m|🧢
+óculos|de bril|m.pl|👓
+óculos de sol|de zonnebril|m.pl|🕶️
+cachecol|de sjaal|m|🧣|pl=cachecóis
+luva|de handschoen|f|🧤
+carteira|de portemonnee|f|👛
+fato de banho|het badpak, de zwembroek|m|🩱|pl=fatos de banho
+pijama|de pyjama|m|🛌
+anel|de ring|m|💍|pl=anéis
+brinco|de oorbel|m|💎
+tamanho|de maat|m|📏
+bolso|de zak (in kleding)|m|👖
+elegante|chic, elegant|adj|✨
+confortável|comfortabel, lekker zittend|adj|☁️|pl=confortáveis
+largo|wijd; breed|adj|↔️
+apertado|strak, krap|adj|🤏
 ` },
-{ id: 'corpo', pt: 'Corpo e saúde', en: 'Body & health', pic: '🩺', words: `
-corpo|body|m|🧍
-cabeça|head|f|🙂
-cabelo|hair|m|💇
-cara|face|f|😀
-olho|eye|m|👁️
-orelha|ear|f|👂
-nariz|nose|m|👃|pl=narizes
-boca|mouth|f|👄
-dente|tooth|m|🦷
-língua|tongue; language|f|👅
-pescoço|neck|m|🦒
-ombro|shoulder|m|🤷
-braço|arm|m|💪
-mão|hand|f|✋|pl=mãos
-dedo|finger; toe|m|☝️
-perna|leg|f|🦵
-joelho|knee|m|🦵
-pé|foot|m|🦶
-costas|back|f.pl|🔙
-barriga|belly, tummy|f|#barriga
-coração|heart|m|❤️|pl=corações
-pele|skin|f|✋
-sangue|blood|m|🩸
-osso|bone|m|🦴
-saúde|health|f|💚
-médico|doctor|m|🧑‍⚕️|f=médica
-enfermeiro|nurse|m|🧑‍⚕️|f=enfermeira
-doente|ill, sick|adj|🤒
-dor|pain|f|🤕|pl=dores
-dor de cabeça|headache|f|🤕|pl=dores de cabeça
-febre|fever, temperature|f|🌡️
-gripe|flu|f|🤧
-constipação|cold (illness)|f|🤧|pl=constipações
-tosse|cough|f|😷
-comprimido|pill, tablet|m|💊
-receita|prescription; recipe|f|📝
-consulta|appointment (doctor)|f|🩺
-urgências|A&E, emergency room|f.pl|🚑
-ambulância|ambulance|f|🚑
-ferida|wound|f|🩹
-alergia|allergy|f|🤧
-cansado|tired|adj|😴
-magoado|hurt|adj|🤕
+{ id: 'corpo', pt: 'Corpo e saúde', en: 'Lichaam en gezondheid', pic: '🩺', words: `
+corpo|het lichaam|m|🧍
+cabeça|het hoofd|f|🙂
+cabelo|het haar|m|💇
+cara|het gezicht|f|😀
+olho|het oog|m|👁️
+orelha|het oor|f|👂
+nariz|de neus|m|👃|pl=narizes
+boca|de mond|f|👄
+dente|de tand|m|🦷
+língua|de tong; de taal|f|👅
+pescoço|de nek, de hals|m|🦒
+ombro|de schouder|m|🤷
+braço|de arm|m|💪
+mão|de hand|f|✋|pl=mãos
+dedo|de vinger; de teen|m|☝️
+perna|het been|f|🦵
+joelho|de knie|m|🦵
+pé|de voet|m|🦶
+costas|de rug|f.pl|🔙
+barriga|de buik|f|#barriga
+coração|het hart|m|❤️|pl=corações
+pele|de huid|f|✋
+sangue|het bloed|m|🩸
+osso|het bot|m|🦴
+saúde|de gezondheid|f|💚
+médico|de dokter, de arts|m|🧑‍⚕️|f=médica
+enfermeiro|de verpleger, de verpleegkundige|m|🧑‍⚕️|f=enfermeira
+doente|ziek|adj|🤒
+dor|de pijn|f|🤕|pl=dores
+dor de cabeça|de hoofdpijn|f|🤕|pl=dores de cabeça
+febre|de koorts|f|🌡️
+gripe|de griep|f|🤧
+constipação|de verkoudheid|f|🤧|pl=constipações
+tosse|de hoest|f|😷
+comprimido|de pil, de tablet|m|💊
+receita|het recept|f|📝
+consulta|de afspraak (bij de dokter)|f|🩺
+urgências|de spoedeisende hulp|f.pl|🚑
+ambulância|de ambulance|f|🚑
+ferida|de wond|f|🩹
+alergia|de allergie|f|🤧
+cansado|moe|adj|😴
+magoado|gewond, bezeerd|adj|🤕
 ` },
-{ id: 'animais', pt: 'Animais', en: 'Animals', pic: '🐓', words: `
-animal|animal|m|🐾|pl=animais
-cão|dog|m|🐕|pl=cães
-gato|cat|m|🐈
-pássaro|bird|m|🐦
-cavalo|horse|m|🐎
-vaca|cow|f|🐄
-porco|pig|m|🐖
-galinha|hen|f|🐔
-galo|rooster|m|🐓|note=The Galo de Barcelos is a symbol of Portugal.
-ovelha|sheep|f|🐑
-cabra|goat|f|🐐
-burro|donkey|m|🐴
-coelho|rabbit|m|🐇
-rato|mouse, rat|m|🐭
-leão|lion|m|🦁|pl=leões
-tigre|tiger|m|🐅
-elefante|elephant|m|🐘
-macaco|monkey|m|🐒
-urso|bear|m|🐻
-lobo|wolf|m|🐺
-raposa|fox|f|🦊
-cobra|snake|f|🐍
-sapo|toad, frog|m|🐸
-tartaruga|turtle, tortoise|f|🐢
-borboleta|butterfly|f|🦋
-abelha|bee|f|🐝
-formiga|ant|f|🐜
-aranha|spider|f|🕷️
-mosca|fly|f|🪰
-mosquito|mosquito|m|🦟
-golfinho|dolphin|m|🐬
-baleia|whale|f|🐋
-polvo|octopus|m|🐙
-caranguejo|crab|m|🦀
-gaivota|seagull|f|🐦
-pato|duck|m|🦆
-pombo|pigeon|m|🕊️
-águia|eagle|f|🦅
-girafa|giraffe|f|🦒
-pinguim|penguin|m|🐧|pl=pinguins
+{ id: 'animais', pt: 'Animais', en: 'Dieren', pic: '🐓', words: `
+animal|het dier|m|🐾|pl=animais
+cão|de hond|m|🐕|pl=cães
+gato|de kat|m|🐈
+pássaro|de vogel|m|🐦
+cavalo|het paard|m|🐎
+vaca|de koe|f|🐄
+porco|het varken|m|🐖
+galinha|de kip (dier)|f|🐔
+galo|de haan|m|🐓|note=De Galo de Barcelos is een symbool van Portugal.
+ovelha|het schaap|f|🐑
+cabra|de geit|f|🐐
+burro|de ezel|m|🐴
+coelho|het konijn|m|🐇
+rato|de muis, de rat|m|🐭
+leão|de leeuw|m|🦁|pl=leões
+tigre|de tijger|m|🐅
+elefante|de olifant|m|🐘
+macaco|de aap|m|🐒
+urso|de beer|m|🐻
+lobo|de wolf|m|🐺
+raposa|de vos|f|🦊
+cobra|de slang|f|🐍
+sapo|de pad, de kikker|m|🐸
+tartaruga|de schildpad|f|🐢
+borboleta|de vlinder|f|🦋
+abelha|de bij|f|🐝
+formiga|de mier|f|🐜
+aranha|de spin|f|🕷️
+mosca|de vlieg|f|🪰
+mosquito|de mug|m|🦟
+golfinho|de dolfijn|m|🐬
+baleia|de walvis|f|🐋
+polvo|de inktvis (octopus)|m|🐙
+caranguejo|de krab|m|🦀
+gaivota|de meeuw|f|🐦
+pato|de eend|m|🦆
+pombo|de duif|m|🕊️
+águia|de adelaar, de arend|f|🦅
+girafa|de giraf|f|🦒
+pinguim|de pinguïn|m|🐧|pl=pinguins
 selvagem|wild|adj|🌿|pl=selvagens
 ` },
-{ id: 'natureza', pt: 'Natureza e tempo', en: 'Nature & weather', pic: '⛅', words: `
-natureza|nature|f|🌿
-tempo|weather; time|m|⛅
-sol|sun|m|☀️|pl=sóis
-chuva|rain|f|🌧️
-vento|wind|m|💨
-neve|snow|f|❄️
-nuvem|cloud|f|☁️|pl=nuvens
-nevoeiro|fog|m|🌫️
-trovoada|thunderstorm|f|⛈️
-tempestade|storm|f|🌪️
-céu|sky|m|🌌|pl=céus
-estrela|star|f|⭐
-lua|moon|f|🌙
-terra|earth, land|f|🌍
-montanha|mountain|f|⛰️
-serra|mountain range|f|🏔️
-floresta|forest|f|🌲
-árvore|tree|f|🌳
-flor|flower|f|🌸|pl=flores
-folha|leaf; sheet of paper|f|🍃
-erva|grass; herb|f|🌱
-campo|countryside; field|m|🌾
-ilha|island|f|🏝️
-lago|lake|m|🏞️
-onda|wave|f|🌊
-areia|sand|f|⏳
-pedra|stone|f|🪨
-fogo|fire|m|🔥
-calor|heat|m|🥵|pl=calores
-frio|cold|adj|🥶
-quente|hot, warm|adj|🔥
-fresco|cool, fresh|adj|🍃
-húmido|humid, damp|adj|💧
-seco|dry|adj|🏜️
-arco-íris|rainbow|m|🌈|pl=arco-íris
-está sol|it's sunny|phr|☀️
-está a chover|it's raining|phr|☔
-está frio|it's cold|phr|🥶
-está calor|it's hot|phr|🥵
-está vento|it's windy|phr|💨
-grau|degree|m|🌡️
+{ id: 'natureza', pt: 'Natureza e tempo', en: 'Natuur en weer', pic: '⛅', words: `
+natureza|de natuur|f|🌿
+tempo|het weer; de tijd|m|⛅
+sol|de zon|m|☀️|pl=sóis
+chuva|de regen|f|🌧️
+vento|de wind|m|💨
+neve|de sneeuw|f|❄️
+nuvem|de wolk|f|☁️|pl=nuvens
+nevoeiro|de mist|m|🌫️
+trovoada|het onweer|f|⛈️
+tempestade|de storm|f|🌪️
+céu|de lucht, de hemel|m|🌌|pl=céus
+estrela|de ster|f|⭐
+lua|de maan|f|🌙
+terra|de aarde, het land|f|🌍
+montanha|de berg|f|⛰️
+serra|het gebergte|f|🏔️
+floresta|het bos|f|🌲
+árvore|de boom|f|🌳
+flor|de bloem|f|🌸|pl=flores
+folha|het blad; het vel papier|f|🍃
+erva|het gras; het kruid|f|🌱
+campo|het platteland; het veld|m|🌾
+ilha|het eiland|f|🏝️
+lago|het meer|m|🏞️
+onda|de golf|f|🌊
+areia|het zand|f|⏳
+pedra|de steen|f|🪨
+fogo|het vuur|m|🔥
+calor|de warmte, de hitte|m|🥵|pl=calores
+frio|koud|adj|🥶
+quente|heet, warm|adj|🔥
+fresco|koel, fris|adj|🍃
+húmido|vochtig|adj|💧
+seco|droog|adj|🏜️
+arco-íris|de regenboog|m|🌈|pl=arco-íris
+está sol|de zon schijnt|phr|☀️
+está a chover|het regent|phr|☔
+está frio|het is koud|phr|🥶
+está calor|het is warm|phr|🥵
+está vento|het waait|phr|💨
+grau|de graad|m|🌡️
 ` },
-{ id: 'trabalho', pt: 'Trabalho e estudos', en: 'Work & study', pic: '💼', words: `
-trabalho|work, job|m|💼
-emprego|job|m|💼
-empresa|company|f|🏢
-chefe|boss|mf|👔
-reunião|meeting|f|👥|pl=reuniões
-salário|salary|m|💶
-computador|computer|m|💻|pl=computadores
-telemóvel|mobile phone|m|📱|pl=telemóveis
-ecrã|screen|m|🖥️|pl=ecrãs
-teclado|keyboard|m|⌨️
-rato|mouse (computer)|m|🖱️|id=rato-pc
-impressora|printer|f|🖨️
-e-mail|email|m|📧
-mensagem|message|f|💬|pl=mensagens
-palavra-passe|password|f|🔒|pl=palavras-passe
-internet|internet|f|🌐
-aplicação|app|f|📲|pl=aplicações
-ficheiro|file|m|📄
-documento|document|m|📄
-projeto|project|m|📊
-cliente|client, customer|mf|🧑‍💼
-aula|class, lesson|f|🏫
-professor|teacher|m|🧑‍🏫|f=professora|pl=professores
-aluno|pupil, student|m|🧑‍🎓|f=aluna
-estudante|student|mf|🎓
-livro|book|m|📕
-caderno|notebook|m|📓
-caneta|pen|f|🖊️
-lápis|pencil|m|✏️|pl=lápis
-exame|exam|m|📝
-teste|test|m|📝
-nota|mark, grade; note|f|💯
-trabalhos de casa|homework|m.pl|📚
-pergunta|question|f|❓
-resposta|answer|f|💡
-palavra|word|f|🔤
-frase|sentence; phrase|f|💬
-curso|course, degree|m|🎓
-entrevista|interview|f|🎤
-horário|timetable; opening hours|m|🕘
-ocupado|busy|adj|⏳
-livre|free (not busy)|adj|🕊️
+{ id: 'trabalho', pt: 'Trabalho e estudos', en: 'Werk en studie', pic: '💼', words: `
+trabalho|het werk, de baan|m|💼
+emprego|de baan|m|💼
+empresa|het bedrijf|f|🏢
+chefe|de baas|mf|👔
+reunião|de vergadering|f|👥|pl=reuniões
+salário|het salaris|m|💶
+computador|de computer|m|💻|pl=computadores
+telemóvel|de mobiele telefoon|m|📱|pl=telemóveis
+ecrã|het scherm|m|🖥️|pl=ecrãs
+teclado|het toetsenbord|m|⌨️
+rato|de muis (computer)|m|🖱️|id=rato-pc
+impressora|de printer|f|🖨️
+e-mail|de e-mail|m|📧
+mensagem|het bericht|f|💬|pl=mensagens
+palavra-passe|het wachtwoord|f|🔒|pl=palavras-passe
+internet|het internet|f|🌐
+aplicação|de app|f|📲|pl=aplicações
+ficheiro|het bestand|m|📄
+documento|het document|m|📄
+projeto|het project|m|📊
+cliente|de klant|mf|🧑‍💼
+aula|de les|f|🏫
+professor|de leraar|m|🧑‍🏫|f=professora|pl=professores
+aluno|de leerling|m|🧑‍🎓|f=aluna
+estudante|de student|mf|🎓
+livro|het boek|m|📕
+caderno|het schrift|m|📓
+caneta|de pen|f|🖊️
+lápis|het potlood|m|✏️|pl=lápis
+exame|het examen|m|📝
+teste|de toets|m|📝
+nota|het cijfer; het briefje|f|💯
+trabalhos de casa|het huiswerk|m.pl|📚
+pergunta|de vraag|f|❓
+resposta|het antwoord|f|💡
+palavra|het woord|f|🔤
+frase|de zin|f|💬
+curso|de opleiding, de cursus|m|🎓
+entrevista|het sollicitatiegesprek, het interview|f|🎤
+horário|het rooster; de openingstijden|m|🕘
+ocupado|druk, bezet|adj|⏳
+livre|vrij|adj|🕊️
 ` },
-{ id: 'profissoes', pt: 'Profissões', en: 'Jobs', pic: '🧑‍🍳', words: `
-profissão|profession|f|🧰|pl=profissões
-advogado|lawyer|m|⚖️|f=advogada
-engenheiro|engineer|m|👷|f=engenheira
-cozinheiro|cook, chef|m|🧑‍🍳|f=cozinheira
-empregado de mesa|waiter|m|🍽️|f=empregada de mesa|pl=empregados de mesa
-motorista|driver (professional)|mf|🚌
-polícia|police officer; the police|mf|👮
-bombeiro|firefighter|m|🧑‍🚒|f=bombeira
-vendedor|salesperson|m|🛍️|f=vendedora|pl=vendedores
-cantor|singer|m|🎤|f=cantora|pl=cantores
-ator|actor|m|🎭|f=atriz|pl=atores
-escritor|writer|m|✍️|f=escritora|pl=escritores
-jornalista|journalist|mf|📰
-programador|programmer|m|🧑‍💻|f=programadora|pl=programadores
-arquiteto|architect|m|📐|f=arquiteta
-agricultor|farmer|m|🧑‍🌾|f=agricultora|pl=agricultores
-pescador|fisherman|m|🎣|f=pescadora|pl=pescadores
-padeiro|baker|m|🥖|f=padeira
-cabeleireiro|hairdresser|m|💇|f=cabeleireira
-dentista|dentist|mf|🦷
-farmacêutico|pharmacist|m|💊|f=farmacêutica
-carteiro|postman|m|📬|f=carteira
-músico|musician|m|🎸|f=música
-artista|artist|mf|🎨
-pintor|painter|m|🖌️|f=pintora|pl=pintores
-eletricista|electrician|mf|🔌
-canalizador|plumber|m|🔧|f=canalizadora|pl=canalizadores
-secretário|secretary|m|🗂️|f=secretária
-empresário|businessman|m|💼|f=empresária
-reformado|retired|adj|👵
-desempregado|unemployed|adj|📉
-gerente|manager|mf|📈
-guia|guide|mf|🧭
-tradutor|translator|m|🌐|f=tradutora|pl=tradutores
-cientista|scientist|mf|🔬
+{ id: 'profissoes', pt: 'Profissões', en: 'Beroepen', pic: '🧑‍🍳', words: `
+profissão|het beroep|f|🧰|pl=profissões
+advogado|de advocaat|m|⚖️|f=advogada
+engenheiro|de ingenieur|m|👷|f=engenheira
+cozinheiro|de kok|m|🧑‍🍳|f=cozinheira
+empregado de mesa|de ober|m|🍽️|f=empregada de mesa|pl=empregados de mesa
+motorista|de chauffeur|mf|🚌
+polícia|de agent; de politie|mf|👮
+bombeiro|de brandweerman|m|🧑‍🚒|f=bombeira
+vendedor|de verkoper|m|🛍️|f=vendedora|pl=vendedores
+cantor|de zanger|m|🎤|f=cantora|pl=cantores
+ator|de acteur|m|🎭|f=atriz|pl=atores
+escritor|de schrijver|m|✍️|f=escritora|pl=escritores
+jornalista|de journalist|mf|📰
+programador|de programmeur|m|🧑‍💻|f=programadora|pl=programadores
+arquiteto|de architect|m|📐|f=arquiteta
+agricultor|de boer|m|🧑‍🌾|f=agricultora|pl=agricultores
+pescador|de visser|m|🎣|f=pescadora|pl=pescadores
+padeiro|de bakker|m|🥖|f=padeira
+cabeleireiro|de kapper|m|💇|f=cabeleireira
+dentista|de tandarts|mf|🦷
+farmacêutico|de apotheker|m|💊|f=farmacêutica
+carteiro|de postbode|m|📬|f=carteira
+músico|de muzikant|m|🎸|f=música
+artista|de kunstenaar|mf|🎨
+pintor|de schilder|m|🖌️|f=pintora|pl=pintores
+eletricista|de elektricien|mf|🔌
+canalizador|de loodgieter|m|🔧|f=canalizadora|pl=canalizadores
+secretário|de secretaris|m|🗂️|f=secretária
+empresário|de ondernemer|m|💼|f=empresária
+reformado|gepensioneerd|adj|👵
+desempregado|werkloos|adj|📉
+gerente|de manager, de bedrijfsleider|mf|📈
+guia|de gids|mf|🧭
+tradutor|de vertaler|m|🌐|f=tradutora|pl=tradutores
+cientista|de wetenschapper|mf|🔬
 ` },
-{ id: 'sentimentos', pt: 'Sentimentos', en: 'Feelings & personality', pic: '😊', words: `
-feliz|happy|adj|😀|pl=felizes
-contente|pleased, glad|adj|😊
-triste|sad|adj|😢
-zangado|angry|adj|😠
-nervoso|nervous|adj|😬
-calmo|calm|adj|😌
-preocupado|worried|adj|😟
-assustado|scared|adj|😨
-aborrecido|bored; annoyed|adj|😒
-entusiasmado|excited|adj|🤩
-surpreendido|surprised|adj|😮
-apaixonado|in love|adj|😍
-orgulhoso|proud|adj|🦚
-envergonhado|embarrassed|adj|😳
-simpático|nice, friendly|adj|😊
-antipático|unfriendly|adj|😤
-tímido|shy|adj|🙈
-engraçado|funny|adj|😂
+{ id: 'sentimentos', pt: 'Sentimentos', en: 'Gevoelens en karakter', pic: '😊', words: `
+feliz|blij, gelukkig|adj|😀|pl=felizes
+contente|tevreden, blij|adj|😊
+triste|verdrietig|adj|😢
+zangado|boos|adj|😠
+nervoso|zenuwachtig|adj|😬
+calmo|rustig|adj|😌
+preocupado|bezorgd|adj|😟
+assustado|bang|adj|😨
+aborrecido|verveeld; geïrriteerd|adj|😒
+entusiasmado|enthousiast|adj|🤩
+surpreendido|verrast|adj|😮
+apaixonado|verliefd|adj|😍
+orgulhoso|trots|adj|🦚
+envergonhado|beschaamd|adj|😳
+simpático|aardig, vriendelijk|adj|😊
+antipático|onvriendelijk|adj|😤
+tímido|verlegen|adj|🙈
+engraçado|grappig|adj|😂
 inteligente|intelligent|adj|🧠
-esperto|clever|adj|🦊
-preguiçoso|lazy|adj|🦥
-trabalhador|hard-working|adj|🐝|f=trabalhadora|pl=trabalhadores
-generoso|generous|adj|🎁
-honesto|honest|adj|🤝
-paciente|patient|adj|⏳
-chato|boring, annoying|adj|🙄
-divertido|fun|adj|🥳
-sério|serious|adj|😐
-educado|polite|adj|🎩
-mal-educado|rude|adj|😛
-fixe|cool, great (informal)|adj|😎
-giro|cute, nice-looking|adj|🥰
-amor|love|m|❤️|pl=amores
-medo|fear|m|😱
-saudade|longing; missing someone|f|💭|note=Famously hard to translate: a warm, sad longing for someone or something absent.
-alegria|joy|f|🎊
-tristeza|sadness|f|😔
-sorte|luck|f|🍀
+esperto|slim|adj|🦊
+preguiçoso|lui|adj|🦥
+trabalhador|hardwerkend|adj|🐝|f=trabalhadora|pl=trabalhadores
+generoso|gul|adj|🎁
+honesto|eerlijk|adj|🤝
+paciente|geduldig|adj|⏳
+chato|saai, vervelend|adj|🙄
+divertido|leuk|adj|🥳
+sério|serieus|adj|😐
+educado|beleefd|adj|🎩
+mal-educado|onbeleefd|adj|😛
+fixe|tof, gaaf (informeel)|adj|😎
+giro|leuk, schattig|adj|🥰
+amor|de liefde|m|❤️|pl=amores
+medo|de angst|m|😱
+saudade|het gemis, het verlangen|f|💭|note=Beroemd onvertaalbaar: een warm, weemoedig verlangen naar iemand of iets dat er niet is.
+alegria|de vreugde|f|🎊
+tristeza|het verdriet|f|😔
+sorte|het geluk (toeval)|f|🍀
 ` },
-{ id: 'adjetivos', pt: 'Adjetivos', en: 'Describing words', pic: '✨', words: `
-grande|big|adj|🐘
-pequeno|small|adj|🐁
-bom|good|adj|👍|f=boa|pl=bons
-mau|bad|adj|👎|f=má|pl=maus
-novo|new; young|adj|✨
-alto|tall; high; loud|adj|🦒
-baixo|short; low|adj|⬇️
-bonito|beautiful, pretty|adj|🌺
-feio|ugly|adj|👹
-caro|expensive|adj|💎
-barato|cheap|adj|🏷️
-fácil|easy|adj|✅|pl=fáceis
-difícil|difficult|adj|🧗|pl=difíceis
-rápido|fast|adj|🐇
-lento|slow|adj|🐢
-cheio|full|adj|🌕
-vazio|empty|adj|⭕
-limpo|clean|adj|🧼
-sujo|dirty|adj|🐷
-rico|rich|adj|🤑
-pobre|poor|adj|🥺
-forte|strong|adj|💪
-fraco|weak|adj|🥀
-gordo|fat|adj|#gordo
-magro|thin, slim|adj|#magro
-comprido|long|adj|📏
-curto|short (length)|adj|✂️
-estreito|narrow|adj|↕️
-pesado|heavy|adj|🏋️
-leve|light (weight)|adj|🪶
+{ id: 'adjetivos', pt: 'Adjetivos', en: 'Beschrijvende woorden', pic: '✨', words: `
+grande|groot|adj|🐘
+pequeno|klein|adj|🐁
+bom|goed|adj|👍|f=boa|pl=bons
+mau|slecht|adj|👎|f=má|pl=maus
+novo|nieuw; jong|adj|✨
+alto|lang; hoog; hard (geluid)|adj|🦒
+baixo|klein (van stuk); laag|adj|⬇️
+bonito|mooi|adj|🌺
+feio|lelijk|adj|👹
+caro|duur|adj|💎
+barato|goedkoop|adj|🏷️
+fácil|makkelijk|adj|✅|pl=fáceis
+difícil|moeilijk|adj|🧗|pl=difíceis
+rápido|snel|adj|🐇
+lento|langzaam|adj|🐢
+cheio|vol|adj|🌕
+vazio|leeg|adj|⭕
+limpo|schoon|adj|🧼
+sujo|vies|adj|🐷
+rico|rijk|adj|🤑
+pobre|arm|adj|🥺
+forte|sterk|adj|💪
+fraco|zwak|adj|🥀
+gordo|dik|adj|#gordo
+magro|dun, slank|adj|#magro
+comprido|lang|adj|📏
+curto|kort|adj|✂️
+estreito|smal|adj|↕️
+pesado|zwaar|adj|🏋️
+leve|licht (gewicht)|adj|🪶
 aberto|open|adj|🔓
-fechado|closed|adj|🔒
-importante|important|adj|❗
-interessante|interesting|adj|🤓
-verdadeiro|true, real|adj|✔️
-falso|false, fake|adj|❌
-certo|right, correct; certain|adj|✅
-errado|wrong|adj|❌
-igual|the same, equal|adj|🟰|pl=iguais
-diferente|different|adj|🔀
-mesmo|same; really|adj|🔁
-outro|other, another|adj|➕
-possível|possible|adj|🙆|pl=possíveis
-impossível|impossible|adj|🙅|pl=impossíveis
-pronto|ready|adj|🏁|id=pronto-adj
-famoso|famous|adj|🌟
-antigo|old, ancient; former|adj|🏺
+fechado|dicht, gesloten|adj|🔒
+importante|belangrijk|adj|❗
+interessante|interessant|adj|🤓
+verdadeiro|waar, echt|adj|✔️
+falso|onwaar, nep|adj|❌
+certo|juist, goed; zeker|adj|✅
+errado|fout|adj|❌
+igual|hetzelfde, gelijk|adj|🟰|pl=iguais
+diferente|anders, verschillend|adj|🔀
+mesmo|zelfde; echt|adj|🔁
+outro|ander|adj|➕
+possível|mogelijk|adj|🙆|pl=possíveis
+impossível|onmogelijk|adj|🙅|pl=impossíveis
+pronto|klaar|adj|🏁|id=pronto-adj
+famoso|beroemd|adj|🌟
+antigo|oud, eeuwenoud; voormalig|adj|🏺
 moderno|modern|adj|🏙️
-típico|typical|adj|🎏
-perigoso|dangerous|adj|⚠️
-seguro|safe; sure|adj|🛡️
-barulhento|noisy|adj|📢
-silencioso|quiet, silent|adj|🤫
-melhor|better; best|adj|🥇|pl=melhores
-pior|worse; worst|adj|🥉|pl=piores
-maior|bigger; biggest|adj|⬆️|pl=maiores
-menor|smaller; younger|adj|⬇️|pl=menores
-ótimo|great, excellent|adj|🌟
-péssimo|awful|adj|💀
+típico|typisch|adj|🎏
+perigoso|gevaarlijk|adj|⚠️
+seguro|veilig; zeker|adj|🛡️
+barulhento|lawaaierig|adj|📢
+silencioso|stil|adj|🤫
+melhor|beter; best|adj|🥇|pl=melhores
+pior|slechter; slechtst|adj|🥉|pl=piores
+maior|groter; grootst|adj|⬆️|pl=maiores
+menor|kleiner; jonger|adj|⬇️|pl=menores
+ótimo|geweldig, uitstekend|adj|🌟
+péssimo|vreselijk|adj|💀
 ` },
-{ id: 'palavras', pt: 'Palavras úteis', en: 'Little words', pic: '🧩', words: `
-quem|who|pron|❓
-o que|what|pron|❓|note=O que é isto? What is this?
-qual|which; what|pron|❓|pl=quais
-quando|when|adv|🕰️
-onde|where|adv|📍
-como|how; like, as|adv|🔧
-porquê|why|adv|🤔|note=Porquê? (why?) at the end of a question; porque (because) in answers.
-porque|because|conj|💡
-quanto|how much|pron|💰|f=quanta
-e|and|conj|➕
-ou|or|conj|🔀
-mas|but|conj|↔️
-também|also, too|adv|➕
-só|only; alone|adv|☝️
-muito|very; a lot|adv|💯
-pouco|not much, a little|adv|🤏
-mais|more|adv|➕
-menos|less|adv|➖
-bastante|quite; enough|adv|👌
-demasiado|too much|adv|🚫
-tão|so (tão bonito)|adv|😲
-bem|well|adv|👍
-mal|badly|adv|👎
-aqui|here|adv|📍
-aí|there (near you)|adv|👉
-ali|over there|adv|👉
-lá|there (far away)|adv|🔭
-então|so, then|adv|➡️
-talvez|maybe|adv|🤔
-nada|nothing|pron|#∅
-tudo|everything|pron|🌍
-alguém|someone|pron|🧍
-ninguém|nobody|pron|👻
-algum|some|det|➕|f=alguma
-nenhum|no, none|det|#0|f=nenhuma
-todo|all, the whole|det|💯|f=toda
-cada|each, every|det|🔁
-este|this (near me)|det|👇|f=esta
-esse|that (near you)|det|👉|f=essa
-aquele|that (over there)|det|🔭|f=aquela
-isto|this (thing)|pron|👇
-isso|that (thing)|pron|👉
-aquilo|that thing over there|pron|🔭
-em|in, on, at|prep|📥
-de|of, from|prep|🔗
-para|for; to|prep|🎯
-por|through, by; for|prep|🔄
-com|with|prep|🤝
-sem|without|prep|🚫
-sobre|about; on|prep|📄
-entre|between|prep|↔️
-até|until; up to|prep|🏁
-desde|since|prep|⏮️
-durante|during|prep|⏳
-contra|against|prep|⚔️
-perto de|near|prep|📍
-longe de|far from|prep|🔭
-ao lado de|next to|prep|↔️
-em cima de|on top of|prep|⬆️
-debaixo de|under|prep|⬇️
-dentro de|inside|prep|📦
-fora de|outside|prep|🚪
-atrás de|behind|prep|🔙
-em frente de|in front of, opposite|prep|🔜
-antes de|before|prep|⏮️
-depois de|after|prep|⏭️
-se|if|conj|❔
-enquanto|while|conj|⏳
-embora|although|conj|🤷
-para que|so that|conj|🎯
-por exemplo|for example|phr|📌
-de repente|suddenly|phr|⚡
-aliás|besides; in fact|adv|💬
-portanto|therefore|conj|#∴
-no entanto|however|conj|🔄
-há|there is, there are|phr|👉|note=From haver. Há um café aqui perto? Is there a café near here?
-meu|my|det|🙋|f=minha|note=In Portugal use the article: o meu carro, a minha casa.
-teu|your (tu)|det|👉|f=tua
-nosso|our|det|👥|f=nossa
-seu|your (formal); his, her|det|🎩|f=sua
-dele|his|pron|👨|note=After the noun: o carro dele (his car).
-dela|her|pron|👩
-deles|their|pron|👥|f=delas
-me|me, to me|pron|🙋
-te|you, to you|pron|👉
-lhe|to him, to her, to you (formal)|pron|📨|pl=lhes
-nos|us, to us|pron|👥
-vos|you, to you (plural)|pron|👥|note=The object form for vocês: vejo-vos amanhã.
-o|him, it (object)|pron|🎯|id=o-pron
-a|her, it (object)|pron|🎯|id=a-pron
-os|them (object)|pron|🎯|id=os-pron
-daqui|from here|adv|📍
-cá|here|adv|📍
-devagar|slowly|adv|🐢
-depressa|quickly|adv|🐇
-sozinho|alone, on your own|adj|🧍
-juntos|together|adj|👫|f=juntas
-coisa|thing|f|📦
-vez|time (one time, two times)|f|🔂|pl=vezes
-verdade|truth|f|✅
-ajuda|help|f|🆘
-notícia|piece of news|f|📰
-esperança|hope|f|🌱
-vista|view|f|🏞️
-lotaria|lottery|f|🎰
-beijinho|little kiss (greeting)|m|😘
-telefone|telephone|m|☎️
+{ id: 'palavras', pt: 'Palavras úteis', en: 'Kleine woordjes', pic: '🧩', words: `
+quem|wie|pron|❓
+o que|wat|pron|❓|note=O que é isto? Wat is dit?
+qual|welke; wat|pron|❓|pl=quais
+quando|wanneer|adv|🕰️
+onde|waar|adv|📍
+como|hoe; zoals|adv|🔧
+porquê|waarom|adv|🤔|note=Porquê? (waarom?) aan het eind van een vraag; porque (omdat) in het antwoord.
+porque|omdat, want|conj|💡
+quanto|hoeveel|pron|💰|f=quanta
+e|en|conj|➕
+ou|of|conj|🔀
+mas|maar|conj|↔️
+também|ook|adv|➕
+só|alleen; pas|adv|☝️
+muito|heel; veel|adv|💯
+pouco|weinig, een beetje|adv|🤏
+mais|meer|adv|➕
+menos|minder|adv|➖
+bastante|behoorlijk; genoeg|adv|👌
+demasiado|te veel|adv|🚫
+tão|zo (tão bonito)|adv|😲
+bem|goed|adv|👍
+mal|slecht|adv|👎
+aqui|hier|adv|📍
+aí|daar (bij jou)|adv|👉
+ali|daar (verderop)|adv|👉
+lá|daar (ver weg)|adv|🔭
+então|dus, toen|adv|➡️
+talvez|misschien|adv|🤔
+nada|niets|pron|#∅
+tudo|alles|pron|🌍
+alguém|iemand|pron|🧍
+ninguém|niemand|pron|👻
+algum|enig, een|det|➕|f=alguma
+nenhum|geen enkel|det|#0|f=nenhuma
+todo|heel, alle|det|💯|f=toda
+cada|elk, ieder|det|🔁
+este|deze, dit (bij mij)|det|👇|f=esta
+esse|die, dat (bij jou)|det|👉|f=essa
+aquele|die, dat (daarginds)|det|🔭|f=aquela
+isto|dit|pron|👇
+isso|dat|pron|👉
+aquilo|dat daar|pron|🔭
+em|in, op, aan|prep|📥
+de|van, uit|prep|🔗
+para|voor; naar|prep|🎯
+por|door, via; voor|prep|🔄
+com|met|prep|🤝
+sem|zonder|prep|🚫
+sobre|over; op|prep|📄
+entre|tussen|prep|↔️
+até|tot|prep|🏁
+desde|sinds|prep|⏮️
+durante|tijdens|prep|⏳
+contra|tegen|prep|⚔️
+perto de|dicht bij|prep|📍
+longe de|ver van|prep|🔭
+ao lado de|naast|prep|↔️
+em cima de|bovenop|prep|⬆️
+debaixo de|onder|prep|⬇️
+dentro de|in, binnen in|prep|📦
+fora de|buiten|prep|🚪
+atrás de|achter|prep|🔙
+em frente de|tegenover, voor|prep|🔜
+antes de|voor (tijd)|prep|⏮️
+depois de|na|prep|⏭️
+se|als|conj|❔
+enquanto|terwijl|conj|⏳
+embora|hoewel|conj|🤷
+para que|zodat|conj|🎯
+por exemplo|bijvoorbeeld|phr|📌
+de repente|plotseling|phr|⚡
+aliás|trouwens; eigenlijk|adv|💬
+portanto|dus|conj|#∴
+no entanto|echter|conj|🔄
+há|er is, er zijn|phr|👉|note=Van haver. Há um café aqui perto? Is er een café hier in de buurt?
+meu|mijn|det|🙋|f=minha|note=In Portugal gebruik je het lidwoord: o meu carro, a minha casa.
+teu|jouw (tu)|det|👉|f=tua
+nosso|ons, onze|det|👥|f=nossa
+seu|uw (beleefd); zijn, haar|det|🎩|f=sua
+dele|zijn (van hem)|pron|👨|note=Na het zelfstandig naamwoord: o carro dele (zijn auto).
+dela|haar (van haar)|pron|👩
+deles|hun|pron|👥|f=delas
+me|mij, me|pron|🙋
+te|jou, je|pron|👉
+lhe|hem, haar, u (meewerkend voorwerp)|pron|📨|pl=lhes
+nos|ons|pron|👥
+vos|jullie (als voorwerp)|pron|👥|note=De voorwerpsvorm bij vocês: vejo-vos amanhã.
+o|hem, het (lijdend voorwerp)|pron|🎯|id=o-pron
+a|haar, het (lijdend voorwerp)|pron|🎯|id=a-pron
+os|ze, hen (lijdend voorwerp)|pron|🎯|id=os-pron
+daqui|van hier|adv|📍
+cá|hier|adv|📍
+devagar|langzaam|adv|🐢
+depressa|snel|adv|🐇
+sozinho|alleen, in je eentje|adj|🧍
+juntos|samen|adj|👫|f=juntas
+coisa|het ding|f|📦
+vez|de keer|f|🔂|pl=vezes
+verdade|de waarheid|f|✅
+ajuda|de hulp|f|🆘
+notícia|het nieuwtje, het nieuwsbericht|f|📰
+esperança|de hoop|f|🌱
+vista|het uitzicht|f|🏞️
+lotaria|de loterij|f|🎰
+beijinho|het kusje (als groet)|m|😘
+telefone|de telefoon|m|☎️
 ` },
-{ id: 'lazer', pt: 'Tempos livres', en: 'Free time', pic: '⚽', words: `
-música|music|f|🎵
-filme|film|m|🎬
-série|series, TV show|f|📺
-jogo|game; match|m|🎮
-futebol|football|m|⚽
-desporto|sport|m|🏅
-ténis|tennis|m|🎾
-natação|swimming|f|🏊
-corrida|running; race|f|🏃
-bola|ball|f|⚽
-equipa|team|f|👕
-golo|goal|m|🥅
-festa|party|f|🎉
-concerto|concert|m|🎤
-dança|dance, dancing|f|💃
-canção|song|f|🎶|pl=canções
-guitarra|guitar|f|🎸
-piano|piano|m|🎹
-fotografia|photograph; photography|f|📷
-jornal|newspaper|m|📰|pl=jornais
-revista|magazine|f|📖
-romance|novel|m|📗
-desenho|drawing|m|✏️
-pintura|painting|f|🖼️
-passeio|walk, outing|m|🚶
-campismo|camping|m|⛺
-passatempo|hobby|m|🧩
-xadrez|chess|m|♟️
-carta|letter; playing card|f|✉️
-rádio|radio|m|📻
-surf|surfing|m|🏄
-fado|fado (Portuguese song)|m|🎙️
-arraial|street party|m|🎊|pl=arraiais
+{ id: 'lazer', pt: 'Tempos livres', en: 'Vrije tijd', pic: '⚽', words: `
+música|de muziek|f|🎵
+filme|de film|m|🎬
+série|de serie|f|📺
+jogo|het spel; de wedstrijd|m|🎮
+futebol|het voetbal|m|⚽
+desporto|de sport|m|🏅
+ténis|het tennis|m|🎾
+natação|het zwemmen|f|🏊
+corrida|het hardlopen; de race|f|🏃
+bola|de bal|f|⚽
+equipa|het team|f|👕
+golo|het doelpunt|m|🥅
+festa|het feest|f|🎉
+concerto|het concert|m|🎤
+dança|de dans, het dansen|f|💃
+canção|het lied|f|🎶|pl=canções
+guitarra|de gitaar|f|🎸
+piano|de piano|m|🎹
+fotografia|de foto; de fotografie|f|📷
+jornal|de krant|m|📰|pl=jornais
+revista|het tijdschrift|f|📖
+romance|de roman|m|📗
+desenho|de tekening|m|✏️
+pintura|het schilderij|f|🖼️
+passeio|de wandeling, het uitje|m|🚶
+campismo|het kamperen|m|⛺
+passatempo|de hobby|m|🧩
+xadrez|het schaken|m|♟️
+carta|de brief; de speelkaart|f|✉️
+rádio|de radio|m|📻
+surf|het surfen|m|🏄
+fado|de fado (Portugees lied)|m|🎙️
+arraial|het straatfeest|m|🎊|pl=arraiais
 ` },
-{ id: 'compras', pt: 'Compras', en: 'Shopping & money', pic: '🛍️', words: `
-dinheiro|money|m|💶
-euro|euro|m|💶
-cêntimo|cent|m|🪙
-preço|price|m|🏷️
-cartão|card|m|💳|pl=cartões
-troco|change (money)|m|🪙
-recibo|receipt|m|🧾
-fatura|receipt with tax number|f|🧾|note=Shops ask: Quer fatura com número de contribuinte?
-saldos|sales|m.pl|🏷️
-desconto|discount|m|💸
-caixa|checkout; box|f|📦
-saco|bag|m|🛍️
-cesto|basket|m|🧺
-provador|fitting room|m|🚪|pl=provadores
-quilo|kilo|m|⚖️
-litro|litre|m|🥛
-pacote|packet|m|📦
-lata|tin, can|f|🥫
-promoção|special offer|f|📣|pl=promoções
-prenda|present, gift|f|🎁
-grátis|free (of charge)|adj|🆓|inv=1
+{ id: 'compras', pt: 'Compras', en: 'Winkelen en geld', pic: '🛍️', words: `
+dinheiro|het geld|m|💶
+euro|de euro|m|💶
+cêntimo|de cent|m|🪙
+preço|de prijs|m|🏷️
+cartão|de kaart (pinpas)|m|💳|pl=cartões
+troco|het wisselgeld|m|🪙
+recibo|het bonnetje|m|🧾
+fatura|de factuur (bon met fiscaal nummer)|f|🧾|note=Winkels vragen: Quer fatura com número de contribuinte?
+saldos|de uitverkoop|m.pl|🏷️
+desconto|de korting|m|💸
+caixa|de kassa; de doos|f|📦
+saco|de tas, de zak|m|🛍️
+cesto|de mand|m|🧺
+provador|de paskamer|m|🚪|pl=provadores
+quilo|de kilo|m|⚖️
+litro|de liter|m|🥛
+pacote|het pak|m|📦
+lata|het blik|f|🥫
+promoção|de aanbieding|f|📣|pl=promoções
+prenda|het cadeau|f|🎁
+grátis|gratis|adj|🆓|inv=1
 ` },
 ];

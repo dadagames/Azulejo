@@ -1,29 +1,74 @@
-# Publishes the app (the public/ folder) to GitHub Pages on every push to main.
+# Records the Portuguese audio and publishes the app (the public/ folder) to GitHub Pages.
+# - voice: tools/voice.py records every fixed Portuguese text with a neural European Portuguese voice
+#   (Piper, "tugão") into public/audio and commits the new recordings. Only new texts are recorded.
+# - deploy: on main, publishes public/ (with the recordings) to GitHub Pages.
 # One-time setup: repository Settings → Pages → Source: GitHub Actions.
 name: GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, nederlands]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.piper
+          key: piper-pt_PT-tugao-medium-v1
+      - name: Install the voice
+        run: |
+          pip install --quiet piper-tts lameenc numpy
+          if [ ! -f ~/.piper/pt_PT-tugao-medium.onnx ]; then
+            mkdir -p ~/.piper
+            url=https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_PT/tug%C3%A3o/medium/pt_PT-tug%C3%A3o-medium.onnx
+            curl -sSfL "$url" -o ~/.piper/pt_PT-tugao-medium.onnx
+            curl -sSfL "$url.json" -o ~/.piper/pt_PT-tugao-medium.onnx.json
+          fi
+      - name: Record new texts
+        run: |
+          node tools/voice-texts.js > "$RUNNER_TEMP/texts.json"
+          python tools/voice.py "$RUNNER_TEMP/texts.json" public/audio --model ~/.piper/pt_PT-tugao-medium.onnx
+      - name: Save the recordings
+        run: |
+          git add -A public/audio
+          if git diff --cached --quiet; then echo "No new recordings"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -m "Record the Portuguese audio"
+          git pull --rebase -q origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
+
   deploy:
+    needs: voice
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: main
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v5
         with:
